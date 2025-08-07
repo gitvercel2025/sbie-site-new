@@ -34,7 +34,13 @@ const StatCard = ({ number, label, delay, index }: StatCardProps) => {
     const numericPart = number.replace(/[^0-9]/g, '');
     const prefix = number.replace(/[0-9]/g, '');
     const targetNumber = parseInt(numericPart);
-    
+
+    // If there's no numeric part (like "FGV"), just show the original text
+    if (isNaN(targetNumber) || numericPart === '') {
+      setCurrentNumber(number);
+      return;
+    }
+
     let current = 0;
     const increment = targetNumber / 50;
     const timer = setInterval(() => {
