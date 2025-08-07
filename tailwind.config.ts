@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        sbie: {
+          beige: "#DFC6AA",
+          bronze: "#B66D38",
+          "dark-green": "#21302B",
+          "forest-green": "#4F5948",
+          sage: "#889073",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
