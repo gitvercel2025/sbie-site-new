@@ -90,7 +90,7 @@ export const Footer = () => {
           <div className="lg:col-span-1 space-y-6">
             <div>
               <img
-                src="https://cdn.builder.io/api/v1/assets/001294cde81c4a5aa1868dd0c3aedb02/image-65dbb8?format=webp&width=120"
+                src="https://i.imgur.com/vnMj83l.png"
                 alt="SBIE Logo"
                 className="h-12 w-auto mb-4"
               />
