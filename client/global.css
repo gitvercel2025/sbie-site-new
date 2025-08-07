@@ -115,7 +115,68 @@
     }
   }
 
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(12deg);
+    }
+  }
+
+  @keyframes shimmer-fast {
+    0% {
+      transform: translateX(-100%) skewX(12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(12deg);
+    }
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(50px) translateY(50px);
+    }
+  }
+
+  @keyframes scan-vertical {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+
+  @keyframes scan-horizontal {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-fast {
+    animation: shimmer-fast 1s ease-in-out;
+  }
+
+  .animate-scan-vertical {
+    animation: scan-vertical 8s linear infinite;
+  }
+
+  .animate-scan-horizontal {
+    animation: scan-horizontal 12s linear infinite;
   }
 }
