@@ -87,7 +87,7 @@ export const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
               <img
-                src="https://cdn.builder.io/api/v1/assets/001294cde81c4a5aa1868dd0c3aedb02/image-65dbb8?format=webp&width=120"
+                src="https://i.imgur.com/vnMj83l.png"
                 alt="SBIE Logo"
                 className="h-12 w-auto"
               />
