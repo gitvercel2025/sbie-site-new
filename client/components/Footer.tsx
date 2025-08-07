@@ -176,7 +176,7 @@ export const Footer = () => {
         <div className={`border-t border-sbie-beige/20 pt-8 mb-8 transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <Star className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
               <p className="text-sbie-beige/90 font-medium">Avaliação 5 estrelas</p>
@@ -191,6 +191,24 @@ export const Footer = () => {
               <Award className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
               <p className="text-sbie-beige/90 font-medium">4 Best-Sellers</p>
               <p className="text-sbie-beige/70 text-sm">Publicados</p>
+            </div>
+            <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
+              <img
+                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+                alt="Selo MEC"
+                className="w-12 h-12 mx-auto mb-3 object-contain"
+              />
+              <p className="text-sbie-beige/90 font-medium">Reconhecido pelo MEC</p>
+              <p className="text-sbie-beige/70 text-sm">Ministério da Educação</p>
+            </div>
+            <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
+              <img
+                src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/05/selo-cinza.png.webp"
+                alt="Selo Google"
+                className="w-12 h-12 mx-auto mb-3 object-contain"
+              />
+              <p className="text-sbie-beige/90 font-medium">Parceiro Google</p>
+              <p className="text-sbie-beige/70 text-sm">Certificação Digital</p>
             </div>
           </div>
         </div>
