@@ -1,0 +1,239 @@
+import { useState, useEffect, useRef } from "react";
+import { ArrowRight, BookOpen, Video, Lightbulb } from "lucide-react";
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: "article" | "video" | "insight";
+  readTime?: string;
+}
+
+export const ExclusiveContent = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Auto-rotate carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % Math.ceil(contentItems.length / getVisibleSlides()));
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const contentItems: ContentItem[] = [
+    {
+      id: "1",
+      title: "Como desenvolver a autoconsciência emocional para melhorar a tomada de decisão",
+      description: "Descubra técnicas comprovadas para aumentar sua autoconsciência e tomar decisões mais assertivas em sua vida pessoal e profissional.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2Fd3e06e07e6b847d184015fc3d8c80c0c?format=webp&width=800",
+      category: "article",
+      readTime: "8 min"
+    },
+    {
+      id: "2",
+      title: "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
+      description: "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F0ac0538cfe29440cbeba00fa755d5e2b?format=webp&width=800",
+      category: "video",
+      readTime: "12 min"
+    },
+    {
+      id: "3",
+      title: "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
+      description: "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2Fc1b9a315b9164022ab111b20a5fdc9fb?format=webp&width=800",
+      category: "insight",
+      readTime: "6 min"
+    }
+  ];
+
+  const getVisibleSlides = () => {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+    }
+    return 1;
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case "article": return <BookOpen className="w-4 h-4" />;
+      case "video": return <Video className="w-4 h-4" />;
+      case "insight": return <Lightbulb className="w-4 h-4" />;
+      default: return <BookOpen className="w-4 h-4" />;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case "article": return "bg-sbie-bronze";
+      case "video": return "bg-sbie-sage";
+      case "insight": return "bg-sbie-forest-green";
+      default: return "bg-sbie-bronze";
+    }
+  };
+
+  return (
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-sbie-beige/20 via-white to-sbie-sage/10 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_0%_50%,#21302B,transparent)]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className={`text-center mb-16 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="inline-flex items-center space-x-2 bg-sbie-bronze/10 px-6 py-3 rounded-full mb-6">
+            <BookOpen className="w-5 h-5 text-sbie-bronze" />
+            <span className="text-sbie-bronze font-semibold">Conteúdo Exclusivo</span>
+          </div>
+          
+          <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
+            Acompanhe conteúdos{" "}
+            <span className="text-sbie-bronze relative">
+              exclusivos da SBIE
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
+            </span>
+          </h2>
+          
+          <p className="text-xl text-sbie-forest-green max-w-4xl mx-auto">
+            Artigos, vídeos e insights para acelerar sua jornada de desenvolvimento pessoal e profissional.
+          </p>
+        </div>
+
+        {/* Content Carousel */}
+        <div className={`relative transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="overflow-hidden rounded-3xl">
+            <div 
+              className="flex transition-transform duration-1000 ease-in-out"
+              style={{ 
+                transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
+                width: `${(contentItems.length / getVisibleSlides()) * 100}%`
+              }}
+            >
+              {contentItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  className="px-4"
+                  style={{ width: `${100 / contentItems.length}%` }}
+                >
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl hover:scale-105 transition-all duration-500 group h-full">
+                    {/* Image */}
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      
+                      {/* Category Badge */}
+                      <div className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}>
+                        {getCategoryIcon(item.category)}
+                        <span className="capitalize">{item.category}</span>
+                      </div>
+
+                      {/* Read Time */}
+                      {item.readTime && (
+                        <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                          {item.readTime}
+                        </div>
+                      )}
+
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-sbie-dark-green mb-3 group-hover:text-sbie-bronze transition-colors duration-300 line-clamp-2">
+                        {item.title}
+                      </h3>
+                      
+                      <p className="text-sbie-forest-green leading-relaxed mb-4 line-clamp-3">
+                        {item.description}
+                      </p>
+
+                      {/* Read More Button */}
+                      <button className="inline-flex items-center space-x-2 text-sbie-bronze hover:text-sbie-bronze/80 font-semibold transition-all duration-300 group-hover:translate-x-2">
+                        <span>Ler mais</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Progress Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {Array.from({ length: Math.ceil(contentItems.length / getVisibleSlides()) }).map((_, index) => (
+              <div
+                key={index}
+                className={`h-1 rounded-full transition-all duration-500 ${
+                  currentSlide === index 
+                    ? 'w-8 bg-sbie-bronze' 
+                    : 'w-4 bg-sbie-bronze/30'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 max-w-3xl mx-auto shadow-xl border border-sbie-bronze/20">
+            <h3 className="text-2xl font-bold text-sbie-dark-green mb-4">
+              Quer Mais Conteúdo Exclusivo?
+            </h3>
+            <p className="text-sbie-forest-green mb-6">
+              Inscreva-se em nossa newsletter e receba semanalmente artigos, vídeos e insights direto em seu e-mail.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Seu melhor e-mail"
+                className="flex-1 px-4 py-3 bg-sbie-beige/30 border border-sbie-bronze/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-sbie-bronze focus:border-transparent"
+              />
+              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap">
+                Inscrever-se
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute top-32 right-16 w-6 h-6 bg-sbie-bronze/20 rounded-full animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-8 h-8 bg-sbie-sage/20 rounded-full animate-float delay-1000"></div>
+    </section>
+  );
+};
