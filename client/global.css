@@ -115,6 +115,15 @@
     }
   }
 
+  @keyframes slide {
+    0%, 100% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+  }
+
   @keyframes shimmer {
     0% {
       transform: translateX(-100%) skewX(12deg);
