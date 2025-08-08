@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { 
-  Facebook, 
-  Instagram, 
-  Linkedin, 
-  Youtube, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
   ArrowUp,
   Star,
   Shield,
-  Award
+  Award,
 } from "lucide-react";
 
 export const Footer = () => {
@@ -20,24 +20,40 @@ export const Footer = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "https://www.facebook.com/sbie.oficial", label: "Facebook" },
-    { icon: <Instagram className="w-5 h-5" />, href: "https://www.instagram.com/sbie.oficial/", label: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/school/sbie/", label: "LinkedIn" },
-    { icon: <Youtube className="w-5 h-5" />, href: "https://www.youtube.com/sbiemocional", label: "YouTube" },
+    {
+      icon: <Facebook className="w-5 h-5" />,
+      href: "https://www.facebook.com/sbie.oficial",
+      label: "Facebook",
+    },
+    {
+      icon: <Instagram className="w-5 h-5" />,
+      href: "https://www.instagram.com/sbie.oficial/",
+      label: "Instagram",
+    },
+    {
+      icon: <Linkedin className="w-5 h-5" />,
+      href: "https://www.linkedin.com/school/sbie/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Youtube className="w-5 h-5" />,
+      href: "https://www.youtube.com/sbiemocional",
+      label: "YouTube",
+    },
   ];
 
   const quickLinks = [
@@ -83,9 +99,11 @@ export const Footer = () => {
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
         {/* Top Section */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div>
@@ -98,7 +116,8 @@ export const Footer = () => {
                 Sociedade Brasileira de Inteligência Emocional
               </h3>
               <p className="text-sbie-beige/80 leading-relaxed">
-                Transformando vidas através do desenvolvimento da inteligência emocional.
+                Transformando vidas através do desenvolvimento da inteligência
+                emocional.
               </p>
             </div>
 
@@ -175,19 +194,27 @@ export const Footer = () => {
         </div>
 
         {/* Certifications/Awards Section */}
-        <div className={`border-t border-sbie-beige/20 pt-8 mb-8 transition-all duration-1000 delay-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`border-t border-sbie-beige/20 pt-8 mb-8 transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <Star className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
-              <p className="text-sbie-beige/90 font-medium">Avaliação 5 estrelas</p>
+              <p className="text-sbie-beige/90 font-medium">
+                Avaliação 5 estrelas
+              </p>
               <p className="text-sbie-beige/70 text-sm">Google Reviews</p>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <Shield className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
-              <p className="text-sbie-beige/90 font-medium">Metodologia Certificada</p>
-              <p className="text-sbie-beige/70 text-sm">International Society</p>
+              <p className="text-sbie-beige/90 font-medium">
+                Metodologia Certificada
+              </p>
+              <p className="text-sbie-beige/70 text-sm">
+                International Society
+              </p>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <Award className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
@@ -200,8 +227,12 @@ export const Footer = () => {
                 alt="Selo MEC"
                 className="w-12 h-12 mx-auto mb-3 object-contain"
               />
-              <p className="text-sbie-beige/90 font-medium">Reconhecido pelo MEC</p>
-              <p className="text-sbie-beige/70 text-sm">Ministério da Educação</p>
+              <p className="text-sbie-beige/90 font-medium">
+                Reconhecido pelo MEC
+              </p>
+              <p className="text-sbie-beige/70 text-sm">
+                Ministério da Educação
+              </p>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <img
@@ -216,9 +247,11 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className={`border-t border-sbie-beige/20 pt-8 transition-all duration-1000 delay-500 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`border-t border-sbie-beige/20 pt-8 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-sbie-beige/80 text-sm mb-2">
@@ -230,10 +263,16 @@ export const Footer = () => {
             </div>
 
             <div className="flex space-x-6 text-sm">
-              <Link to="/politica-privacidade" className="text-sbie-beige/80 hover:text-sbie-bronze transition-colors duration-300">
+              <Link
+                to="/politica-privacidade"
+                className="text-sbie-beige/80 hover:text-sbie-bronze transition-colors duration-300"
+              >
                 Política de Privacidade
               </Link>
-              <Link to="/termos-uso" className="text-sbie-beige/80 hover:text-sbie-bronze transition-colors duration-300">
+              <Link
+                to="/termos-uso"
+                className="text-sbie-beige/80 hover:text-sbie-bronze transition-colors duration-300"
+              >
                 Termos de Uso
               </Link>
             </div>
@@ -245,7 +284,9 @@ export const Footer = () => {
       <button
         onClick={scrollToTop}
         className={`fixed bottom-8 right-8 w-12 h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 text-white rounded-full shadow-lg transition-all duration-300 z-50 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+          showScrollTop
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
         } hover:scale-110`}
       >
         <ArrowUp className="w-6 h-6 mx-auto" />

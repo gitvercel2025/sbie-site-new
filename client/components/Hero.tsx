@@ -37,8 +37,8 @@ export const Hero = () => {
               linear-gradient(rgba(182, 109, 56, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(182, 109, 56, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px',
-            animation: 'grid-move 25s linear infinite'
+            backgroundSize: "60px 60px",
+            animation: "grid-move 25s linear infinite",
           }}
         ></div>
       </div>
@@ -87,10 +87,9 @@ export const Hero = () => {
 
                 <p className="text-xl sm:text-2xl text-sbie-forest-green leading-relaxed mt-6 relative z-10">
                   Transforme sua carreira e seus relacionamentos. A SBIE oferece
-                  as ferramentas e o conhecimento para você assumir o controle da
-                  sua vida e alcançar resultados.
+                  as ferramentas e o conhecimento para você assumir o controle
+                  da sua vida e alcançar resultados.
                 </p>
-
               </div>
             </div>
 
@@ -127,7 +126,9 @@ export const Hero = () => {
               }`}
             >
               <button className="group bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/90 hover:to-sbie-bronze text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-                <span className="relative z-10">Conheça Nossos Treinamentos</span>
+                <span className="relative z-10">
+                  Conheça Nossos Treinamentos
+                </span>
                 {/* Button Shimmer */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 translate-x-full group-hover:animate-shimmer-fast"></div>
               </button>
@@ -186,7 +187,6 @@ export const Hero = () => {
                   <p className="text-sbie-forest-green">
                     Fundador e Presidente da SBIE
                   </p>
-
                 </div>
 
                 {/* Floating Particles */}

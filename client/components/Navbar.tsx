@@ -14,21 +14,30 @@ interface DropdownMenuProps {
   onToggle: () => void;
 }
 
-const DropdownMenu = ({ title, items, isOpen, onToggle }: DropdownMenuProps) => (
+const DropdownMenu = ({
+  title,
+  items,
+  isOpen,
+  onToggle,
+}: DropdownMenuProps) => (
   <div className="relative group">
     <button
       onClick={onToggle}
       className="flex items-center space-x-1 px-4 py-2 text-white hover:text-sbie-beige transition-all duration-300 hover:scale-105"
     >
       <span className="font-medium">{title}</span>
-      <ChevronDown 
-        className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+      <ChevronDown
+        className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
       />
     </button>
-    
-    <div className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl transition-all duration-300 transform ${
-      isOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'
-    } z-50 border border-sbie-beige/20`}>
+
+    <div
+      className={`absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl transition-all duration-300 transform ${
+        isOpen
+          ? "opacity-100 translate-y-0 visible"
+          : "opacity-0 -translate-y-2 invisible"
+      } z-50 border border-sbie-beige/20`}
+    >
       <div className="py-3">
         {items.map((item, index) => (
           <Link
@@ -85,7 +94,10 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+            <Link
+              to="/"
+              className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
+            >
               <img
                 src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/08/auto_site_logo_w.png.webp"
                 alt="SBIE Logo"
@@ -100,22 +112,22 @@ export const Navbar = () => {
               <DropdownMenu
                 title="Quem Somos"
                 items={quemSomosItems}
-                isOpen={openDropdown === 'quem-somos'}
-                onToggle={() => toggleDropdown('quem-somos')}
+                isOpen={openDropdown === "quem-somos"}
+                onToggle={() => toggleDropdown("quem-somos")}
               />
-              
+
               <DropdownMenu
                 title="Treinamentos"
                 items={treinamentosItems}
-                isOpen={openDropdown === 'treinamentos'}
-                onToggle={() => toggleDropdown('treinamentos')}
+                isOpen={openDropdown === "treinamentos"}
+                onToggle={() => toggleDropdown("treinamentos")}
               />
-              
+
               <DropdownMenu
                 title="Online"
                 items={onlineItems}
-                isOpen={openDropdown === 'online'}
-                onToggle={() => toggleDropdown('online')}
+                isOpen={openDropdown === "online"}
+                onToggle={() => toggleDropdown("online")}
               />
 
               <Link
@@ -160,9 +172,11 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-screen pb-6' : 'max-h-0'
-        }`}>
+        <div
+          className={`lg:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? "max-h-screen pb-6" : "max-h-0"
+          }`}
+        >
           <div className="space-y-2">
             <div className="border-t border-sbie-beige/20 pt-4">
               <Link
@@ -196,7 +210,7 @@ export const Navbar = () => {
 
       {/* Overlay for closing dropdowns */}
       {openDropdown && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/20 z-40"
           onClick={closeAllDropdowns}
         />

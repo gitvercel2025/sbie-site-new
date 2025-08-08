@@ -14,11 +14,17 @@ export const MECBanner = () => {
   }, []);
 
   return (
-    <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-3 md:py-4 px-3 md:px-4 relative overflow-hidden transition-all duration-500 ${
-      isAnimated ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-    }`}>
+    <div
+      className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-3 md:py-4 px-3 md:px-4 relative overflow-hidden transition-all duration-500 ${
+        isAnimated ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+      }`}
+    >
       {/* Background Pattern */}
-      <div className={"absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"3\" cy=\"3\" r=\"3\"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"}></div>
+      <div
+        className={
+          'absolute inset-0 bg-[url(\'data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3C/g%3E%3C/svg%3E\')] opacity-20'
+        }
+      ></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Mobile Layout */}
@@ -66,7 +72,8 @@ export const MECBanner = () => {
               />
               <div className="relative">
                 <span className="font-bold text-base lg:text-lg animate-pulse bg-white/10 px-4 py-2 rounded-full">
-                  🎓 Nossos treinamentos são reconhecidos pelo MEC - Ministério da Educação
+                  🎓 Nossos treinamentos são reconhecidos pelo MEC - Ministério
+                  da Educação
                 </span>
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-30"></div>

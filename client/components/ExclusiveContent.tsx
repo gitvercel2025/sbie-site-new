@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, BookOpen, Video, Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  Video,
+  Lightbulb,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 interface ContentItem {
   id: string;
@@ -45,8 +52,8 @@ export const ExclusiveContent = () => {
     };
 
     updateVisibleSlides();
-    window.addEventListener('resize', updateVisibleSlides);
-    return () => window.removeEventListener('resize', updateVisibleSlides);
+    window.addEventListener("resize", updateVisibleSlides);
+    return () => window.removeEventListener("resize", updateVisibleSlides);
   }, [currentSlide]);
 
   const contentItems: ContentItem[] = [

@@ -12,7 +12,7 @@ export const QuoteSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -28,15 +28,15 @@ export const QuoteSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-sbie-dark-green via-gray-900 to-black">
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0 opacity-20">
-          <div 
-            className="absolute inset-0" 
+          <div
+            className="absolute inset-0"
             style={{
               backgroundImage: `
                 linear-gradient(rgba(223, 198, 170, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(223, 198, 170, 0.1) 1px, transparent 1px)
               `,
-              backgroundSize: '50px 50px',
-              animation: 'grid-move 20s linear infinite'
+              backgroundSize: "50px 50px",
+              animation: "grid-move 20s linear infinite",
             }}
           ></div>
         </div>
@@ -54,16 +54,18 @@ export const QuoteSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           {/* Futuristic Card */}
           <div className="relative">
             {/* Card Background with Holographic Effect */}
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-sbie-bronze/30 p-12 lg:p-16 text-center relative overflow-hidden">
               {/* Holographic Shimmer */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sbie-bronze/10 to-transparent transform skew-x-12 translate-x-full animate-shimmer"></div>
-              
+
               {/* Corner Decorations */}
               <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-sbie-bronze/50"></div>
               <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-sbie-bronze/50"></div>
@@ -74,7 +76,7 @@ export const QuoteSection = () => {
               <div className="relative mb-8">
                 <div className="w-20 h-20 bg-gradient-to-br from-sbie-bronze to-sbie-bronze/70 rounded-2xl mx-auto flex items-center justify-center relative">
                   <Zap className="w-10 h-10 text-white" />
-                  
+
                   {/* Pulsing Ring */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-sbie-bronze animate-ping opacity-75"></div>
                   <div className="absolute inset-0 rounded-2xl border border-sbie-bronze/50 animate-pulse"></div>
@@ -91,7 +93,7 @@ export const QuoteSection = () => {
                   </span>
                   "
                 </blockquote>
-                
+
                 <div className="flex items-center justify-center space-x-4">
                   <div className="h-px bg-sbie-bronze/50 flex-1 max-w-24"></div>
                   <cite className="text-sbie-beige text-xl font-semibold tracking-wider">
@@ -108,7 +110,7 @@ export const QuoteSection = () => {
                     <span>Transforme Seu Medo em Ação</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
-                  
+
                   {/* Button Shimmer */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 translate-x-full group-hover:animate-shimmer-fast"></div>
                 </button>
