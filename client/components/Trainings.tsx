@@ -102,37 +102,37 @@ export const Trainings = () => {
     {
       title: "LOTUS Inteligência Emocional",
       description: "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
-      icon: <Star className="w-8 h-8" />,
+      icon: <Sparkles className="w-8 h-8" />,
       category: "individual" as const,
     },
     {
       title: "LOTUS Legado",
       description: "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
-      icon: <Award className="w-8 h-8" />,
+      icon: <Atom className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "Formação em Inteligência Emocional",
       description: "Certificação completa para profissionais que desejam aplicar inteligência emocional em suas carreiras.",
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "Formação Master em Inteligência Emocional",
       description: "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "SBIE Business",
       description: "Soluções corporativas em inteligência emocional para empresas que querem resultados excepcionais.",
-      icon: <Building className="w-8 h-8" />,
+      icon: <Target className="w-8 h-8" />,
       category: "corporate" as const,
     },
     {
       title: "Embaixadores do Bem",
       description: "Programa social para multiplicar conhecimento em inteligência emocional em comunidades.",
-      icon: <Heart className="w-8 h-8" />,
+      icon: <Rocket className="w-8 h-8" />,
       category: "social" as const,
     },
   ];
