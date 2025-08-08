@@ -139,12 +139,21 @@ export const Hero = () => {
             }`}
           >
             <div className="relative">
-              {/* Decorative Elements */}
+              {/* Enhanced Decorative Elements */}
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-sbie-bronze/20 rounded-full blur-xl animate-pulse"></div>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sbie-sage/20 rounded-full blur-xl animate-pulse delay-1000"></div>
 
-              {/* Photo Placeholder */}
-              <div className="relative bg-gradient-to-br from-white to-sbie-beige/50 rounded-3xl p-8 shadow-2xl border border-sbie-bronze/20">
+              {/* Futuristic Photo Container */}
+              <div className="relative bg-gradient-to-br from-white/80 to-sbie-beige/30 rounded-3xl p-8 shadow-2xl border-2 border-sbie-bronze/30 backdrop-blur-sm">
+                {/* Holographic Frame Effects */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sbie-bronze/10 to-transparent transform skew-x-12 translate-x-full animate-shimmer"></div>
+
+                {/* Tech Corner Elements */}
+                <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-sbie-bronze"></div>
+                <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-sbie-bronze"></div>
+                <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-sbie-bronze"></div>
+                <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-sbie-bronze"></div>
+
                 <div className="aspect-[4/5] rounded-2xl relative overflow-hidden">
                   <img
                     src="https://i.imgur.com/tbrCvCe.jpeg"
@@ -152,19 +161,35 @@ export const Hero = () => {
                     className="w-full h-full object-cover object-center"
                   />
 
-                  {/* Decorative border */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-sbie-bronze/20"></div>
+                  {/* Tech Scan Lines */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sbie-bronze/10 to-transparent animate-scan-vertical opacity-50"></div>
+
+                  {/* Decorative border with glow */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-sbie-bronze/50 shadow-inner"></div>
+                  <div className="absolute inset-0 rounded-2xl border border-sbie-bronze animate-ping opacity-30"></div>
                 </div>
 
-                {/* Caption */}
-                <div className="mt-6 text-center">
+                {/* Enhanced Caption */}
+                <div className="mt-6 text-center relative">
                   <h4 className="text-xl font-bold text-sbie-dark-green">
                     Rodrigo Fonseca
                   </h4>
                   <p className="text-sbie-forest-green">
                     Fundador e Presidente da SBIE
                   </p>
+
+                  {/* Data Display */}
+                  <div className="flex justify-center space-x-4 mt-2 text-xs text-sbie-bronze/70 font-mono">
+                    <span>[ID: FOUNDER_001]</span>
+                    <span>[STATUS: ACTIVE]</span>
+                  </div>
                 </div>
+
+                {/* Floating Particles */}
+                <div className="absolute -top-2 -left-2 w-2 h-2 bg-sbie-bronze rounded-full animate-float"></div>
+                <div className="absolute -top-4 -right-1 w-1 h-1 bg-sbie-sage rounded-full animate-float delay-300"></div>
+                <div className="absolute -bottom-1 -left-4 w-3 h-3 bg-sbie-beige/50 rounded-full animate-float delay-700"></div>
+                <div className="absolute -bottom-3 -right-3 w-2 h-2 bg-sbie-bronze/50 rounded-full animate-float delay-1000"></div>
               </div>
             </div>
           </div>
