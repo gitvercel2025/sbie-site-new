@@ -62,8 +62,13 @@ export const Navbar = () => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
 
+  const toggleMobileDropdown = (dropdown: string) => {
+    setOpenMobileDropdown(openMobileDropdown === dropdown ? null : dropdown);
+  };
+
   const closeAllDropdowns = () => {
     setOpenDropdown(null);
+    setOpenMobileDropdown(null);
   };
 
   const quemSomosItems: DropdownItem[] = [
