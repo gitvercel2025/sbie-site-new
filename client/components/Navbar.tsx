@@ -83,14 +83,10 @@ export const Navbar = () => {
     <nav className="bg-sbie-dark-green shadow-lg relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+          {/* Logo - Removido temporariamente */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-              <img
-                src="https://i.imgur.com/vnMj83l.png"
-                alt="SBIE Logo"
-                className="h-12 w-auto"
-              />
+              <span className="text-2xl font-bold text-sbie-beige">SBIE</span>
             </Link>
           </div>
 
