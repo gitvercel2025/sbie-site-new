@@ -56,7 +56,9 @@ const DropdownMenu = ({
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(
+    null,
+  );
 
   const toggleDropdown = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
@@ -188,13 +190,17 @@ export const Navbar = () => {
               {/* Quem Somos Dropdown */}
               <div className="mb-2">
                 <button
-                  onClick={() => toggleMobileDropdown('quem-somos')}
+                  onClick={() => toggleMobileDropdown("quem-somos")}
                   className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
                 >
                   <span className="font-medium">Quem Somos</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'quem-somos' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === "quem-somos" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'quem-somos' ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === "quem-somos" ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}
+                >
                   {quemSomosItems.map((item, index) => (
                     <Link
                       key={index}
@@ -211,13 +217,17 @@ export const Navbar = () => {
               {/* Treinamentos Dropdown */}
               <div className="mb-2">
                 <button
-                  onClick={() => toggleMobileDropdown('treinamentos')}
+                  onClick={() => toggleMobileDropdown("treinamentos")}
                   className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
                 >
                   <span className="font-medium">Treinamentos</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'treinamentos' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === "treinamentos" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'treinamentos' ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === "treinamentos" ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}
+                >
                   {treinamentosItems.map((item, index) => (
                     <Link
                       key={index}
@@ -234,13 +244,17 @@ export const Navbar = () => {
               {/* Online Dropdown */}
               <div className="mb-2">
                 <button
-                  onClick={() => toggleMobileDropdown('online')}
+                  onClick={() => toggleMobileDropdown("online")}
                   className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
                 >
                   <span className="font-medium">Online</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'online' ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === "online" ? "rotate-180" : ""}`}
+                  />
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'online' ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === "online" ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
+                >
                   {onlineItems.map((item, index) => (
                     <Link
                       key={index}

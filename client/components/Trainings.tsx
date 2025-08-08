@@ -1,5 +1,17 @@
 import { useEffect, useState, useRef } from "react";
-import { ArrowRight, Zap, Brain, Cpu, Users, Building, Heart, Sparkles, Target, Rocket, Atom } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  Brain,
+  Cpu,
+  Users,
+  Building,
+  Heart,
+  Sparkles,
+  Target,
+  Rocket,
+  Atom,
+} from "lucide-react";
 
 interface TrainingCardProps {
   title: string;
@@ -9,7 +21,13 @@ interface TrainingCardProps {
   category: "individual" | "professional" | "corporate" | "social";
 }
 
-const TrainingCard = ({ title, description, icon, index, category }: TrainingCardProps) => {
+const TrainingCard = ({
+  title,
+  description,
+  icon,
+  index,
+  category,
+}: TrainingCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +38,7 @@ const TrainingCard = ({ title, description, icon, index, category }: TrainingCar
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (cardRef.current) {
@@ -32,21 +50,31 @@ const TrainingCard = ({ title, description, icon, index, category }: TrainingCar
 
   const getCategoryColor = () => {
     switch (category) {
-      case "individual": return "from-sbie-bronze to-sbie-bronze/70";
-      case "professional": return "from-sbie-sage to-sbie-sage/70";
-      case "corporate": return "from-sbie-dark-green to-sbie-forest-green";
-      case "social": return "from-sbie-forest-green to-sbie-sage";
-      default: return "from-sbie-bronze to-sbie-bronze/70";
+      case "individual":
+        return "from-sbie-bronze to-sbie-bronze/70";
+      case "professional":
+        return "from-sbie-sage to-sbie-sage/70";
+      case "corporate":
+        return "from-sbie-dark-green to-sbie-forest-green";
+      case "social":
+        return "from-sbie-forest-green to-sbie-sage";
+      default:
+        return "from-sbie-bronze to-sbie-bronze/70";
     }
   };
 
   const getCategoryBorder = () => {
     switch (category) {
-      case "individual": return "border-sbie-bronze/20 hover:border-sbie-bronze/40";
-      case "professional": return "border-sbie-sage/20 hover:border-sbie-sage/40";
-      case "corporate": return "border-sbie-dark-green/20 hover:border-sbie-dark-green/40";
-      case "social": return "border-sbie-forest-green/20 hover:border-sbie-forest-green/40";
-      default: return "border-sbie-bronze/20 hover:border-sbie-bronze/40";
+      case "individual":
+        return "border-sbie-bronze/20 hover:border-sbie-bronze/40";
+      case "professional":
+        return "border-sbie-sage/20 hover:border-sbie-sage/40";
+      case "corporate":
+        return "border-sbie-dark-green/20 hover:border-sbie-dark-green/40";
+      case "social":
+        return "border-sbie-forest-green/20 hover:border-sbie-forest-green/40";
+      default:
+        return "border-sbie-bronze/20 hover:border-sbie-bronze/40";
     }
   };
 
@@ -54,21 +82,25 @@ const TrainingCard = ({ title, description, icon, index, category }: TrainingCar
     <div
       ref={cardRef}
       className={`group transition-all duration-700 transform ${
-        isVisible 
-          ? 'opacity-100 translate-y-0 scale-100' 
-          : 'opacity-0 translate-y-8 scale-95'
+        isVisible
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-8 scale-95"
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className={`bg-white/90 backdrop-blur-sm rounded-3xl p-8 h-full shadow-xl border-2 ${getCategoryBorder()} hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:bg-white group relative overflow-hidden`}>
+      <div
+        className={`bg-white/90 backdrop-blur-sm rounded-3xl p-8 h-full shadow-xl border-2 ${getCategoryBorder()} hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:bg-white group relative overflow-hidden`}
+      >
         {/* Background Gradient */}
-        <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${getCategoryColor()} opacity-10 rounded-bl-[100px] group-hover:opacity-20 transition-opacity duration-300`}></div>
-        
+        <div
+          className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${getCategoryColor()} opacity-10 rounded-bl-[100px] group-hover:opacity-20 transition-opacity duration-300`}
+        ></div>
+
         {/* Icon */}
-        <div className={`w-16 h-16 bg-gradient-to-br ${getCategoryColor()} rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 relative z-10`}>
-          <div className="text-white">
-            {icon}
-          </div>
+        <div
+          className={`w-16 h-16 bg-gradient-to-br ${getCategoryColor()} rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-300 relative z-10`}
+        >
+          <div className="text-white">{icon}</div>
         </div>
 
         {/* Content */}
@@ -76,13 +108,15 @@ const TrainingCard = ({ title, description, icon, index, category }: TrainingCar
           <h3 className="text-2xl font-bold text-sbie-dark-green mb-4 group-hover:text-sbie-bronze transition-colors duration-300">
             {title}
           </h3>
-          
+
           <p className="text-sbie-forest-green leading-relaxed mb-6 text-lg">
             {description}
           </p>
 
           {/* CTA Button */}
-          <button className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}>
+          <button
+            className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}
+          >
             <span>Saiba Mais</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
@@ -101,37 +135,43 @@ export const Trainings = () => {
   const trainings = [
     {
       title: "LOTUS Inteligência Emocional",
-      description: "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
+      description:
+        "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
       icon: <Sparkles className="w-8 h-8" />,
       category: "individual" as const,
     },
     {
       title: "LOTUS Legado",
-      description: "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
+      description:
+        "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
       icon: <Atom className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "Formação em Inteligência Emocional",
-      description: "Certificação completa para profissionais que desejam aplicar inteligência emocional em suas carreiras.",
+      description:
+        "Certificação completa para profissionais que desejam aplicar inteligência emocional em suas carreiras.",
       icon: <Brain className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "Formação Master em Inteligência Emocional",
-      description: "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
+      description:
+        "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
       icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
     },
     {
       title: "SBIE Business",
-      description: "Soluções corporativas em inteligência emocional para empresas que querem resultados excepcionais.",
+      description:
+        "Soluções corporativas em inteligência emocional para empresas que querem resultados excepcionais.",
       icon: <Target className="w-8 h-8" />,
       category: "corporate" as const,
     },
     {
       title: "Embaixadores do Bem",
-      description: "Programa social para multiplicar conhecimento em inteligência emocional em comunidades.",
+      description:
+        "Programa social para multiplicar conhecimento em inteligência emocional em comunidades.",
       icon: <Rocket className="w-8 h-8" />,
       category: "social" as const,
     },
@@ -149,9 +189,11 @@ export const Trainings = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-sbie-bronze/10 px-6 py-3 rounded-full mb-6">
             <Zap className="w-5 h-5 text-sbie-bronze" />
-            <span className="text-sbie-bronze font-semibold">Treinamentos SBIE</span>
+            <span className="text-sbie-bronze font-semibold">
+              Treinamentos SBIE
+            </span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
             Treinamentos{" "}
             <span className="text-sbie-bronze relative">
@@ -159,9 +201,10 @@ export const Trainings = () => {
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
             </span>
           </h2>
-          
+
           <p className="text-xl text-sbie-forest-green max-w-4xl mx-auto">
-            Transforme sua vida através dos treinamentos da Sociedade Brasileira de Inteligência Emocional.
+            Transforme sua vida através dos treinamentos da Sociedade Brasileira
+            de Inteligência Emocional.
           </p>
         </div>
 
@@ -186,7 +229,8 @@ export const Trainings = () => {
               Pronto para Transformar sua Vida?
             </h3>
             <p className="text-sbie-forest-green mb-6">
-              Escolha o treinamento ideal para você e comece sua jornada de desenvolvimento emocional hoje mesmo.
+              Escolha o treinamento ideal para você e comece sua jornada de
+              desenvolvimento emocional hoje mesmo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
