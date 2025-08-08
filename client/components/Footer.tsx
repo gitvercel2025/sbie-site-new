@@ -34,10 +34,10 @@ export const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Youtube className="w-5 h-5" />, href: "#", label: "YouTube" },
+    { icon: <Facebook className="w-5 h-5" />, href: "https://www.facebook.com/sbie.oficial", label: "Facebook" },
+    { icon: <Instagram className="w-5 h-5" />, href: "https://www.instagram.com/sbie.oficial/", label: "Instagram" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/school/sbie/", label: "LinkedIn" },
+    { icon: <Youtube className="w-5 h-5" />, href: "https://www.youtube.com/sbiemocional", label: "YouTube" },
   ];
 
   const quickLinks = [
