@@ -118,14 +118,12 @@ export const ExclusiveContent = () => {
   };
 
   const nextSlide = () => {
-    const currentVisibleSlides = getVisibleSlides();
-    const maxSlide = contentItems.length - currentVisibleSlides;
+    const maxSlide = contentItems.length - 1;
     setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    const currentVisibleSlides = getVisibleSlides();
-    const maxSlide = contentItems.length - currentVisibleSlides;
+    const maxSlide = contentItems.length - 1;
     setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
   };
 
@@ -208,8 +206,8 @@ export const ExclusiveContent = () => {
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
-                  transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
-                  width: `${(contentItems.length * 100) / visibleSlides}%`,
+                  transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
+                  width: `${(contentItems.length * 100) / getVisibleSlides()}%`,
                 }}
               >
                 {contentItems.map((item, index) => (
@@ -290,7 +288,7 @@ export const ExclusiveContent = () => {
           {/* Progress Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {Array.from({
-              length: Math.max(1, contentItems.length - getVisibleSlides() + 1),
+              length: contentItems.length,
             }).map((_, index) => (
               <button
                 key={index}

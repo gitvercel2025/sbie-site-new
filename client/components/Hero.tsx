@@ -166,9 +166,9 @@ export const Hero = () => {
 
                 <div className="aspect-[4/5] rounded-2xl relative overflow-hidden">
                   <img
-                    src="https://i.imgur.com/tbrCvCe.jpeg"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F581de98a9d064ea5b854738a91d6c43f?format=webp&width=800"
                     alt="Rodrigo Fonseca - Fundador e Presidente da SBIE"
-                    className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105 hover:brightness-110"
+                    className="w-full h-full object-cover object-center transition-all duration-700 hover:scale-110 hover:brightness-115 hover:contrast-110 hover:saturate-125 cursor-pointer group-hover:filter group-hover:drop-shadow-2xl"
                   />
 
                   {/* Tech Scan Lines */}

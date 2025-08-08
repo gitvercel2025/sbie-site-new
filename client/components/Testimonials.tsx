@@ -81,14 +81,12 @@ export const Testimonials = () => {
   ];
 
   const nextSlide = () => {
-    const visibleSlides = getVisibleSlides();
-    const maxSlide = testimonials.length - visibleSlides;
+    const maxSlide = testimonials.length - 1;
     setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    const visibleSlides = getVisibleSlides();
-    const maxSlide = testimonials.length - visibleSlides;
+    const maxSlide = testimonials.length - 1;
     setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
   };
 
@@ -240,7 +238,7 @@ export const Testimonials = () => {
         {/* Dots Indicator */}
         <div className="flex justify-center mt-12 space-x-3">
           {Array.from({
-            length: Math.max(1, testimonials.length - getVisibleSlides() + 1),
+            length: testimonials.length,
           }).map((_, index) => (
             <button
               key={index}
