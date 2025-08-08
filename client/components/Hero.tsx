@@ -9,9 +9,32 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-sbie-beige via-sbie-beige/90 to-sbie-sage/20 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#21302B,transparent)]"></div>
+        {/* Animated Grid Pattern */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(182, 109, 56, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(182, 109, 56, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+            animation: 'grid-move 25s linear infinite'
+          }}
+        ></div>
+      </div>
+
+      {/* Glowing Orbs */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-sbie-bronze/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-40 h-40 bg-sbie-sage/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-sbie-beige/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+
+      {/* Scanning Lines */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-sbie-bronze/30 to-transparent animate-scan-vertical"></div>
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-sbie-sage/30 to-transparent animate-scan-horizontal"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
