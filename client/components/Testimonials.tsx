@@ -157,7 +157,7 @@ export const Testimonials = () => {
                       {/* Play Button Overlay */}
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-colors duration-300">
                         <button
-                          onClick={() => handleVideoPlay(testimonial.id)}
+                          onClick={() => handleVideoPlay(testimonial)}
                           className="w-16 h-16 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-2xl"
                         >
                           <Play className="w-6 h-6 text-white ml-1" />
