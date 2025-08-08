@@ -200,14 +200,14 @@ export const ExclusiveContent = () => {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
                   transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
-                  width: `${Math.ceil(contentItems.length / visibleSlides) * 100}%`,
+                  width: `${(contentItems.length * 100) / visibleSlides}%`,
                 }}
               >
                 {contentItems.map((item, index) => (
                   <div
                     key={item.id}
                     className="px-3 md:px-4"
-                    style={{ width: `${100 / Math.ceil(contentItems.length / visibleSlides)}%` }}
+                    style={{ width: `${100 / contentItems.length}%` }}
                   >
                     <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl hover:scale-105 transition-all duration-500 group h-full">
                       {/* Image */}
