@@ -14,53 +14,49 @@ export const MECBanner = () => {
   }, []);
 
   return (
-    <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-3 px-4 relative overflow-hidden transition-all duration-500 ${
+    <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-4 px-4 relative overflow-hidden transition-all duration-500 ${
       isAnimated ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
     }`}>
       {/* Background Pattern */}
       <div className={"absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"3\" cy=\"3\" r=\"3\"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"}></div>
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex items-center justify-center space-x-4">
           {/* Icon with animation */}
           <div className="flex-shrink-0">
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center animate-pulse">
-              <Award className="w-4 h-4 text-white" />
+            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
+              <Award className="w-5 h-5 text-white" />
             </div>
           </div>
 
-          {/* Text content */}
+          {/* Text content with enhanced animation */}
           <div className="flex-1 text-center">
-            <div className="flex items-center justify-center space-x-3">
-              <img 
-                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
-                alt="Selo MEC" 
-                className="h-6 w-auto"
+            <div className="flex items-center justify-center space-x-4 flex-wrap">
+              <img
+                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+                alt="Selo MEC"
+                className="h-8 w-auto animate-pulse"
               />
-              <span className="font-semibold text-sm sm:text-base">
-                🎓 Nossos treinamentos são reconhecidos pelo MEC - Ministério da Educação
-              </span>
-              <img 
-                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png" 
-                alt="Selo MEC" 
-                className="h-6 w-auto"
+              <div className="relative">
+                <span className="font-bold text-base sm:text-lg animate-pulse bg-white/10 px-4 py-2 rounded-full">
+                  🎓 Nossos treinamentos são reconhecidos pelo MEC - Ministério da Educação
+                </span>
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-30"></div>
+              </div>
+              <img
+                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+                alt="Selo MEC"
+                className="h-8 w-auto animate-pulse"
               />
             </div>
           </div>
-
-          {/* Close button */}
-          <button
-            onClick={handleClose}
-            className="flex-shrink-0 p-1 hover:bg-white/20 rounded-full transition-colors duration-200"
-            aria-label="Fechar aviso"
-          >
-            <X className="w-4 h-4 text-white" />
-          </button>
         </div>
       </div>
 
-      {/* Animated shine effect */}
-      <div className="absolute inset-0 -top-2 bg-gradient-to-r from-transparent via-white/10 to-transparent transform skew-x-12 translate-x-full animate-[shine_3s_ease-in-out_infinite]"></div>
+      {/* Multiple animated effects */}
+      <div className="absolute inset-0 -top-2 bg-gradient-to-r from-transparent via-white/10 to-transparent transform skew-x-12 translate-x-full animate-[shine_4s_ease-in-out_infinite]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5 animate-[slide_6s_ease-in-out_infinite]"></div>
     </div>
   );
 };
