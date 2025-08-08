@@ -73,7 +73,7 @@ export const ExclusiveContent = () => {
     {
       id: "3",
       title:
-        "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
+        "Lideran��a emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
       description:
         "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
       image: "https://i.imgur.com/OTiOK5A.png",
@@ -108,6 +108,20 @@ export const ExclusiveContent = () => {
       if (window.innerWidth >= 768) return 2;
     }
     return 1;
+  };
+
+  const nextSlide = () => {
+    const maxSlide = Math.ceil(contentItems.length / visibleSlides) - 1;
+    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    const maxSlide = Math.ceil(contentItems.length / visibleSlides) - 1;
+    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
   };
 
   const getCategoryIcon = (category: string) => {
