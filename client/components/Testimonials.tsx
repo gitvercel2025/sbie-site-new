@@ -92,8 +92,9 @@ export const Testimonials = () => {
     return 1;
   };
 
-  const handleVideoPlay = (videoId: string) => {
-    setIsPlaying(videoId);
+  const handleVideoPlay = (testimonial: TestimonialVideo) => {
+    // Abre o vídeo do YouTube em uma nova aba
+    window.open(testimonial.videoUrl, '_blank');
   };
 
   return (
