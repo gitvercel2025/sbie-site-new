@@ -10,16 +10,19 @@
 ### Opção 1: Deploy via CLI (Recomendado)
 
 1. **Instalar Vercel CLI** (se ainda não tiver):
+
 ```bash
 npm install -g vercel
 ```
 
 2. **Fazer login no Vercel**:
+
 ```bash
 vercel login
 ```
 
 3. **Fazer o deploy**:
+
 ```bash
 vercel
 ```
@@ -32,6 +35,7 @@ vercel
 ### Opção 2: Deploy via GitHub
 
 1. **Conectar repositório ao Vercel**:
+
    - Acesse https://vercel.com
    - Clique em "New Project"
    - Conecte sua conta GitHub
@@ -57,6 +61,7 @@ Se você tiver variáveis de ambiente, configure-as no painel do Vercel:
 ## Estrutura do Projeto
 
 O projeto está configurado com:
+
 - **Frontend**: React SPA na pasta `client/`
 - **Backend**: Express API na pasta `server/` (exposto via `/api/*`)
 - **Build Output**: `dist/spa/` para arquivos estáticos
@@ -71,11 +76,13 @@ O projeto está configurado com:
 Se houver problemas com o deploy:
 
 1. **Verificar logs**:
+
 ```bash
 vercel logs
 ```
 
 2. **Rebuild local**:
+
 ```bash
 npm run build
 ```
