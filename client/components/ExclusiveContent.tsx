@@ -73,7 +73,7 @@ export const ExclusiveContent = () => {
     {
       id: "3",
       title:
-        "Lideran��a emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
+        "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
       description:
         "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
       image: "https://i.imgur.com/OTiOK5A.png",
@@ -194,82 +194,104 @@ export const ExclusiveContent = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="overflow-hidden rounded-3xl">
-            <div
-              className="flex transition-transform duration-1000 ease-in-out"
-              style={{
-                transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
-                width: `${(contentItems.length / getVisibleSlides()) * 100}%`,
-              }}
-            >
-              {contentItems.map((item, index) => (
-                <div
-                  key={item.id}
-                  className="px-4"
-                  style={{ width: `${100 / contentItems.length}%` }}
-                >
-                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl hover:scale-105 transition-all duration-500 group h-full">
-                    {/* Image */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+          <div className="relative">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentSlide * (100 / visibleSlides)}%)`,
+                  width: `${Math.ceil(contentItems.length / visibleSlides) * 100}%`,
+                }}
+              >
+                {contentItems.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="px-3 md:px-4"
+                    style={{ width: `${100 / Math.ceil(contentItems.length / visibleSlides)}%` }}
+                  >
+                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl hover:scale-105 transition-all duration-500 group h-full">
+                      {/* Image */}
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                          loading="lazy"
+                        />
 
-                      {/* Category Badge */}
-                      <div
-                        className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}
-                      >
-                        {getCategoryIcon(item.category)}
-                        <span className="capitalize">{item.category}</span>
+                        {/* Category Badge */}
+                        <div
+                          className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}
+                        >
+                          {getCategoryIcon(item.category)}
+                          <span className="capitalize">{item.category}</span>
+                        </div>
+
+                        {/* Read Time */}
+                        {item.readTime && (
+                          <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                            {item.readTime}
+                          </div>
+                        )}
+
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
 
-                      {/* Read Time */}
-                      {item.readTime && (
-                        <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                          {item.readTime}
-                        </div>
-                      )}
+                      {/* Content */}
+                      <div className="p-6">
+                        <h3 className="text-lg md:text-xl font-bold text-sbie-dark-green mb-3 group-hover:text-sbie-bronze transition-colors duration-300 line-clamp-2">
+                          {item.title}
+                        </h3>
 
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
+                        <p className="text-sm md:text-base text-sbie-forest-green leading-relaxed mb-4 line-clamp-3">
+                          {item.description}
+                        </p>
 
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-sbie-dark-green mb-3 group-hover:text-sbie-bronze transition-colors duration-300 line-clamp-2">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-sbie-forest-green leading-relaxed mb-4 line-clamp-3">
-                        {item.description}
-                      </p>
-
-                      {/* Read More Button */}
-                      <button className="inline-flex items-center space-x-2 text-sbie-bronze hover:text-sbie-bronze/80 font-semibold transition-all duration-300 group-hover:translate-x-2">
-                        <span>Ler mais</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      </button>
+                        {/* Read More Button */}
+                        <button className="inline-flex items-center space-x-2 text-sbie-bronze hover:text-sbie-bronze/80 font-semibold transition-all duration-300 group-hover:translate-x-2 text-sm md:text-base">
+                          <span>Ler mais</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-10 h-10 md:w-12 md:h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
+              aria-label="Slide anterior"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-10 h-10 md:w-12 md:h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
+              aria-label="Próximo slide"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+            </button>
           </div>
 
           {/* Progress Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {Array.from({
-              length: Math.ceil(contentItems.length / getVisibleSlides()),
+              length: Math.ceil(contentItems.length / visibleSlides),
             }).map((_, index) => (
-              <div
+              <button
                 key={index}
-                className={`h-1 rounded-full transition-all duration-500 ${
+                onClick={() => goToSlide(index)}
+                className={`h-2 rounded-full transition-all duration-500 hover:scale-110 ${
                   currentSlide === index
                     ? "w-8 bg-sbie-bronze"
-                    : "w-4 bg-sbie-bronze/30"
+                    : "w-4 bg-sbie-bronze/30 hover:bg-sbie-bronze/50"
                 }`}
+                aria-label={`Ir para slide ${index + 1}`}
               />
             ))}
           </div>
