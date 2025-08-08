@@ -168,12 +168,16 @@ export const Hero = () => {
                 <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-sbie-bronze"></div>
                 <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-sbie-bronze"></div>
 
-                <div className="aspect-[4/5] rounded-2xl relative overflow-hidden">
+                <div className="aspect-[4/5] rounded-2xl relative overflow-hidden animate-photo-pulse">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F581de98a9d064ea5b854738a91d6c43f?format=webp&width=800"
                     alt="Rodrigo Fonseca - Fundador e Presidente da SBIE"
                     className="w-full h-full object-cover object-center transition-all duration-700 hover:scale-110 hover:brightness-115 hover:contrast-110 hover:saturate-125 cursor-pointer group-hover:filter group-hover:drop-shadow-2xl"
                   />
+
+                  {/* Photo Enhancement Effects */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-sbie-bronze/10 via-transparent to-sbie-sage/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-sbie-dark-green/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
 
                   {/* Tech Scan Lines */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sbie-bronze/10 to-transparent animate-scan-vertical opacity-50"></div>
