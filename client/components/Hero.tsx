@@ -2,9 +2,26 @@ import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  const fullText = "nunca procurou";
 
   useEffect(() => {
     setIsVisible(true);
+
+    // Typing effect para a segunda parte do título
+    let index = 0;
+    const timer = setTimeout(() => {
+      const typingInterval = setInterval(() => {
+        if (index < fullText.length) {
+          setTypedText(fullText.slice(0, index + 1));
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 100);
+    }, 1500); // Delay para começar depois que a animação inicial terminar
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
