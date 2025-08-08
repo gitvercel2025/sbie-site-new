@@ -114,18 +114,13 @@ export const AboutRodrigo = () => {
               
               {/* Main Image Container */}
               <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-sbie-bronze/20">
-                <div className="aspect-[4/5] bg-gradient-to-br from-sbie-beige to-sbie-sage/30 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                  {/* Placeholder for Rodrigo's photo */}
-                  <div className="text-center text-sbie-dark-green/60">
-                    <div className="w-40 h-40 bg-sbie-bronze/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <svg className="w-20 h-20 text-sbie-bronze" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                      </svg>
-                    </div>
-                    <p className="text-2xl font-bold">Rodrigo Fonseca</p>
-                    <p className="text-lg opacity-75">Fundador e Presidente</p>
-                  </div>
-                  
+                <div className="aspect-[4/5] rounded-2xl relative overflow-hidden">
+                  <img
+                    src="https://i.imgur.com/9a9VMCS.jpeg"
+                    alt="Rodrigo Fonseca - Presidente da Sociedade Brasileira de Inteligência Emocional"
+                    className="w-full h-full object-cover object-center"
+                  />
+
                   {/* Decorative border */}
                   <div className="absolute inset-0 rounded-2xl border-2 border-sbie-bronze/20"></div>
                 </div>
