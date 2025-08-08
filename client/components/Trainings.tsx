@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { ArrowRight, Star, Users, BookOpen, Building, Heart, Award } from "lucide-react";
+import { ArrowRight, Zap, Brain, Cpu, Users, Building, Heart, Sparkles, Target, Rocket, Atom } from "lucide-react";
 
 interface TrainingCardProps {
   title: string;
