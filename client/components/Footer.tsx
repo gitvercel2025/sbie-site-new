@@ -221,11 +221,14 @@ export const Footer = () => {
         }`}>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-sbie-beige/80 text-sm">
-                © 2025 SBIE - Sociedade Brasileira de Inteligência Emocional. Todos os direitos reservados.
+              <p className="text-sbie-beige/80 text-sm mb-2">
+                Copyright © 2025 Sbie - Todos os direitos reservados
+              </p>
+              <p className="text-sbie-beige/70 text-xs">
+                Rua Curupá, 595 - Anália Franco - São Paulo - SP - 03355-010
               </p>
             </div>
-            
+
             <div className="flex space-x-6 text-sm">
               <Link to="/politica-privacidade" className="text-sbie-beige/80 hover:text-sbie-bronze transition-colors duration-300">
                 Política de Privacidade
