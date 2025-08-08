@@ -14,14 +14,41 @@ export const MECBanner = () => {
   }, []);
 
   return (
-    <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-4 px-4 relative overflow-hidden transition-all duration-500 ${
+    <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-3 md:py-4 px-3 md:px-4 relative overflow-hidden transition-all duration-500 ${
       isAnimated ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
     }`}>
       {/* Background Pattern */}
       <div className={"absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"3\" cy=\"3\" r=\"3\"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"}></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex items-center justify-center space-x-4">
+        {/* Mobile Layout */}
+        <div className="block md:hidden">
+          <div className="flex flex-col items-center space-y-2 text-center">
+            <div className="flex items-center space-x-2">
+              <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
+                <Award className="w-3 h-3 text-white" />
+              </div>
+              <img
+                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+                alt="Selo MEC"
+                className="h-5 w-auto animate-pulse"
+              />
+            </div>
+            <div className="relative">
+              <span className="font-semibold text-sm animate-pulse bg-white/10 px-3 py-1 rounded-full block">
+                🎓 Reconhecido pelo MEC
+              </span>
+              <div className="text-xs mt-1 text-white/90">
+                Ministério da Educação
+              </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-white/20 rounded-full animate-ping opacity-30"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:flex items-center justify-center space-x-4">
           {/* Icon with animation */}
           <div className="flex-shrink-0">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center animate-bounce">
@@ -38,7 +65,7 @@ export const MECBanner = () => {
                 className="h-8 w-auto animate-pulse"
               />
               <div className="relative">
-                <span className="font-bold text-base sm:text-lg animate-pulse bg-white/10 px-4 py-2 rounded-full">
+                <span className="font-bold text-base lg:text-lg animate-pulse bg-white/10 px-4 py-2 rounded-full">
                   🎓 Nossos treinamentos são reconhecidos pelo MEC - Ministério da Educação
                 </span>
                 {/* Glow effect */}
