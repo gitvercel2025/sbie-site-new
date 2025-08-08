@@ -117,11 +117,15 @@ export const Hero = () => {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                Conheça Nossos Treinamentos
+              <button className="group bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/90 hover:to-sbie-bronze text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+                <span className="relative z-10">Conheça Nossos Treinamentos</span>
+                {/* Button Shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 translate-x-full group-hover:animate-shimmer-fast"></div>
               </button>
-              <button className="border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105">
-                Saiba Mais Sobre a SBIE
+              <button className="group border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden">
+                <span className="relative z-10">Saiba Mais Sobre a SBIE</span>
+                {/* Button Glow */}
+                <div className="absolute inset-0 bg-sbie-dark-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
           </div>
