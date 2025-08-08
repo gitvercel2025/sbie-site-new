@@ -21,7 +21,6 @@ export const ExclusiveContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,14 +38,6 @@ export const ExclusiveContent = () => {
 
     return () => observer.disconnect();
   }, []);
-
-  const getVisibleSlides = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 768) return 2;
-    }
-    return 1;
-  };
 
   const contentItems: ContentItem[] = [
     {
@@ -102,23 +93,11 @@ export const ExclusiveContent = () => {
   ];
 
   const nextSlide = () => {
-    const visibleSlides = getVisibleSlides();
-    const maxSlide = contentItems.length - visibleSlides;
-    if (currentSlide >= maxSlide) {
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide((prev) => prev + 1);
-    }
+    setCurrentSlide((prev) => (prev >= contentItems.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    const visibleSlides = getVisibleSlides();
-    const maxSlide = contentItems.length - visibleSlides;
-    if (currentSlide <= 0) {
-      setCurrentSlide(maxSlide);
-    } else {
-      setCurrentSlide((prev) => prev - 1);
-    }
+    setCurrentSlide((prev) => (prev <= 0 ? contentItems.length - 1 : prev - 1));
   };
 
   const goToSlide = (index: number) => {
@@ -189,101 +168,91 @@ export const ExclusiveContent = () => {
           </p>
         </div>
 
-        {/* Content Carousel */}
+        {/* Content Slide */}
         <div
           className={`relative transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="relative">
-            <div className="overflow-hidden" ref={scrollContainerRef}>
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
-                  width: `${(contentItems.length * 100) / getVisibleSlides()}%`,
-                }}
-              >
-                {contentItems.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className="px-3 md:px-4"
-                    style={{ width: `${100 / contentItems.length}%` }}
-                  >
-                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl hover:scale-105 transition-all duration-500 group h-full">
-                      {/* Image */}
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                          loading="lazy"
-                        />
+          <div className="relative max-w-4xl mx-auto">
+            {/* Current Slide */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/10 hover:shadow-2xl transition-all duration-500 group">
+              {contentItems.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`transition-all duration-500 ${
+                    currentSlide === index ? "block" : "hidden"
+                  }`}
+                >
+                  {/* Image */}
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      loading="lazy"
+                    />
 
-                        {/* Category Badge */}
-                        <div
-                          className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}
-                        >
-                          {getCategoryIcon(item.category)}
-                          <span className="capitalize">{item.category}</span>
-                        </div>
-
-                        {/* Read Time */}
-                        {item.readTime && (
-                          <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                            {item.readTime}
-                          </div>
-                        )}
-
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="p-6">
-                        <h3 className="text-lg md:text-xl font-bold text-sbie-dark-green mb-3 group-hover:text-sbie-bronze transition-colors duration-300 line-clamp-2">
-                          {item.title}
-                        </h3>
-
-                        <p className="text-sm md:text-base text-sbie-forest-green leading-relaxed mb-4 line-clamp-3">
-                          {item.description}
-                        </p>
-
-                        {/* Read More Button */}
-                        <button className="inline-flex items-center space-x-2 text-sbie-bronze hover:text-sbie-bronze/80 font-semibold transition-all duration-300 group-hover:translate-x-2 text-sm md:text-base">
-                          <span>Ler mais</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                        </button>
-                      </div>
+                    {/* Category Badge */}
+                    <div
+                      className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-4 py-2 rounded-full flex items-center space-x-2 text-sm font-medium`}
+                    >
+                      {getCategoryIcon(item.category)}
+                      <span className="capitalize">{item.category}</span>
                     </div>
+
+                    {/* Read Time */}
+                    {item.readTime && (
+                      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm">
+                        {item.readTime}
+                      </div>
+                    )}
+
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
-                ))}
-              </div>
+
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl md:text-3xl font-bold text-sbie-dark-green mb-4 group-hover:text-sbie-bronze transition-colors duration-300">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-base md:text-lg text-sbie-forest-green leading-relaxed mb-6">
+                      {item.description}
+                    </p>
+
+                    {/* Read More Button */}
+                    <button className="inline-flex items-center space-x-3 bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                      <span>Ler mais</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-10 h-10 md:w-12 md:h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
-              aria-label="Slide anterior"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 w-12 h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
+              aria-label="Artigo anterior"
             >
-              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              <ChevronLeft className="w-6 h-6 text-white" />
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-10 h-10 md:w-12 md:h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
-              aria-label="Próximo slide"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 w-12 h-12 bg-sbie-bronze hover:bg-sbie-bronze/90 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-xl z-10"
+              aria-label="Próximo artigo"
             >
-              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              <ChevronRight className="w-6 h-6 text-white" />
             </button>
           </div>
 
-          {/* Progress Indicators */}
+          {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({
-              length: Math.max(1, contentItems.length - getVisibleSlides() + 1),
-            }).map((_, index) => (
+            {contentItems.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
@@ -292,9 +261,16 @@ export const ExclusiveContent = () => {
                     ? "w-8 bg-sbie-bronze"
                     : "w-4 bg-sbie-bronze/30 hover:bg-sbie-bronze/50"
                 }`}
-                aria-label={`Ir para slide ${index + 1}`}
+                aria-label={`Ir para artigo ${index + 1}`}
               />
             ))}
+          </div>
+
+          {/* Slide Counter */}
+          <div className="text-center mt-4">
+            <span className="text-sbie-forest-green font-medium">
+              {currentSlide + 1} de {contentItems.length}
+            </span>
           </div>
         </div>
 
