@@ -152,7 +152,7 @@ export const Testimonials = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{
                 transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
-                width: `${(testimonials.length / getVisibleSlides()) * 100}%`,
+                width: `${(testimonials.length * 100) / getVisibleSlides()}%`,
               }}
             >
               {testimonials.map((testimonial, index) => (
