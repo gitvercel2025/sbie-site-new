@@ -33,31 +33,46 @@ export const Testimonials = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Sample testimonial data - replace with actual data
   const testimonials: TestimonialVideo[] = [
     {
       id: "1",
-      name: "Juliana Paes",
-      title: "Atriz",
-      thumbnail: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F0ac0538cfe29440cbeba00fa755d5e2b?format=webp&width=800",
-      videoUrl: "#",
-      quote: "Eu ganhei um entendimento que talvez nem a terapia tivesse me dado até aqui"
+      name: "Chris Flores",
+      title: "Apresentadora",
+      thumbnail: "https://img.youtube.com/vi/dKBKJjxy2J4/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=dKBKJjxy2J4",
+      quote: "O treinamento LOTUS me deu ferramentas práticas para lidar com as emoções"
     },
     {
-      id: "2", 
+      id: "2",
       name: "Wolf Maya",
       title: "Diretor e Ator",
-      thumbnail: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2Fc1b9a315b9164022ab111b20a5fdc9fb?format=webp&width=800",
-      videoUrl: "#",
+      thumbnail: "https://img.youtube.com/vi/ENhzSaMsOQI/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=ENhzSaMsOQI",
       quote: "A metodologia SBIE transformou completamente minha visão sobre liderança"
     },
     {
       id: "3",
-      name: "Chris Flores",
+      name: "Catia Fonseca",
       title: "Apresentadora",
-      thumbnail: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F8c5fbedd695c4573bbe07acedf27038b?format=webp&width=800",
-      videoUrl: "#",
-      quote: "O treinamento LOTUS me deu ferramentas práticas para lidar com as emoções"
+      thumbnail: "https://img.youtube.com/vi/5gCzTc34VVo/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=5gCzTc34VVo",
+      quote: "A inteligência emocional mudou minha forma de enxergar os relacionamentos"
+    },
+    {
+      id: "4",
+      name: "Scheila Carvalho",
+      title: "Dançarina e Apresentadora",
+      thumbnail: "https://img.youtube.com/vi/a9o4wfPvndI/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=a9o4wfPvndI",
+      quote: "Descobri o poder de transformar emoções em resultados positivos"
+    },
+    {
+      id: "5",
+      name: "Juliana Paes",
+      title: "Atriz",
+      thumbnail: "https://img.youtube.com/vi/ysF7fk1pjeQ/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=ysF7fk1pjeQ",
+      quote: "Eu ganhei um entendimento que talvez nem a terapia tivesse me dado até aqui"
     }
   ];
 
