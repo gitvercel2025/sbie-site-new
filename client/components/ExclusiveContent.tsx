@@ -22,7 +22,7 @@ export const ExclusiveContent = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -35,7 +35,10 @@ export const ExclusiveContent = () => {
   // Auto-rotate carousel
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % Math.ceil(contentItems.length / getVisibleSlides()));
+      setCurrentSlide(
+        (prev) =>
+          (prev + 1) % Math.ceil(contentItems.length / getVisibleSlides()),
+      );
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(timer);
@@ -44,48 +47,58 @@ export const ExclusiveContent = () => {
   const contentItems: ContentItem[] = [
     {
       id: "1",
-      title: "Inteligência emocional e saúde mental: estratégias para um ambiente de trabalho saudável",
-      description: "Descubra como implementar estratégias de inteligência emocional para criar um ambiente de trabalho mais saudável e produtivo.",
+      title:
+        "Inteligência emocional e saúde mental: estratégias para um ambiente de trabalho saudável",
+      description:
+        "Descubra como implementar estratégias de inteligência emocional para criar um ambiente de trabalho mais saudável e produtivo.",
       image: "https://i.imgur.com/PutfwSD.png",
       category: "article",
-      readTime: "10 min"
+      readTime: "10 min",
     },
     {
       id: "2",
-      title: "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
-      description: "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
+      title:
+        "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
+      description:
+        "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
       image: "https://i.imgur.com/AIrq70I.png",
       category: "insight",
-      readTime: "6 min"
+      readTime: "6 min",
     },
     {
       id: "3",
-      title: "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
-      description: "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
+      title:
+        "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
+      description:
+        "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
       image: "https://i.imgur.com/OTiOK5A.png",
       category: "article",
-      readTime: "12 min"
+      readTime: "12 min",
     },
     {
       id: "4",
-      title: "Como desenvolver a autoconsciência emocional para melhorar a tomada de decisão",
-      description: "Descubra técnicas comprovadas para aumentar sua autoconsciência e tomar decisões mais assertivas em sua vida pessoal e profissional.",
+      title:
+        "Como desenvolver a autoconsciência emocional para melhorar a tomada de decisão",
+      description:
+        "Descubra técnicas comprovadas para aumentar sua autoconsciência e tomar decisões mais assertivas em sua vida pessoal e profissional.",
       image: "https://i.imgur.com/yuhrcYq.png",
       category: "article",
-      readTime: "8 min"
+      readTime: "8 min",
     },
     {
       id: "5",
-      title: "Inteligência emocional e Geração Z: como eles estão buscando essa soft skill",
-      description: "Compreenda como a Geração Z está priorizando o desenvolvimento da inteligência emocional no ambiente profissional.",
+      title:
+        "Inteligência emocional e Geração Z: como eles estão buscando essa soft skill",
+      description:
+        "Compreenda como a Geração Z está priorizando o desenvolvimento da inteligência emocional no ambiente profissional.",
       image: "https://i.imgur.com/Nun0Ujc.png",
       category: "insight",
-      readTime: "7 min"
-    }
+      readTime: "7 min",
+    },
   ];
 
   const getVisibleSlides = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.innerWidth >= 1024) return 3;
       if (window.innerWidth >= 768) return 2;
     }
@@ -94,24 +107,35 @@ export const ExclusiveContent = () => {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case "article": return <BookOpen className="w-4 h-4" />;
-      case "video": return <Video className="w-4 h-4" />;
-      case "insight": return <Lightbulb className="w-4 h-4" />;
-      default: return <BookOpen className="w-4 h-4" />;
+      case "article":
+        return <BookOpen className="w-4 h-4" />;
+      case "video":
+        return <Video className="w-4 h-4" />;
+      case "insight":
+        return <Lightbulb className="w-4 h-4" />;
+      default:
+        return <BookOpen className="w-4 h-4" />;
     }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "article": return "bg-sbie-bronze";
-      case "video": return "bg-sbie-sage";
-      case "insight": return "bg-sbie-forest-green";
-      default: return "bg-sbie-bronze";
+      case "article":
+        return "bg-sbie-bronze";
+      case "video":
+        return "bg-sbie-sage";
+      case "insight":
+        return "bg-sbie-forest-green";
+      default:
+        return "bg-sbie-bronze";
     }
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-sbie-beige/20 via-white to-sbie-sage/10 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-20 bg-gradient-to-br from-sbie-beige/20 via-white to-sbie-sage/10 relative overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_0%_50%,#21302B,transparent)]"></div>
@@ -119,14 +143,18 @@ export const ExclusiveContent = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="inline-flex items-center space-x-2 bg-sbie-bronze/10 px-6 py-3 rounded-full mb-6">
             <BookOpen className="w-5 h-5 text-sbie-bronze" />
-            <span className="text-sbie-bronze font-semibold">Conteúdo Exclusivo</span>
+            <span className="text-sbie-bronze font-semibold">
+              Conteúdo Exclusivo
+            </span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
             Acompanhe conteúdos{" "}
             <span className="text-sbie-bronze relative">
@@ -134,22 +162,25 @@ export const ExclusiveContent = () => {
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
             </span>
           </h2>
-          
+
           <p className="text-xl text-sbie-forest-green max-w-4xl mx-auto">
-            Artigos, vídeos e insights para acelerar sua jornada de desenvolvimento pessoal e profissional.
+            Artigos, vídeos e insights para acelerar sua jornada de
+            desenvolvimento pessoal e profissional.
           </p>
         </div>
 
         {/* Content Carousel */}
-        <div className={`relative transition-all duration-1000 delay-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`relative transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="overflow-hidden rounded-3xl">
-            <div 
+            <div
               className="flex transition-transform duration-1000 ease-in-out"
-              style={{ 
+              style={{
                 transform: `translateX(-${currentSlide * (100 / getVisibleSlides())}%)`,
-                width: `${(contentItems.length / getVisibleSlides()) * 100}%`
+                width: `${(contentItems.length / getVisibleSlides()) * 100}%`,
               }}
             >
               {contentItems.map((item, index) => (
@@ -166,9 +197,11 @@ export const ExclusiveContent = () => {
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
-                      
+
                       {/* Category Badge */}
-                      <div className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}>
+                      <div
+                        className={`absolute top-4 left-4 ${getCategoryColor(item.category)} text-white px-3 py-1 rounded-full flex items-center space-x-1 text-sm font-medium`}
+                      >
                         {getCategoryIcon(item.category)}
                         <span className="capitalize">{item.category}</span>
                       </div>
@@ -189,7 +222,7 @@ export const ExclusiveContent = () => {
                       <h3 className="text-xl font-bold text-sbie-dark-green mb-3 group-hover:text-sbie-bronze transition-colors duration-300 line-clamp-2">
                         {item.title}
                       </h3>
-                      
+
                       <p className="text-sbie-forest-green leading-relaxed mb-4 line-clamp-3">
                         {item.description}
                       </p>
@@ -208,13 +241,15 @@ export const ExclusiveContent = () => {
 
           {/* Progress Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
-            {Array.from({ length: Math.ceil(contentItems.length / getVisibleSlides()) }).map((_, index) => (
+            {Array.from({
+              length: Math.ceil(contentItems.length / getVisibleSlides()),
+            }).map((_, index) => (
               <div
                 key={index}
                 className={`h-1 rounded-full transition-all duration-500 ${
-                  currentSlide === index 
-                    ? 'w-8 bg-sbie-bronze' 
-                    : 'w-4 bg-sbie-bronze/30'
+                  currentSlide === index
+                    ? "w-8 bg-sbie-bronze"
+                    : "w-4 bg-sbie-bronze/30"
                 }`}
               />
             ))}
@@ -222,17 +257,20 @@ export const ExclusiveContent = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-500 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div
+          className={`text-center mt-16 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 max-w-3xl mx-auto shadow-xl border border-sbie-bronze/20">
             <h3 className="text-2xl font-bold text-sbie-dark-green mb-4">
               Quer Mais Conteúdo Exclusivo?
             </h3>
             <p className="text-sbie-forest-green mb-6">
-              Inscreva-se em nossa newsletter e receba semanalmente artigos, vídeos e insights direto em seu e-mail.
+              Inscreva-se em nossa newsletter e receba semanalmente artigos,
+              vídeos e insights direto em seu e-mail.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"

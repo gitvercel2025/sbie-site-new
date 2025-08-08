@@ -1,5 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import { Award, BookOpen, Users, Trophy, Star, GraduationCap } from "lucide-react";
+import {
+  Award,
+  BookOpen,
+  Users,
+  Trophy,
+  Star,
+  GraduationCap,
+} from "lucide-react";
 
 interface AchievementItemProps {
   icon: React.ReactNode;
@@ -18,7 +25,7 @@ const AchievementItem = ({ icon, text, index }: AchievementItemProps) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (itemRef.current) {
@@ -32,16 +39,12 @@ const AchievementItem = ({ icon, text, index }: AchievementItemProps) => {
     <div
       ref={itemRef}
       className={`flex items-start space-x-4 transition-all duration-700 transform ${
-        isVisible 
-          ? 'opacity-100 translate-x-0' 
-          : 'opacity-0 -translate-x-8'
+        isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="w-12 h-12 bg-gradient-to-br from-sbie-bronze to-sbie-bronze/70 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
-        <div className="text-white">
-          {icon}
-        </div>
+        <div className="text-white">{icon}</div>
       </div>
       <p className="text-sbie-forest-green text-lg leading-relaxed pt-2">
         {text}
@@ -61,7 +64,7 @@ export const AboutRodrigo = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (sectionRef.current) {
@@ -74,28 +77,31 @@ export const AboutRodrigo = () => {
   const achievements = [
     {
       icon: <Trophy className="w-6 h-6" />,
-      text: "Idealizador do Treinamento LOTUS Inteligência Emocional"
+      text: "Idealizador do Treinamento LOTUS Inteligência Emocional",
     },
     {
       icon: <GraduationCap className="w-6 h-6" />,
-      text: "Criador da primeira Formação em Inteligência Emocional do Brasil"
+      text: "Criador da primeira Formação em Inteligência Emocional do Brasil",
     },
     {
       icon: <BookOpen className="w-6 h-6" />,
-      text: "Fundador da primeira Academia Emocional Online"
+      text: "Fundador da primeira Academia Emocional Online",
     },
     {
       icon: <Users className="w-6 h-6" />,
-      text: "Criador do maior evento de IE da América Latina: Conexão!"
+      text: "Criador do maior evento de IE da América Latina: Conexão!",
     },
     {
       icon: <Star className="w-6 h-6" />,
-      text: "Maior influenciador digital em Inteligência Emocional"
-    }
+      text: "Maior influenciador digital em Inteligência Emocional",
+    },
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-sbie-beige/20 via-white to-sbie-sage/5 relative overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="py-20 bg-gradient-to-br from-sbie-beige/20 via-white to-sbie-sage/5 relative overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-200px,#21302B,transparent)]"></div>
@@ -104,14 +110,18 @@ export const AboutRodrigo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Photo */}
-          <div className={`relative transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-          }`}>
+          <div
+            className={`relative transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
+          >
             <div className="relative">
               {/* Decorative Background */}
               <div className="absolute -top-8 -left-8 w-full h-full bg-gradient-to-br from-sbie-bronze/20 to-sbie-sage/20 rounded-3xl transform rotate-3"></div>
               <div className="absolute -bottom-8 -right-8 w-full h-full bg-gradient-to-br from-sbie-sage/20 to-sbie-bronze/20 rounded-3xl transform -rotate-3"></div>
-              
+
               {/* Main Image Container */}
               <div className="relative bg-white rounded-3xl p-8 shadow-2xl border border-sbie-bronze/20">
                 <div className="aspect-[4/5] rounded-2xl relative overflow-hidden">
@@ -133,14 +143,20 @@ export const AboutRodrigo = () => {
           </div>
 
           {/* Right Column - Content */}
-          <div className={`space-y-8 transition-all duration-1000 delay-300 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-          }`}>
+          <div
+            className={`space-y-8 transition-all duration-1000 delay-300 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+            }`}
+          >
             {/* Header */}
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 bg-sbie-bronze/10 px-6 py-3 rounded-full">
                 <Award className="w-5 h-5 text-sbie-bronze" />
-                <span className="text-sbie-bronze font-semibold">Sobre o Fundador</span>
+                <span className="text-sbie-bronze font-semibold">
+                  Sobre o Fundador
+                </span>
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green">
@@ -159,27 +175,44 @@ export const AboutRodrigo = () => {
             {/* Description */}
             <div className="space-y-6 text-lg text-sbie-forest-green leading-relaxed">
               <p>
-                Rodrigo Fonseca possui mais de <strong className="text-sbie-bronze">26 anos de carreira</strong> como Mentor emocional 
-                e já transformou a vida de mais de <strong className="text-sbie-bronze">200 mil pessoas</strong> com a Inteligência Emocional, 
-                dentre elas Juliana Paes, Wolf Maya, Júlio Cocielo e muitas outras personalidades.
+                Rodrigo Fonseca possui mais de{" "}
+                <strong className="text-sbie-bronze">
+                  26 anos de carreira
+                </strong>{" "}
+                como Mentor emocional e já transformou a vida de mais de{" "}
+                <strong className="text-sbie-bronze">200 mil pessoas</strong>{" "}
+                com a Inteligência Emocional, dentre elas Juliana Paes, Wolf
+                Maya, Júlio Cocielo e muitas outras personalidades.
               </p>
 
               <p>
-                <strong className="text-sbie-dark-green">Mestrando pela Florida Christian University (FCU)</strong> em Neuromarketing, 
-                <strong className="text-sbie-dark-green"> Comunicólogo formado pela Universidade de São Paulo (USP)</strong> e membro da 
-                International Society for Emotional Intelligence.
+                <strong className="text-sbie-dark-green">
+                  Mestrando pela Florida Christian University (FCU)
+                </strong>{" "}
+                em Neuromarketing,
+                <strong className="text-sbie-dark-green">
+                  {" "}
+                  Comunicólogo formado pela Universidade de São Paulo (USP)
+                </strong>{" "}
+                e membro da International Society for Emotional Intelligence.
               </p>
 
               <p>
-                Palestrante para milhares de pessoas nas principais empresas do Brasil e exterior. 
-                <strong className="text-sbie-dark-green"> Professor Convidado da FGV no MBA de C-Levels</strong> e 
-                Conselheiro no Instituto Êxito de Empreendedorismo.
+                Palestrante para milhares de pessoas nas principais empresas do
+                Brasil e exterior.
+                <strong className="text-sbie-dark-green">
+                  {" "}
+                  Professor Convidado da FGV no MBA de C-Levels
+                </strong>{" "}
+                e Conselheiro no Instituto Êxito de Empreendedorismo.
               </p>
             </div>
 
             {/* Achievements */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-sbie-dark-green">Principais Realizações</h3>
+              <h3 className="text-2xl font-bold text-sbie-dark-green">
+                Principais Realizações
+              </h3>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
                   <AchievementItem
