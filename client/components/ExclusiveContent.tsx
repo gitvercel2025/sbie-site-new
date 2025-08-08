@@ -44,27 +44,43 @@ export const ExclusiveContent = () => {
   const contentItems: ContentItem[] = [
     {
       id: "1",
+      title: "Inteligência emocional e saúde mental: estratégias para um ambiente de trabalho saudável",
+      description: "Descubra como implementar estratégias de inteligência emocional para criar um ambiente de trabalho mais saudável e produtivo.",
+      image: "https://i.imgur.com/PutfwSD.png",
+      category: "article",
+      readTime: "10 min"
+    },
+    {
+      id: "2",
+      title: "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
+      description: "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
+      image: "https://i.imgur.com/AIrq70I.png",
+      category: "insight",
+      readTime: "6 min"
+    },
+    {
+      id: "3",
+      title: "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
+      description: "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
+      image: "https://i.imgur.com/OTiOK5A.png",
+      category: "article",
+      readTime: "12 min"
+    },
+    {
+      id: "4",
       title: "Como desenvolver a autoconsciência emocional para melhorar a tomada de decisão",
       description: "Descubra técnicas comprovadas para aumentar sua autoconsciência e tomar decisões mais assertivas em sua vida pessoal e profissional.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2Fd3e06e07e6b847d184015fc3d8c80c0c?format=webp&width=800",
+      image: "https://i.imgur.com/yuhrcYq.png",
       category: "article",
       readTime: "8 min"
     },
     {
-      id: "2",
-      title: "Liderança emocionalmente inteligente: o futuro da gestão em ambientes híbridos",
-      description: "Explore as competências essenciais para liderar equipes com inteligência emocional no novo mundo do trabalho híbrido.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2F0ac0538cfe29440cbeba00fa755d5e2b?format=webp&width=800",
-      category: "video",
-      readTime: "12 min"
-    },
-    {
-      id: "3",
-      title: "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
-      description: "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F001294cde81c4a5aa1868dd0c3aedb02%2Fc1b9a315b9164022ab111b20a5fdc9fb?format=webp&width=800",
+      id: "5",
+      title: "Inteligência emocional e Geração Z: como eles estão buscando essa soft skill",
+      description: "Compreenda como a Geração Z está priorizando o desenvolvimento da inteligência emocional no ambiente profissional.",
+      image: "https://i.imgur.com/Nun0Ujc.png",
       category: "insight",
-      readTime: "6 min"
+      readTime: "7 min"
     }
   ];
 
