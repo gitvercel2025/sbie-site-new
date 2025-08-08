@@ -111,12 +111,14 @@ export const ExclusiveContent = () => {
   };
 
   const nextSlide = () => {
-    const maxSlide = contentItems.length - visibleSlides;
+    const currentVisibleSlides = getVisibleSlides();
+    const maxSlide = contentItems.length - currentVisibleSlides;
     setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    const maxSlide = contentItems.length - visibleSlides;
+    const currentVisibleSlides = getVisibleSlides();
+    const maxSlide = contentItems.length - currentVisibleSlides;
     setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
   };
 
