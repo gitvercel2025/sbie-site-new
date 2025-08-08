@@ -101,22 +101,24 @@ export const ExclusiveContent = () => {
     },
   ];
 
-  const getVisibleSlides = () => {
-    if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 768) return 2;
-    }
-    return 1;
-  };
-
   const nextSlide = () => {
-    const maxSlide = contentItems.length - 1;
-    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = contentItems.length - visibleSlides;
+    if (currentSlide >= maxSlide) {
+      setCurrentSlide(0);
+    } else {
+      setCurrentSlide(prev => prev + 1);
+    }
   };
 
   const prevSlide = () => {
-    const maxSlide = contentItems.length - 1;
-    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = contentItems.length - visibleSlides;
+    if (currentSlide <= 0) {
+      setCurrentSlide(maxSlide);
+    } else {
+      setCurrentSlide(prev => prev - 1);
+    }
   };
 
   const goToSlide = (index: number) => {
