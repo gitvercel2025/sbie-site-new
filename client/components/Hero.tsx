@@ -91,15 +91,6 @@ export const Hero = () => {
                   sua vida e alcançar resultados.
                 </p>
 
-                {/* Data Streams */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                  <div className="absolute top-1/4 left-6 text-sbie-bronze/30 text-xs font-mono animate-pulse">
-                    [TRANSFORMING...]
-                  </div>
-                  <div className="absolute bottom-1/4 right-6 text-sbie-sage/30 text-xs font-mono animate-pulse delay-500">
-                    [EVOLVING...]
-                  </div>
-                </div>
               </div>
             </div>
 
