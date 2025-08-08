@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { X, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
 export const MECBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
@@ -13,12 +12,6 @@ export const MECBanner = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
 
   return (
     <div className={`bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 text-white py-3 px-4 relative overflow-hidden transition-all duration-500 ${
