@@ -154,9 +154,13 @@ export const Hero = () => {
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sbie-sage/20 rounded-full blur-xl animate-pulse delay-1000"></div>
 
               {/* Futuristic Photo Container */}
-              <div className="relative bg-gradient-to-br from-white/80 to-sbie-beige/30 rounded-3xl p-8 shadow-2xl border-2 border-sbie-bronze/30 backdrop-blur-sm">
+              <div className="relative bg-gradient-to-br from-white/80 to-sbie-beige/30 rounded-3xl p-8 shadow-2xl border-2 border-sbie-bronze/30 backdrop-blur-sm animate-photo-glow group">
                 {/* Holographic Frame Effects */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sbie-bronze/10 to-transparent transform skew-x-12 translate-x-full animate-shimmer"></div>
+                <div className="absolute inset-0 rounded-3xl animate-holographic-shift"></div>
+
+                {/* Energy Aura Effect */}
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-sbie-bronze/20 via-transparent to-sbie-sage/20 animate-photo-energy"></div>
 
                 {/* Tech Corner Elements */}
                 <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-sbie-bronze"></div>
