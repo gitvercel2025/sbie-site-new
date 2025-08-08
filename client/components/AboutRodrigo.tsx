@@ -128,7 +128,7 @@ export const AboutRodrigo = () => {
                   <img
                     src="https://i.imgur.com/9a9VMCS.jpeg"
                     alt="Rodrigo Fonseca - Presidente da Sociedade Brasileira de Inteligência Emocional"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105 hover:brightness-110 hover:shadow-2xl"
                   />
 
                   {/* Decorative border */}
