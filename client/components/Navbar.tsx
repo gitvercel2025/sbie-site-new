@@ -56,6 +56,7 @@ const DropdownMenu = ({
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
   const toggleDropdown = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
