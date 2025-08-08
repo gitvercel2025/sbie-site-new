@@ -167,7 +167,7 @@ export const Hero = () => {
                   <img
                     src="https://i.imgur.com/tbrCvCe.jpeg"
                     alt="Rodrigo Fonseca - Fundador e Presidente da SBIE"
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105 hover:brightness-110"
                   />
 
                   {/* Tech Scan Lines */}
