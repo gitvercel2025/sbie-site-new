@@ -13,6 +13,7 @@ interface ContentItem {
 export const ExclusiveContent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(1);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,17 +33,21 @@ export const ExclusiveContent = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Auto-rotate carousel
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide(
-        (prev) =>
-          (prev + 1) % Math.ceil(contentItems.length / getVisibleSlides()),
-      );
-    }, 4000); // Change slide every 4 seconds
+    const updateVisibleSlides = () => {
+      const slides = getVisibleSlides();
+      setVisibleSlides(slides);
+      // Reset currentSlide if it's beyond the new max
+      const maxSlide = Math.ceil(contentItems.length / slides) - 1;
+      if (currentSlide > maxSlide) {
+        setCurrentSlide(0);
+      }
+    };
 
-    return () => clearInterval(timer);
-  }, []);
+    updateVisibleSlides();
+    window.addEventListener('resize', updateVisibleSlides);
+    return () => window.removeEventListener('resize', updateVisibleSlides);
+  }, [currentSlide]);
 
   const contentItems: ContentItem[] = [
     {
