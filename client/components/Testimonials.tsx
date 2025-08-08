@@ -81,13 +81,23 @@ export const Testimonials = () => {
   ];
 
   const nextSlide = () => {
-    const maxSlide = testimonials.length - 1;
-    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = testimonials.length - visibleSlides;
+    if (currentSlide >= maxSlide) {
+      setCurrentSlide(0);
+    } else {
+      setCurrentSlide(prev => prev + 1);
+    }
   };
 
   const prevSlide = () => {
-    const maxSlide = testimonials.length - 1;
-    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = testimonials.length - visibleSlides;
+    if (currentSlide <= 0) {
+      setCurrentSlide(maxSlide);
+    } else {
+      setCurrentSlide(prev => prev - 1);
+    }
   };
 
   const getVisibleSlides = () => {
