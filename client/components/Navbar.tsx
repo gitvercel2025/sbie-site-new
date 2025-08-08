@@ -185,80 +185,105 @@ export const Navbar = () => {
         >
           <div className="space-y-2">
             <div className="border-t border-sbie-beige/20 pt-4">
-              {/* Quem Somos Section */}
-              <div className="mb-4">
-                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
-                  Quem Somos
-                </h4>
-                {quemSomosItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              {/* Quem Somos Dropdown */}
+              <div className="mb-2">
+                <button
+                  onClick={() => toggleMobileDropdown('quem-somos')}
+                  className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  <span className="font-medium">Quem Somos</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'quem-somos' ? 'rotate-180' : ''}`} />
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'quem-somos' ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  {quemSomosItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.href}
+                      className="block px-8 py-2 text-white/80 hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
-              {/* Treinamentos Section */}
-              <div className="mb-4">
-                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
-                  Treinamentos
-                </h4>
-                {treinamentosItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              {/* Treinamentos Dropdown */}
+              <div className="mb-2">
+                <button
+                  onClick={() => toggleMobileDropdown('treinamentos')}
+                  className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  <span className="font-medium">Treinamentos</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'treinamentos' ? 'rotate-180' : ''}`} />
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'treinamentos' ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  {treinamentosItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.href}
+                      className="block px-8 py-2 text-white/80 hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
-              {/* Online Section */}
-              <div className="mb-4">
-                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
-                  Online
-                </h4>
-                {onlineItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+              {/* Online Dropdown */}
+              <div className="mb-2">
+                <button
+                  onClick={() => toggleMobileDropdown('online')}
+                  className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  <span className="font-medium">Online</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${openMobileDropdown === 'online' ? 'rotate-180' : ''}`} />
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${openMobileDropdown === 'online' ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  {onlineItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      to={item.href}
+                      className="block px-8 py-2 text-white/80 hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
               {/* Other Links */}
-              <div className="border-t border-sbie-beige/20 pt-4">
+              <div className="border-t border-sbie-beige/20 pt-4 mt-4">
                 <Link
                   to="/blog"
-                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Blog
                 </Link>
                 <Link
                   to="/imprensa"
-                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Imprensa
                 </Link>
                 <Link
                   to="/store"
-                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Store
                 </Link>
-                <Link
-                  to="/contato"
+                <a
+                  href="#contact"
                   className="block mx-4 mt-4 px-6 py-3 bg-sbie-bronze text-white rounded-full hover:bg-sbie-bronze/90 transition-all duration-300 text-center font-medium"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Contato
-                </Link>
+                </a>
               </div>
             </div>
           </div>
