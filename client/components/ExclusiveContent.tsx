@@ -196,7 +196,7 @@ export const ExclusiveContent = () => {
           }`}
         >
           <div className="relative">
-            <div className="overflow-hidden">
+            <div className="overflow-hidden" ref={scrollContainerRef}>
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{
