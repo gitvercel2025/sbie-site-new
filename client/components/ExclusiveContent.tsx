@@ -40,21 +40,13 @@ export const ExclusiveContent = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const updateVisibleSlides = () => {
-      const slides = getVisibleSlides();
-      setVisibleSlides(slides);
-      // Reset currentSlide if it's beyond the new max
-      const maxSlide = Math.ceil(contentItems.length / slides) - 1;
-      if (currentSlide > maxSlide) {
-        setCurrentSlide(0);
-      }
-    };
-
-    updateVisibleSlides();
-    window.addEventListener("resize", updateVisibleSlides);
-    return () => window.removeEventListener("resize", updateVisibleSlides);
-  }, [currentSlide]);
+  const getVisibleSlides = () => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+    }
+    return 1;
+  };
 
   const contentItems: ContentItem[] = [
     {
