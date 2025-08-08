@@ -179,30 +179,81 @@ export const Navbar = () => {
         >
           <div className="space-y-2">
             <div className="border-t border-sbie-beige/20 pt-4">
-              <Link
-                to="/blog"
-                className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
-              >
-                Blog
-              </Link>
-              <Link
-                to="/imprensa"
-                className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
-              >
-                Imprensa
-              </Link>
-              <Link
-                to="/store"
-                className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
-              >
-                Store
-              </Link>
-              <Link
-                to="/contato"
-                className="block mx-4 mt-4 px-6 py-3 bg-sbie-bronze text-white rounded-full hover:bg-sbie-bronze/90 transition-all duration-300 text-center font-medium"
-              >
-                Contato
-              </Link>
+              {/* Quem Somos Section */}
+              <div className="mb-4">
+                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
+                  Quem Somos
+                </h4>
+                {quemSomosItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Treinamentos Section */}
+              <div className="mb-4">
+                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
+                  Treinamentos
+                </h4>
+                {treinamentosItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Online Section */}
+              <div className="mb-4">
+                <h4 className="px-4 py-2 text-sbie-beige font-semibold text-sm uppercase tracking-wide">
+                  Online
+                </h4>
+                {onlineItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className="block px-6 py-2 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Other Links */}
+              <div className="border-t border-sbie-beige/20 pt-4">
+                <Link
+                  to="/blog"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  Blog
+                </Link>
+                <Link
+                  to="/imprensa"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  Imprensa
+                </Link>
+                <Link
+                  to="/store"
+                  className="block px-4 py-3 text-white hover:bg-sbie-beige/10 hover:text-sbie-beige transition-all duration-200 rounded-lg"
+                >
+                  Store
+                </Link>
+                <Link
+                  to="/contato"
+                  className="block mx-4 mt-4 px-6 py-3 bg-sbie-bronze text-white rounded-full hover:bg-sbie-bronze/90 transition-all duration-300 text-center font-medium"
+                >
+                  Contato
+                </Link>
+              </div>
             </div>
           </div>
         </div>
