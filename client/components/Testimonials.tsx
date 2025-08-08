@@ -248,7 +248,7 @@ export const Testimonials = () => {
         {/* Dots Indicator */}
         <div className="flex justify-center mt-12 space-x-3">
           {Array.from({
-            length: testimonials.length,
+            length: Math.max(1, testimonials.length - getVisibleSlides() + 1),
           }).map((_, index) => (
             <button
               key={index}
