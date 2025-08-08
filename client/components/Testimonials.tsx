@@ -81,18 +81,15 @@ export const Testimonials = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide(
-      (prev) =>
-        (prev + 1) % Math.ceil(testimonials.length / getVisibleSlides()),
-    );
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = testimonials.length - visibleSlides;
+    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
-      (prev) =>
-        (prev - 1 + Math.ceil(testimonials.length / getVisibleSlides())) %
-        Math.ceil(testimonials.length / getVisibleSlides()),
-    );
+    const visibleSlides = getVisibleSlides();
+    const maxSlide = testimonials.length - visibleSlides;
+    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
   };
 
   const getVisibleSlides = () => {
