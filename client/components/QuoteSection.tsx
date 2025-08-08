@@ -117,13 +117,13 @@ export const QuoteSection = () => {
               {/* Data Streams */}
               <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                 <div className="absolute top-1/4 left-8 text-sbie-bronze/30 text-xs font-mono animate-pulse">
-                  [ANALYZING...]
+                  [ANALISANDO...]
                 </div>
                 <div className="absolute top-3/4 right-8 text-sbie-sage/30 text-xs font-mono animate-pulse delay-1000">
-                  [TRANSFORMING...]
+                  [TRANSFORMANDO...]
                 </div>
                 <div className="absolute bottom-1/4 left-1/2 text-sbie-beige/30 text-xs font-mono animate-pulse delay-500 transform -translate-x-1/2">
-                  [EVOLVING...]
+                  [EVOLUINDO...]
                 </div>
               </div>
             </div>
