@@ -79,7 +79,8 @@ export const Hero = () => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sbie-dark-green leading-tight relative z-10">
                   A resposta que você tanto busca, está no lugar que você{" "}
                   <span className="text-sbie-bronze relative inline-block">
-                    nunca procurou
+                    {typedText}
+                    <span className="animate-pulse">|</span>
                     <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/50 rounded-full animate-pulse"></div>
                   </span>
                 </h1>
