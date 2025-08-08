@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ArrowRight, BookOpen, Video, Lightbulb } from "lucide-react";
+import { ArrowRight, BookOpen, Video, Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ContentItem {
   id: string;
