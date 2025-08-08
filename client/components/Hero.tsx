@@ -196,11 +196,6 @@ export const Hero = () => {
                     Fundador e Presidente da SBIE
                   </p>
 
-                  {/* Data Display */}
-                  <div className="flex justify-center space-x-4 mt-2 text-xs text-sbie-bronze/70 font-mono">
-                    <span>[ID: FOUNDER_001]</span>
-                    <span>[STATUS: ACTIVE]</span>
-                  </div>
                 </div>
 
                 {/* Floating Particles */}
