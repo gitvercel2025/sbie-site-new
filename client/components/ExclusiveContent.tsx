@@ -283,7 +283,7 @@ export const ExclusiveContent = () => {
           {/* Progress Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {Array.from({
-              length: contentItems.length - visibleSlides + 1,
+              length: Math.max(1, contentItems.length - getVisibleSlides() + 1),
             }).map((_, index) => (
               <button
                 key={index}
