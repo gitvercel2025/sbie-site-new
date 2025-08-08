@@ -107,7 +107,7 @@ export const ExclusiveContent = () => {
     if (currentSlide >= maxSlide) {
       setCurrentSlide(0);
     } else {
-      setCurrentSlide(prev => prev + 1);
+      setCurrentSlide((prev) => prev + 1);
     }
   };
 
@@ -117,7 +117,7 @@ export const ExclusiveContent = () => {
     if (currentSlide <= 0) {
       setCurrentSlide(maxSlide);
     } else {
-      setCurrentSlide(prev => prev - 1);
+      setCurrentSlide((prev) => prev - 1);
     }
   };
 
