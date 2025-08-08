@@ -47,20 +47,42 @@ export const Hero = () => {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sbie-dark-green leading-tight">
-                A resposta que você tanto busca, está no lugar que você{" "}
-                <span className="text-sbie-bronze relative">
-                  nunca procurou
-                  <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
-                </span>
-              </h1>
+            <div className="space-y-6 relative">
+              {/* Futuristic Container */}
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-sbie-bronze/20 shadow-2xl">
+                {/* Holographic Shimmer */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sbie-bronze/10 to-transparent transform skew-x-12 translate-x-full animate-shimmer"></div>
 
-              <p className="text-xl sm:text-2xl text-sbie-forest-green leading-relaxed">
-                Transforme sua carreira e seus relacionamentos. A SBIE oferece
-                as ferramentas e o conhecimento para você assumir o controle da
-                sua vida e alcançar resultados.
-              </p>
+                {/* Corner Decorations */}
+                <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-sbie-bronze/50"></div>
+                <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-sbie-bronze/50"></div>
+                <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-sbie-bronze/50"></div>
+                <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-sbie-bronze/50"></div>
+
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sbie-dark-green leading-tight relative z-10">
+                  A resposta que você tanto busca, está no lugar que você{" "}
+                  <span className="text-sbie-bronze relative inline-block">
+                    nunca procurou
+                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/50 rounded-full animate-pulse"></div>
+                  </span>
+                </h1>
+
+                <p className="text-xl sm:text-2xl text-sbie-forest-green leading-relaxed mt-6 relative z-10">
+                  Transforme sua carreira e seus relacionamentos. A SBIE oferece
+                  as ferramentas e o conhecimento para você assumir o controle da
+                  sua vida e alcançar resultados.
+                </p>
+
+                {/* Data Streams */}
+                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+                  <div className="absolute top-1/4 left-6 text-sbie-bronze/30 text-xs font-mono animate-pulse">
+                    [TRANSFORMING...]
+                  </div>
+                  <div className="absolute bottom-1/4 right-6 text-sbie-sage/30 text-xs font-mono animate-pulse delay-500">
+                    [EVOLVING...]
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Mission Statement */}
