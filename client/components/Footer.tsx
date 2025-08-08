@@ -85,8 +85,9 @@ export const Footer = () => {
 
   const contactInfo = [
     { icon: <Mail className="w-4 h-4" />, text: "contato@sbie.com.br" },
-    { icon: <Phone className="w-4 h-4" />, text: "+55 11 94006-9695" },
-    { icon: <MapPin className="w-4 h-4" />, text: "São Paulo, SP\nBrasil" },
+    { icon: <Phone className="w-4 h-4" />, text: "+55 11 2985-5949" },
+    { icon: <Instagram className="w-4 h-4" />, text: "@RodrigoFonsecaIE" },
+    { icon: <Instagram className="w-4 h-4" />, text: "@sbie.oficial" },
   ];
 
   return (
