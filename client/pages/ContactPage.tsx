@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Send, Phone, Mail, MapPin, ArrowRight, Briefcase } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -10,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-export const Contact = () => {
+export const ContactPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -42,10 +42,7 @@ export const Contact = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -110,7 +107,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-sbie-beige/30 via-white to-sbie-sage/10 relative overflow-hidden">
+    <div ref={sectionRef} className="py-20 bg-gradient-to-br from-sbie-beige/30 via-white to-sbie-sage/10 relative overflow-hidden min-h-screen">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_100%_0%,#B66D38,transparent)]"></div>
@@ -126,13 +123,13 @@ export const Contact = () => {
             <span className="text-sbie-bronze font-semibold">Entre em Contato</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
             Transforme sua vida{" "}
             <span className="text-sbie-bronze relative">
               hoje mesmo
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
             </span>
-          </h2>
+          </h1>
           
           <p className="text-xl text-sbie-forest-green max-w-3xl mx-auto">
             Estamos aqui para ajudar você a dar o primeiro passo na sua jornada de desenvolvimento emocional.
@@ -146,9 +143,9 @@ export const Contact = () => {
           }`}>
             <div className="space-y-8">
               <div>
-                <h3 className="text-3xl font-bold text-sbie-dark-green mb-6">
+                <h2 className="text-3xl font-bold text-sbie-dark-green mb-6">
                   Vamos Conversar
-                </h3>
+                </h2>
                 <p className="text-lg text-sbie-forest-green leading-relaxed">
                   Nossa equipe está pronta para esclarecer suas dúvidas e ajudar você a escolher 
                   o melhor caminho para seu desenvolvimento emocional.
@@ -183,7 +180,7 @@ export const Contact = () => {
 
               {/* Additional Info */}
               <div className="bg-gradient-to-br from-sbie-dark-green to-sbie-forest-green rounded-2xl p-8 text-white">
-                <h4 className="text-xl font-bold mb-4">Horário de Atendimento</h4>
+                <h3 className="text-xl font-bold mb-4">Horário de Atendimento</h3>
                 <div className="space-y-2 text-sbie-beige">
                   <p>Segunda a Sexta: 9h às 18h</p>
                   <p>Sábado: 9h às 14h</p>
@@ -198,7 +195,7 @@ export const Contact = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-sbie-bronze/20">
-              <h3 className="text-2xl font-bold text-sbie-dark-green mb-6">Envie sua Mensagem</h3>
+              <h2 className="text-2xl font-bold text-sbie-dark-green mb-6">Envie sua Mensagem</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name and Email */}
@@ -331,6 +328,6 @@ export const Contact = () => {
       {/* Floating elements */}
       <div className="absolute top-20 left-16 w-6 h-6 bg-sbie-bronze/20 rounded-full animate-float"></div>
       <div className="absolute bottom-32 right-20 w-8 h-8 bg-sbie-sage/20 rounded-full animate-float delay-1000"></div>
-    </section>
+    </div>
   );
 };

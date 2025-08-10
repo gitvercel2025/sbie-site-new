@@ -41,7 +41,7 @@ export const MECBanner = () => {
               <img
                 src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
                 alt="Selo MEC"
-                className="h-8 w-auto animate-pulse drop-shadow-lg"
+                className="h-12 w-auto animate-pulse drop-shadow-lg"
               />
             </div>
             <div className="relative">
@@ -84,7 +84,7 @@ export const MECBanner = () => {
               <img
                 src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
                 alt="Selo MEC"
-                className="h-12 w-auto animate-pulse drop-shadow-xl hover:scale-110 transition-transform duration-300"
+                className="h-16 w-auto animate-pulse drop-shadow-xl hover:scale-110 transition-transform duration-300"
               />
             </div>
           </div>

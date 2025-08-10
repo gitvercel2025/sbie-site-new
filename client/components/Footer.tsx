@@ -57,21 +57,22 @@ export const Footer = () => {
   ];
 
   const quickLinks = [
-    { label: "Quem Somos", href: "/quem-somos" },
-    { label: "Nossa Metodologia", href: "/metodologia" },
-    { label: "Rodrigo Fonseca", href: "/rodrigo-fonseca" },
+    { label: "Quem Somos", href: "https://www.sbie.com.br/conheca-a-sbie/" },
+    { label: "Nossa Metodologia", href: "https://www.sbie.com.br/nossa-metodologia/" },
+    { label: "Rodrigo Fonseca", href: "https://rodrigofonsecaie.com.br/" },
     { label: "Blog", href: "/blog" },
     { label: "Imprensa", href: "/imprensa" },
     { label: "Contato", href: "/contato" },
   ];
 
   const trainings = [
-    { label: "LOTUS Inteligência Emocional", href: "/lotus-ie" },
-    { label: "LOTUS Legado", href: "/lotus-legado" },
-    { label: "Formação em Inteligência Emocional", href: "/formacao-ie" },
-    { label: "Formação Master", href: "/formacao-master" },
-    { label: "SBIE Business", href: "/sbie-business" },
-    { label: "Embaixadores do Bem", href: "/embaixadores" },
+    { label: "LOTUS Inteligência Emocional", href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus" },
+    { label: "LOTUS Legado", href: "https://lp.sbie.com.br/lotus-legado/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus-legado" },
+    { label: "Formação em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao" },
+    { label: "Formação Master", href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master" },
+    { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=bio-sbie&utm_medium=banner&utm_campaign=academia" },
+    { label: "SBIE Business", href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business" },
+    { label: "Embaixadores do Bem", href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores" },
   ];
 
   const onlineServices = [
@@ -86,8 +87,8 @@ export const Footer = () => {
   const contactInfo = [
     { icon: <Mail className="w-4 h-4" />, text: "contato@sbie.com.br" },
     { icon: <Phone className="w-4 h-4" />, text: "+55 11 2985-5949" },
-    { icon: <Instagram className="w-4 h-4" />, text: "@RodrigoFonsecaIE" },
-    { icon: <Instagram className="w-4 h-4" />, text: "@sbie.oficial" },
+    { icon: <Instagram className="w-4 h-4" />, text: "@rodrigofonsecaie", href: "https://www.instagram.com/rodrigofonsecaie/" },
+    { icon: <Instagram className="w-4 h-4" />, text: "@sbie.oficial", href: "https://www.instagram.com/sbie.oficial/" },
   ];
 
   return (
@@ -187,9 +188,20 @@ export const Footer = () => {
                   <div className="w-8 h-8 bg-sbie-bronze/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                     {info.icon}
                   </div>
-                  <span className="text-sbie-beige/80 text-sm leading-relaxed whitespace-pre-line">
-                    {info.text}
-                  </span>
+                  {info.href ? (
+                    <a 
+                      href={info.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sbie-beige/80 text-sm leading-relaxed whitespace-pre-line hover:text-sbie-bronze transition-colors duration-300"
+                    >
+                      {info.text}
+                    </a>
+                  ) : (
+                    <span className="text-sbie-beige/80 text-sm leading-relaxed whitespace-pre-line">
+                      {info.text}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
@@ -202,14 +214,7 @@ export const Footer = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center">
-            <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
-              <Star className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
-              <p className="text-sbie-beige/90 font-medium">
-                Avaliação 5 estrelas
-              </p>
-              <p className="text-sbie-beige/70 text-sm">Google Reviews</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <Shield className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
               <p className="text-sbie-beige/90 font-medium">
@@ -228,7 +233,7 @@ export const Footer = () => {
               <img
                 src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
                 alt="Selo MEC"
-                className="w-12 h-12 mx-auto mb-3 object-contain"
+                className="w-16 h-16 mx-auto mb-3 object-contain"
               />
               <p className="text-sbie-beige/90 font-medium">
                 Reconhecido pelo MEC
@@ -238,13 +243,20 @@ export const Footer = () => {
               </p>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
-              <img
-                src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/05/selo-cinza.png.webp"
-                alt="Selo Google"
-                className="w-12 h-12 mx-auto mb-3 object-contain"
-              />
-              <p className="text-sbie-beige/90 font-medium">Parceiro Google</p>
-              <p className="text-sbie-beige/70 text-sm">Certificação Digital</p>
+              <a 
+                href="https://www.google.com/search?authuser=0&gl=br&hl=pt-BR&output=search&q=SBIE+-+Sociedade+Brasileira+de+Intelig%C3%AAncia+Emocional&ludocid=11416569491023735063&gsas=1&lsig=AB86z5UOqn0k3W3xEoh_RxtOFChJ&ved=1i%3A3%2Ct%3A109124%2Ce%3A2%2Cp%3ArNT3Y65K6Lnk5Q_a14P4DA%3A1#lrd="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/05/selo-cinza.png.webp"
+                  alt="Selo Google"
+                  className="w-16 h-16 mx-auto mb-3 object-contain"
+                />
+                <p className="text-sbie-beige/90 font-medium">5 Estrelas Google</p>
+                <p className="text-sbie-beige/70 text-sm">Avaliações Verificadas</p>
+              </a>
             </div>
           </div>
         </div>

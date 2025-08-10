@@ -10,6 +10,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { MECBanner } from "./components/MECBanner";
 import { PlaceholderPage } from "./components/PlaceholderPage";
+import { ContactPage } from "./pages/ContactPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -52,13 +53,13 @@ const App = () => (
               <Route path="/blog" element={<PlaceholderPage title="Blog SBIE" description="Artigos e insights sobre inteligência emocional." />} />
               <Route path="/imprensa" element={<PlaceholderPage title="Imprensa" description="Materiais para imprensa e mídia." />} />
               <Route path="/store" element={<PlaceholderPage title="SBIE Store" description="Produtos e materiais exclusivos da SBIE." />} />
-              <Route path="/contato" element={<PlaceholderPage title="Contato" description="Entre em contato conosco para mais informações." />} />
+              <Route path="/contato" element={<ContactPage />} />
 
               {/* Legal Pages */}
               <Route path="/politica-privacidade" element={<PlaceholderPage title="Política de Privacidade" description="Nossa política de privacidade e proteção de dados." />} />
               <Route path="/termos-uso" element={<PlaceholderPage title="Termos de Uso" description="Termos e condições de uso dos nossos serviços." />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

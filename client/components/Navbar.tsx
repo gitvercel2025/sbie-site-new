@@ -74,17 +74,18 @@ export const Navbar = () => {
   };
 
   const quemSomosItems: DropdownItem[] = [
-    { label: "Conheça a SBIE", href: "/conheca-sbie" },
-    { label: "Nossa Metodologia", href: "/metodologia" },
-    { label: "Rodrigo Fonseca", href: "/rodrigo-fonseca" },
+    { label: "Conheça a SBIE", href: "https://www.sbie.com.br/conheca-a-sbie/" },
+    { label: "Nossa Metodologia", href: "https://www.sbie.com.br/nossa-metodologia/" },
+    { label: "Rodrigo Fonseca", href: "https://rodrigofonsecaie.com.br/" },
   ];
 
   const treinamentosItems: DropdownItem[] = [
-    { label: "Lotus Inteligência Emocional", href: "/lotus-ie" },
-    { label: "Lotus Legado", href: "/lotus-legado" },
-    { label: "Formação em Inteligência Emocional", href: "/formacao-ie" },
-    { label: "SBIE Business", href: "/sbie-business" },
-    { label: "Embaixadores do Bem", href: "/embaixadores" },
+    { label: "Lotus Inteligência Emocional", href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus" },
+    { label: "Formação em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao" },
+    { label: "Formação Master em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master" },
+    { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=bio-sbie&utm_medium=banner&utm_campaign=academia" },
+    { label: "SBIE Business", href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business" },
+    { label: "SBIE Embaixadores do Bem", href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores" },
   ];
 
   const onlineItems: DropdownItem[] = [
