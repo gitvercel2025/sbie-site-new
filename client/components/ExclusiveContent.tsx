@@ -49,14 +49,15 @@ export const ExclusiveContent = () => {
       image: "https://i.imgur.com/PutfwSD.png",
       category: "article",
       readTime: "10 min",
+      url: "https://www.sbie.com.br/inteligencia-emocional-e-saude-mental-estrategias-para-um-ambiente-de-trabalho-saudavel/",
     },
     {
       id: "2",
       title:
-        "Dormir mal afeta suas emoções (e pode prejudicar sua saúde mental a longo prazo)",
+        "Como o uso excessivo do ChatGPT pode estar \"emburrecendo\" as pessoas e o que fazer a respeito",
       description:
-        "Entenda a conexão entre qualidade do sono e regulação emocional, e como melhorar ambos para uma vida mais equilibrada.",
-      image: "https://i.imgur.com/AIrq70I.png",
+        "Como o uso excessivo do ChatGPT pode estar \"emburrecendo\" as pessoas e o que fazer a respeito Desde a popularização do ChatGPT e outras inteligências artificiais generativas, muitas vozes vêm apontando: estaríamos nos tornando mais preguiçosos cognitivamente? Estudos recentes.",
+      image: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2025/07/21506-360x240.jpg.webp",
       category: "insight",
       readTime: "6 min",
     },
@@ -69,6 +70,7 @@ export const ExclusiveContent = () => {
       image: "https://i.imgur.com/OTiOK5A.png",
       category: "article",
       readTime: "12 min",
+      url: "https://www.sbie.com.br/inteligencia-emocional-e-ia-como-a-autoconsciencia-se-torna-essencial-na-era-digital/",
     },
     {
       id: "4",
@@ -79,6 +81,7 @@ export const ExclusiveContent = () => {
       image: "https://i.imgur.com/yuhrcYq.png",
       category: "article",
       readTime: "8 min",
+      url: "https://www.sbie.com.br/como-desenvolver-a-autoconsciencia-emocional-para-melhorar-a-tomada-de-decisao/",
     },
     {
       id: "5",
@@ -223,10 +226,15 @@ export const ExclusiveContent = () => {
                     </p>
 
                     {/* Read More Button */}
-                    <button className="inline-flex items-center space-x-3 bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <a 
+                      href={item.url || '#'} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-3 bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                    >
                       <span>Ler mais</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}

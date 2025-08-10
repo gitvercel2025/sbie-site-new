@@ -108,11 +108,13 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div>
-              <img
-                src="https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/08/auto_site_logo_w.png.webp"
-                alt="SBIE Logo"
-                className="h-12 w-auto mb-4"
-              />
+              <div className="inline-block transition-transform duration-300 hover:scale-110">
+                <img
+                  src="https://i.imgur.com/t5ySutR.png"
+                  alt="SBIE Logo"
+                  className="h-24 w-auto mb-4 transition-all duration-300 brightness-125 contrast-110"
+                />
+              </div>
               <h3 className="text-lg font-bold text-sbie-beige mb-2">
                 Sociedade Brasileira de Inteligência Emocional
               </h3>

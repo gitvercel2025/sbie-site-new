@@ -12,6 +12,7 @@ import {
   Rocket,
   Atom,
 } from "lucide-react";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 interface TrainingCardProps {
   title: string;
@@ -78,6 +79,23 @@ const TrainingCard = ({
     }
   };
 
+  const getBorderBeamColors = () => {
+    switch (category) {
+      case "individual":
+        return { colorFrom: "#B66D38", colorTo: "#D4A574" };
+      case "professional":
+        return { colorFrom: "#889073", colorTo: "#A8B896" };
+      case "corporate":
+        return { colorFrom: "#2D5016", colorTo: "#4A7C59" };
+      case "social":
+        return { colorFrom: "#4A7C59", colorTo: "#889073" };
+      default:
+        return { colorFrom: "#B66D38", colorTo: "#D4A574" };
+    }
+  };
+
+  const beamColors = getBorderBeamColors();
+
   return (
     <div
       ref={cardRef}
@@ -91,6 +109,16 @@ const TrainingCard = ({
       <div
         className={`bg-white/90 backdrop-blur-sm rounded-3xl p-8 h-full shadow-xl border-2 ${getCategoryBorder()} hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:bg-white group relative overflow-hidden`}
       >
+        {/* BorderBeam Animation */}
+        <BorderBeam
+          size={200}
+          duration={8}
+          delay={index * 2}
+          colorFrom={beamColors.colorFrom}
+          colorTo={beamColors.colorTo}
+          borderWidth={2}
+        />
+
         {/* Background Gradient */}
         <div
           className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${getCategoryColor()} opacity-10 rounded-bl-[100px] group-hover:opacity-20 transition-opacity duration-300`}

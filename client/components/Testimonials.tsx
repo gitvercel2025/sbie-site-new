@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Play, Star } from "lucide-react";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 interface TestimonialVideo {
   id: string;
@@ -35,18 +36,18 @@ export const Testimonials = () => {
   const testimonials: TestimonialVideo[] = [
     {
       id: "1",
-      name: "Chris Flores",
-      title: "Apresentadora",
-      thumbnail: "https://img.youtube.com/vi/dKBKJjxy2J4/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/watch?v=dKBKJjxy2J4",
+      name: "Juliana Paes",
+      title: "Atriz",
+      thumbnail: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2022/05/juliana-paes-620.jpg.webp",
+      videoUrl: "https://www.youtube.com/watch?v=ysF7fk1pjeQ",
       quote:
-        "O treinamento LOTUS me deu ferramentas práticas para lidar com as emoções",
+        "Eu ganhei um entendimento que talvez nem a terapia tivesse me dado até aqui",
     },
     {
       id: "2",
       name: "Wolf Maya",
       title: "Diretor e Ator",
-      thumbnail: "https://img.youtube.com/vi/ENhzSaMsOQI/maxresdefault.jpg",
+      thumbnail: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2022/05/wolf-620-ajustada.jpg.webp",
       videoUrl: "https://www.youtube.com/watch?v=ENhzSaMsOQI",
       quote:
         "A metodologia SBIE transformou completamente minha visão sobre liderança",
@@ -55,27 +56,27 @@ export const Testimonials = () => {
       id: "3",
       name: "Catia Fonseca",
       title: "Apresentadora",
-      thumbnail: "https://img.youtube.com/vi/5gCzTc34VVo/maxresdefault.jpg",
+      thumbnail: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2019/07/catia-fonseca.jpg.webp",
       videoUrl: "https://www.youtube.com/watch?v=5gCzTc34VVo",
       quote:
         "A inteligência emocional mudou minha forma de enxergar os relacionamentos",
     },
     {
       id: "4",
-      name: "Scheila Carvalho",
-      title: "Dançarina e Apresentadora",
-      thumbnail: "https://img.youtube.com/vi/a9o4wfPvndI/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/watch?v=a9o4wfPvndI",
-      quote: "Descobri o poder de transformar emoções em resultados positivos",
+      name: "Chris Flores",
+      title: "Apresentadora",
+      thumbnail: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2023/04/chris.jpg.webp",
+      videoUrl: "https://www.youtube.com/watch?v=dKBKJjxy2J4",
+      quote:
+        "O treinamento LOTUS me deu ferramentas práticas para lidar com as emoções",
     },
     {
       id: "5",
-      name: "Juliana Paes",
-      title: "Atriz",
-      thumbnail: "https://img.youtube.com/vi/ysF7fk1pjeQ/maxresdefault.jpg",
-      videoUrl: "https://www.youtube.com/watch?v=ysF7fk1pjeQ",
-      quote:
-        "Eu ganhei um entendimento que talvez nem a terapia tivesse me dado até aqui",
+      name: "Scheila Carvalho",
+      title: "Dançarina e Apresentadora",
+      thumbnail: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2022/05/scheila-carvalho-620.jpg.webp",
+      videoUrl: "https://www.youtube.com/watch?v=a9o4wfPvndI",
+      quote: "Descobri o poder de transformar emoções em resultados positivos",
     },
   ];
 
@@ -140,7 +141,17 @@ export const Testimonials = () => {
         >
           <div className="relative max-w-4xl mx-auto">
             {/* Current Video Slide */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 hover:scale-105 group">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 hover:scale-105 group relative">
+              {/* BorderBeam Animation */}
+              <BorderBeam
+                size={100}
+                duration={10}
+                delay={0}
+                colorFrom="#B66D38"
+                colorTo="#D4A574"
+                borderWidth={2}
+              />
+              
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
@@ -253,7 +264,17 @@ export const Testimonials = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-3xl mx-auto border border-sbie-bronze/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 max-w-3xl mx-auto border border-sbie-bronze/20 relative">
+            {/* BorderBeam Animation for CTA */}
+            <BorderBeam
+              size={80}
+              duration={12}
+              delay={2}
+              colorFrom="#B66D38"
+              colorTo="#D4A574"
+              borderWidth={1}
+            />
+            
             <h3 className="text-2xl font-bold text-white mb-4">
               Seja o Próximo a Transformar sua Vida
             </h3>

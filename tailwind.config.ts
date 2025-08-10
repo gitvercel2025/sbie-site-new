@@ -60,7 +60,8 @@ export default {
         sbie: {
           beige: "#DFC6AA",
           bronze: "#B66D38",
-          "dark-green": "#21302B",
+          "dark-green": "#1A1A1A",
+          "menu-green": "#0C3D35",
           "forest-green": "#4F5948",
           sage: "#889073",
         },
@@ -87,10 +88,67 @@ export default {
             height: "0",
           },
         },
+        // Novas animações futuristas
+        "matrix-rain": {
+          "0%": { transform: "translateY(-100vh)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { transform: "translateY(100vh)", opacity: "0" },
+        },
+        "cyber-pulse": {
+          "0%, 100%": { 
+            boxShadow: "0 0 5px #0C3D35, 0 0 10px #0C3D35, 0 0 15px #0C3D35",
+            transform: "scale(1)"
+          },
+          "50%": { 
+            boxShadow: "0 0 20px #0C3D35, 0 0 30px #0C3D35, 0 0 40px #0C3D35",
+            transform: "scale(1.05)"
+          },
+        },
+        "neon-glow": {
+          "0%, 100%": { filter: "brightness(1) saturate(1)" },
+          "50%": { filter: "brightness(1.3) saturate(1.5)" },
+        },
+        "data-stream": {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "50%": { opacity: "1" },
+          "100%": { transform: "translateX(100%)", opacity: "0" },
+        },
+        "hologram-flicker": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+          "75%": { opacity: "0.9" },
+        },
+        "circuit-flow": {
+          "0%": { strokeDashoffset: "1000" },
+          "100%": { strokeDashoffset: "0" },
+        },
+        "energy-wave": {
+          "0%": { 
+            transform: "scale(0.8) rotate(0deg)",
+            opacity: "0.3"
+          },
+          "50%": { 
+            transform: "scale(1.2) rotate(180deg)",
+            opacity: "0.7"
+          },
+          "100%": { 
+            transform: "scale(0.8) rotate(360deg)",
+            opacity: "0.3"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Novas animações futuristas
+        "matrix-rain": "matrix-rain 3s linear infinite",
+        "cyber-pulse": "cyber-pulse 2s ease-in-out infinite",
+        "neon-glow": "neon-glow 1.5s ease-in-out infinite",
+        "data-stream": "data-stream 4s linear infinite",
+        "hologram-flicker": "hologram-flicker 0.1s ease-in-out infinite",
+        "circuit-flow": "circuit-flow 3s ease-in-out infinite",
+        "energy-wave": "energy-wave 4s ease-in-out infinite",
       },
     },
   },
