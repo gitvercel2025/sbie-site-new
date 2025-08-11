@@ -227,9 +227,14 @@ export const AboutRodrigo = () => {
 
             {/* CTA */}
             <div className="pt-6">
-              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <a 
+                href="https://rodrigofonsecaie.com.br/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
                 Conheça Mais Sobre Rodrigo
-              </button>
+              </a>
             </div>
           </div>
         </div>

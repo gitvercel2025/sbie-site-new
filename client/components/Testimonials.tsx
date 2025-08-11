@@ -282,9 +282,14 @@ export const Testimonials = () => {
               Junte-se a milhares de pessoas que já descobriram o poder da
               inteligência emocional.
             </p>
-            <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <a 
+              href="https://wa.me/5511940069695" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
               Comece Sua Transformação Agora
-            </button>
+            </a>
           </div>
         </div>
       </div>

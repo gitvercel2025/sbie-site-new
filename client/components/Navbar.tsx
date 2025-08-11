@@ -83,18 +83,17 @@ export const Navbar = () => {
     { label: "Lotus Inteligência Emocional", href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus" },
     { label: "Formação em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao" },
     { label: "Formação Master em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master" },
-    { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=bio-sbie&utm_medium=banner&utm_campaign=academia" },
     { label: "SBIE Business", href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business" },
     { label: "SBIE Embaixadores do Bem", href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores" },
   ];
 
   const onlineItems: DropdownItem[] = [
-    { label: "SBIE Academy", href: "/academy" },
-    { label: "SBIE Care", href: "/care" },
-    { label: "Academia Emocional", href: "/academia-emocional" },
-    { label: "Gerando com Amor", href: "/gerando-amor" },
-    { label: "Almas Gêmeas", href: "/almas-gemeas" },
-    { label: "Livros Digitais", href: "/livros" },
+    { label: "SBIE Academy", href: "https://www.sbie.com.br/solucao/sbie-academy/?utm_source=sitesbie&utm_medium=menu&utm_campaign=academy" },
+    { label: "SBIE Care", href: "https://www.sbie.com.br/solucao/sbie-care/?utm_source=sitesbie&utm_medium=menu&utm_campaign=care" },
+    { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=sitesbie&utm_medium=menu&utm_campaign=academia" },
+    { label: "Gerando com Amor", href: "https://rodrigofonsecaie.com.br/gerando-com-amor/?utm_source=sitesbie&utm_medium=menu&utm_campaign=gerando-com-amor" },
+    { label: "Alma Gêmeas", href: "https://hotmart.com/pt-br/marketplace?utm_source=sitesbie&utm_medium=menu&utm_campaign=almagemeas" },
+    { label: "Livros Digitais", href: "https://rodrigofonsecaie.com.br/os4poderes/?utm_source=sitesbie&utm_medium=menu&utm_campaign=livros" },
   ];
 
   return (
@@ -139,26 +138,32 @@ export const Navbar = () => {
                 onToggle={() => toggleDropdown("online")}
               />
 
-              <Link
-                to="/blog"
+              <a
+                href="https://www.sbie.com.br/blog/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 text-white/90 hover:text-white transition-all duration-300 hover:scale-105 hover:bg-white/5 rounded-lg font-medium"
               >
                 Blog
-              </Link>
+              </a>
 
-              <Link
-                to="/imprensa"
+              <a
+                href="https://www.sbie.com.br/imprensa/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 text-white/90 hover:text-white transition-all duration-300 hover:scale-105 hover:bg-white/5 rounded-lg font-medium"
               >
                 Imprensa
-              </Link>
+              </a>
 
-              <Link
-                to="/store"
+              <a
+                href="https://www.sbie.com.br/store/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 text-white/90 hover:text-white transition-all duration-300 hover:scale-105 hover:bg-white/5 rounded-lg font-medium"
               >
                 Store
-              </Link>
+              </a>
 
               <Link
                 to="/contato"

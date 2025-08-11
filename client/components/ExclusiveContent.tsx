@@ -86,12 +86,13 @@ export const ExclusiveContent = () => {
     {
       id: "5",
       title:
-        "Inteligência emocional e Geração Z: como eles estão buscando essa soft skill",
+        "O segredo para lidar com emoções intensas no dia a dia",
       description:
-        "Compreenda como a Geração Z está priorizando o desenvolvimento da inteligência emocional no ambiente profissional.",
-      image: "https://i.imgur.com/Nun0Ujc.png",
+        "O segredo para lidar com emoções intensas no dia a dia Você já sentiu que seria engolido por uma emoção? Um acesso de raiva.",
+      image: "https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2025/08/2150030322.jpg.webp",
       category: "insight",
       readTime: "7 min",
+      url: "https://www.sbie.com.br/o-segredo-para-lidar-com-emocoes-intensas-no-dia-a-dia/",
     },
   ];
 

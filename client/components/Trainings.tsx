@@ -20,6 +20,7 @@ interface TrainingCardProps {
   icon: React.ReactNode;
   index: number;
   category: "individual" | "professional" | "corporate" | "social";
+  href: string;
 }
 
 const TrainingCard = ({
@@ -28,6 +29,7 @@ const TrainingCard = ({
   icon,
   index,
   category,
+  href,
 }: TrainingCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -142,12 +144,15 @@ const TrainingCard = ({
           </p>
 
           {/* CTA Button */}
-          <button
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}
           >
             <span>Saiba Mais</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
 
         {/* Decorative elements */}
@@ -167,6 +172,7 @@ export const Trainings = () => {
         "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
       icon: <Sparkles className="w-8 h-8" />,
       category: "individual" as const,
+      href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus",
     },
     {
       title: "LOTUS Legado",
@@ -174,6 +180,7 @@ export const Trainings = () => {
         "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
       icon: <Atom className="w-8 h-8" />,
       category: "professional" as const,
+      href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus",
     },
     {
       title: "Formação em Inteligência Emocional",
@@ -181,6 +188,7 @@ export const Trainings = () => {
         "Certificação completa para profissionais que desejam aplicar inteligência emocional em suas carreiras.",
       icon: <Brain className="w-8 h-8" />,
       category: "professional" as const,
+      href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao",
     },
     {
       title: "Formação Master em Inteligência Emocional",
@@ -188,6 +196,7 @@ export const Trainings = () => {
         "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
       icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
+      href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master",
     },
     {
       title: "SBIE Business",
@@ -195,6 +204,7 @@ export const Trainings = () => {
         "Soluções corporativas em inteligência emocional para empresas que querem resultados excepcionais.",
       icon: <Target className="w-8 h-8" />,
       category: "corporate" as const,
+      href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business",
     },
     {
       title: "Embaixadores do Bem",
@@ -202,11 +212,12 @@ export const Trainings = () => {
         "Programa social para multiplicar conhecimento em inteligência emocional em comunidades.",
       icon: <Rocket className="w-8 h-8" />,
       category: "social" as const,
+      href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores",
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-white via-sbie-beige/20 to-sbie-sage/10 relative overflow-hidden">
+    <section id="trainings" className="py-20 bg-gradient-to-br from-white via-sbie-beige/20 to-sbie-sage/10 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_100%,#889073,transparent)]"></div>
@@ -246,6 +257,7 @@ export const Trainings = () => {
               icon={training.icon}
               index={index}
               category={training.category}
+              href={training.href}
             />
           ))}
         </div>
@@ -261,12 +273,24 @@ export const Trainings = () => {
               desenvolvimento emocional hoje mesmo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <a 
+                href="#trainings" 
+                className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#trainings')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Ver Todos os Treinamentos
-              </button>
-              <button className="border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+              </a>
+              <a 
+                href="https://wa.me/5511940069695" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+              >
                 Fale com um Consultor
-              </button>
+              </a>
             </div>
           </div>
         </div>
