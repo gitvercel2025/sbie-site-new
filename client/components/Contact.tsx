@@ -88,15 +88,15 @@ export const Contact = () => {
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      label: "Telefone",
+      label: "WhatsApp",
       value: "+55 11 94006-9695",
-      href: "tel:+5511940069695"
+      href: "https://wa.me/5511940069695"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       label: "Localização",
       value: "São Paulo, SP - Brasil",
-      href: "#"
+      href: "https://share.google/YElUSQtG0bXOSosu5"
     }
   ];
 
