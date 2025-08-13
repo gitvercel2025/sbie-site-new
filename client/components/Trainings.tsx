@@ -165,38 +165,30 @@ const TrainingCard = ({
 };
 
 export const Trainings = () => {
-  const trainings = [
+  const trainings: TrainingCardProps[] = [
     {
-      title: "LOTUS Inteligência Emocional",
+      title: "Lotus Inteligência Emocional",
       description:
-        "Transforme sua vida em 3 dias intensos de autoconhecimento e desenvolvimento emocional.",
-      icon: <Heart className="w-8 h-8" />,
-      category: "personal" as const,
+        "Uma imersão de 3 dias para transformar sua vida pessoal e profissional através da inteligência emocional.",
+      icon: <Zap className="w-8 h-8" />,
+      category: "individual" as const,
       href: "/lotus",
-    },
-    {
-      title: "LOTUS Legado",
-      description:
-        "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
-      icon: <Atom className="w-8 h-8" />,
-      category: "professional" as const,
-      href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus",
     },
     {
       title: "Formação em Inteligência Emocional",
       description:
-        "Certificação completa para profissionais que desejam aplicar inteligência emocional em suas carreiras.",
+        "Capacitação completa para quem deseja se tornar um profissional em inteligência emocional.",
       icon: <Brain className="w-8 h-8" />,
       category: "professional" as const,
-      href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao",
+      href: "/formacao",
     },
     {
       title: "Formação Master em Inteligência Emocional",
       description:
-        "O programa mais completo para formar especialistas em inteligência emocional com metodologia internacional.",
+        "Aprofunde seus conhecimentos e se torne um especialista master em inteligência emocional.",
       icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
-      href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master",
+      href: "/formacao-master",
     },
     {
       title: "SBIE Business",
@@ -204,7 +196,7 @@ export const Trainings = () => {
         "Soluções corporativas em inteligência emocional para empresas que querem resultados excepcionais.",
       icon: <Target className="w-8 h-8" />,
       category: "corporate" as const,
-      href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business",
+      href: "/business",
     },
     {
       title: "Embaixadores do Bem",
@@ -212,7 +204,7 @@ export const Trainings = () => {
         "Programa social para multiplicar conhecimento em inteligência emocional em comunidades.",
       icon: <Rocket className="w-8 h-8" />,
       category: "social" as const,
-      href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores",
+      href: "/embaixadores",
     },
   ];
 
