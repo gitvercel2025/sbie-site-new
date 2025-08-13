@@ -169,10 +169,10 @@ export const Trainings = () => {
     {
       title: "LOTUS Inteligência Emocional",
       description:
-        "Desenvolva sua inteligência emocional com metodologia comprovada. Aprenda a gerenciar emoções e melhorar relacionamentos.",
-      icon: <Sparkles className="w-8 h-8" />,
-      category: "individual" as const,
-      href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus",
+        "Transforme sua vida em 3 dias intensos de autoconhecimento e desenvolvimento emocional.",
+      icon: <Heart className="w-8 h-8" />,
+      category: "personal" as const,
+      href: "/lotus",
     },
     {
       title: "LOTUS Legado",

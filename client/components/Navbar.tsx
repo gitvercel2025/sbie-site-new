@@ -80,11 +80,11 @@ export const Navbar = () => {
   ];
 
   const treinamentosItems: DropdownItem[] = [
-    { label: "Lotus Inteligência Emocional", href: "https://lp.sbie.com.br/lotus/?utm_source=sitesbie&utm_medium=menu&utm_campaign=lotus" },
-    { label: "Formação em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao" },
-    { label: "Formação Master em Inteligência Emocional", href: "https://lp.sbie.com.br/formacao-master-oportunidade-unica/?utm_source=sitesbie&utm_medium=menu&utm_campaign=formacao-master" },
-    { label: "SBIE Business", href: "https://lp.sbie.com.br/business/?utm_source=sitesbie&utm_medium=menu&utm_campaign=business" },
-    { label: "SBIE Embaixadores do Bem", href: "https://lp.sbie.com.br/embaixadores-do-bem/?utm_source=sitesbie&utm_medium=menu&utm_campaign=embaixadores" },
+    { label: "Lotus Inteligência Emocional", href: "/lotus" },
+    { label: "Formação em Inteligência Emocional", href: "/formacao" },
+    { label: "Formação Master em Inteligência Emocional", href: "/formacao-master" },
+    { label: "SBIE Business", href: "/business" },
+    { label: "SBIE Embaixadores do Bem", href: "/embaixadores" },
   ];
 
   const onlineItems: DropdownItem[] = [

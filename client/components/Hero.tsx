@@ -203,7 +203,12 @@ export const Hero = () => {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              <button className="group relative bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/95 hover:to-sbie-bronze text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-500 hover:scale-105 hover:shadow-xl overflow-hidden">
+              <button 
+                onClick={() => {
+                  document.querySelector('#trainings')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="group relative bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/95 hover:to-sbie-bronze text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-500 hover:scale-105 hover:shadow-xl overflow-hidden"
+              >
                 <span className="relative z-10 drop-shadow-sm">
                   Conheça Nossos Treinamentos
                 </span>
@@ -212,7 +217,12 @@ export const Hero = () => {
                 {/* Sombra Interna Suave */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 rounded-full"></div>
               </button>
-              <button className="group border-2 border-sbie-bronze text-sbie-beige hover:bg-gradient-to-r hover:from-sbie-bronze/20 hover:to-sbie-menu-green/20 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden backdrop-blur-sm">
+              <button 
+                onClick={() => {
+                  window.location.href = 'https://www.sbie.com.br/conheca-a-sbie/';
+                }}
+                className="group border-2 border-sbie-bronze text-sbie-beige hover:bg-gradient-to-r hover:from-sbie-bronze/20 hover:to-sbie-menu-green/20 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden backdrop-blur-sm"
+              >
                 <span className="relative z-10 drop-shadow-lg">Saiba Mais Sobre a SBIE</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze/20 via-sbie-menu-green/20 to-sbie-bronze/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-hologram-flicker"></div>
               </button>

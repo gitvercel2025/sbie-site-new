@@ -293,20 +293,20 @@
 
 /* Marquee Animations */
 @keyframes marquee {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+  100% {
+    transform: translateX(-100%);
   }
 }
 
 @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+  0% {
+    transform: translateY(0%);
   }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+  100% {
+    transform: translateY(-100%);
   }
 }
 
@@ -316,4 +316,61 @@
 
 .animate-marquee-vertical {
   animation: marquee-vertical var(--duration) linear infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade In Up Animation */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Gradient Animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
 }

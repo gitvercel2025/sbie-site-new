@@ -11,8 +11,10 @@ import { Footer } from "./components/Footer";
 import { MECBanner } from "./components/MECBanner";
 import { PlaceholderPage } from "./components/PlaceholderPage";
 import { ContactPage } from "./pages/ContactPage";
+import LotusPage from "./pages/LotusPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import FormularioPage from './pages/FormularioPage';
 
 const queryClient = new QueryClient();
 
@@ -34,12 +36,19 @@ const App = () => (
               <Route path="/metodologia" element={<PlaceholderPage title="Nossa Metodologia" description="Conheça a metodologia exclusiva da SBIE para desenvolvimento emocional." />} />
               <Route path="/rodrigo-fonseca" element={<PlaceholderPage title="Rodrigo Fonseca" description="Saiba mais sobre o fundador e presidente da SBIE." />} />
 
-              {/* Treinamentos */}
-              <Route path="/lotus-ie" element={<PlaceholderPage title="LOTUS Inteligência Emocional" description="Desenvolva sua inteligência emocional com nossa metodologia comprovada." />} />
+              {/* Treinamentos - Corrigindo as rotas para corresponder ao menu */}
+              <Route path="/lotus" element={<LotusPage />} />
+              <Route path="/formulario" element={<FormularioPage />} />
+              <Route path="/formacao" element={<PlaceholderPage title="Formação em Inteligência Emocional" description="Certificação completa para profissionais da área." />} />
+              <Route path="/formacao-master" element={<PlaceholderPage title="Formação Master em Inteligência Emocional" description="Certificação avançada para especialistas." />} />
+              <Route path="/business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
+              <Route path="/embaixadores" element={<PlaceholderPage title="SBIE Embaixadores do Bem" description="Programa social para multiplicar conhecimento em comunidades." />} />
+
+              {/* Rotas antigas mantidas para compatibilidade */}
+              <Route path="/lotus-ie" element={<LotusPage />} />
               <Route path="/lotus-legado" element={<PlaceholderPage title="LOTUS Legado" description="O programa mais completo para especialistas em inteligência emocional." />} />
               <Route path="/formacao-ie" element={<PlaceholderPage title="Formação em Inteligência Emocional" description="Certificação completa para profissionais da área." />} />
               <Route path="/sbie-business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
-              <Route path="/embaixadores" element={<PlaceholderPage title="Embaixadores do Bem" description="Programa social para multiplicar conhecimento em comunidades." />} />
 
               {/* Online */}
               <Route path="/academy" element={<PlaceholderPage title="SBIE Academy" description="Nossa plataforma online de ensino." />} />
@@ -49,17 +58,17 @@ const App = () => (
               <Route path="/almas-gemeas" element={<PlaceholderPage title="Almas Gêmeas" description="Encontre relacionamentos saudáveis." />} />
               <Route path="/livros" element={<PlaceholderPage title="Livros Digitais" description="Nossa biblioteca digital de inteligência emocional." />} />
 
-              {/* Other Pages */}
+              {/* Outros */}
               <Route path="/blog" element={<PlaceholderPage title="Blog SBIE" description="Artigos e insights sobre inteligência emocional." />} />
               <Route path="/imprensa" element={<PlaceholderPage title="Imprensa" description="Materiais para imprensa e mídia." />} />
               <Route path="/store" element={<PlaceholderPage title="SBIE Store" description="Produtos e materiais exclusivos da SBIE." />} />
               <Route path="/contato" element={<ContactPage />} />
 
-              {/* Legal Pages */}
+              {/* Legais */}
               <Route path="/politica-privacidade" element={<PlaceholderPage title="Política de Privacidade" description="Nossa política de privacidade e proteção de dados." />} />
               <Route path="/termos-uso" element={<PlaceholderPage title="Termos de Uso" description="Termos e condições de uso dos nossos serviços." />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL \"*\" ROUTE */}
+              {/* 404 */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
