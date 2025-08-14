@@ -308,7 +308,7 @@ const LotusPage = () => {
               
               <button 
                 onClick={handleCTAClick}
-                className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50 relative overflow-hidden group"
+                className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-[#B66D38]/50 relative overflow-hidden group"
               >
                 <span className="relative z-10">QUERO TRANSFORMAR 10 ANOS EM APENAS UM ANO</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -365,6 +365,23 @@ const LotusPage = () => {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Próximas Turmas Section */}
+      <section className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f7f5ef] via-[#f3e7d6] to-[#e9e2d0]">
+        <div className="max-w-xl w-full bg-white/90 rounded-3xl shadow-2xl border border-[#DFC6AA]/40 p-8 flex flex-col items-center gap-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#B66D38] mb-2 tracking-tight">PRÓXIMA TURMA</h2>
+          <div className="text-lg md:text-xl text-[#21302B] font-semibold mb-2">22, 23 e 24 de Agosto de 2025</div>
+          <div className="text-base md:text-lg text-[#21302B]/80 mb-4">Hotel Vista Serrana – Mairiporã/SP</div>
+          <a
+            href="https://wa.me/5511940069695"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-[#B66D38]/50"
+          >
+            Mais Informações
+          </a>
         </div>
       </section>
 
