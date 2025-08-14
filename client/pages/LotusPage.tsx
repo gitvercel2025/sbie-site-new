@@ -226,7 +226,10 @@ const LotusPage = () => {
   // Função para navegação dos botões CTA
   const handleCTAClick = () => {
     // Scroll para o topo antes de navegar
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // No início do componente LotusPage, adicione:
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
     // Pequeno delay para garantir que o scroll aconteça antes da navegação
     setTimeout(() => {
       navigate('/formulario');

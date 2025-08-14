@@ -13,6 +13,7 @@ import {
   Atom,
 } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { Link } from 'react-router-dom';
 
 interface TrainingCardProps {
   title: string;
@@ -144,15 +145,18 @@ const TrainingCard = ({
           </p>
 
           {/* CTA Button */}
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={href}
+            onClick={() => {
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }, 100);
+            }}
             className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}
           >
             <span>Saiba Mais</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
         </div>
 
         {/* Decorative elements */}
@@ -168,24 +172,21 @@ export const Trainings = () => {
   const trainings: TrainingCardProps[] = [
     {
       title: "Lotus Inteligência Emocional",
-      description:
-        "Uma imersão de 3 dias para transformar sua vida pessoal e profissional através da inteligência emocional.",
+      description: "Uma imersão de 3 dias para transformar sua vida pessoal e profissional através da inteligência emocional.",
       icon: <Zap className="w-8 h-8" />,
       category: "individual" as const,
       href: "/lotus",
     },
     {
       title: "Formação em Inteligência Emocional",
-      description:
-        "Capacitação completa para quem deseja se tornar um profissional em inteligência emocional.",
+      description: "Capacitação completa para quem deseja se tornar um profissional em inteligência emocional.",
       icon: <Brain className="w-8 h-8" />,
       category: "professional" as const,
       href: "/formacao",
     },
     {
       title: "Formação Master em Inteligência Emocional",
-      description:
-        "Aprofunde seus conhecimentos e se torne um especialista master em inteligência emocional.",
+      description: "Aprofunde seus conhecimentos e se torne um especialista master em inteligência emocional.",
       icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
       href: "/formacao-master",
