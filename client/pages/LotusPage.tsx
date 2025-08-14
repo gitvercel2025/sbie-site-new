@@ -431,6 +431,139 @@ const LotusPage = () => {
         </div>
       </section>
 
+      {/* Primeiro Card - Você Carrega Algum Desses Sentimentos */}
+      <section className="py-20 px-4 relative bg-gradient-to-br from-[#21302B] via-[#2a3d36] to-[#21302B]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-12">
+              VOCÊ CARREGA ALGUM DESSES SENTIMENTOS?
+            </h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image Section */}
+            <div className="flex justify-center">
+              <div className="relative group">
+                {/* Decorative frame */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] rounded-3xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] rounded-2xl opacity-50"></div>
+                
+                {/* Main image container */}
+                <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                  <img 
+                    src="https://i.imgur.com/AIrq70I.png" 
+                    alt="Sentimentos negativos" 
+                    className="w-full h-auto rounded-xl shadow-lg"
+                  />
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-xl animate-pulse">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-br from-[#DFC6AA] to-[#B66D38] rounded-full shadow-lg animate-bounce"></div>
+              </div>
+            </div>
+            
+            {/* Questions Section */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-[#4F5948]/30 to-[#21302B]/50 backdrop-blur-xl border border-[#DFC6AA]/20 rounded-3xl p-8 shadow-2xl">
+                <div className="space-y-6">
+                  {[
+                    "Você se sente vazio e sem motivação para nada?",
+                    "Você não se sente valorizado(a) pelas pessoas que mais ama?",
+                    "Seus familiares não te reconhecem e não se importam com você?",
+                    "Sua vida perdeu o sentido?"
+                  ].map((question, index) => (
+                    <div key={index} className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-[#B66D38]/10 transition-all duration-300">
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                      </div>
+                      <p className="text-lg md:text-xl text-[#DFC6AA] font-medium leading-relaxed group-hover:text-white transition-colors duration-300">
+                        {question}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3">
+                    <Brain className="w-5 h-5 text-[#B66D38] mr-2" />
+                    <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide">Se você respondeu SIM para alguma dessas perguntas...</span>
+                  </div>
+                  <p className="text-[#B66D38] font-bold text-xl mt-4">
+                    O LOTUS é para você!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Segundo Card - Você Carrega Algum Desses Sentimentos */}
+      <section className="py-20 px-4 relative bg-gradient-to-br from-[#2a3d36] via-[#21302B] to-[#2a3d36]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Questions Section - Lado esquerdo */}
+            <div className="space-y-6 order-2 lg:order-1">
+              <div className="bg-gradient-to-br from-[#4F5948]/30 to-[#21302B]/50 backdrop-blur-xl border border-[#DFC6AA]/20 rounded-3xl p-8 shadow-2xl">
+                <div className="space-y-6">
+                  {[
+                    "Você se sente sobrecarregado(a) e acha que não vai dar conta?",
+                    "Os problemas só acumulam e você não consegue resolver mais nada?",
+                    "Sente que só trabalha e não consegue aproveitar a vida?"
+                  ].map((question, index) => (
+                    <div key={index} className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-[#B66D38]/10 transition-all duration-300">
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                      </div>
+                      <p className="text-lg md:text-xl text-[#DFC6AA] font-medium leading-relaxed group-hover:text-white transition-colors duration-300">
+                        {question}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3">
+                    <Brain className="w-5 h-5 text-[#B66D38] mr-2" />
+                    <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide">Se você respondeu SIM para alguma dessas perguntas...</span>
+                  </div>
+                  <p className="text-[#B66D38] font-bold text-xl mt-4">
+                    O LOTUS é para você!
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image Section - Lado direito */}
+            <div className="flex justify-center order-1 lg:order-2">
+              <div className="relative group">
+                {/* Decorative frame */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#DFC6AA] via-[#B66D38] to-[#DFC6AA] rounded-3xl blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] rounded-2xl opacity-50"></div>
+                
+                {/* Main image container */}
+                <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                  <img 
+                    src="https://i.imgur.com/A9deES9.png" 
+                    alt="Sobrecarga e estresse" 
+                    className="w-full h-auto rounded-xl shadow-lg"
+                  />
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-br from-[#DFC6AA] to-[#B66D38] rounded-full flex items-center justify-center shadow-xl animate-pulse">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full shadow-lg animate-bounce"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-6xl mx-auto">
