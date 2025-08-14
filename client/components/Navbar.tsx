@@ -83,7 +83,7 @@ export const Navbar = () => {
     { label: "Lotus Inteligência Emocional", href: "/lotus" },
     { label: "Formação em Inteligência Emocional", href: "/formacao" },
     { label: "Formação Master em Inteligência Emocional", href: "/formacao-master" },
-    { label: "Legado", href: "/legado" },
+    { label: "Lotus Legado", href: "/legado" },
     { label: "SBIE Business", href: "/business" },
     { label: "SBIE Embaixadores do Bem", href: "/embaixadores" },
   ];

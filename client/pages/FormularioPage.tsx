@@ -105,7 +105,7 @@ Aguardo contato para mais informações sobre o curso.`;
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
             <Send className="w-5 h-5 text-[#B66D38] mr-2" />
-            <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Inscrição LOTUS</span>
+            <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Faça sua inscrição</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-4">
@@ -113,7 +113,7 @@ Aguardo contato para mais informações sobre o curso.`;
           </h1>
           
           <p className="text-xl text-[#DFC6AA]/80 leading-relaxed">
-            Preencha o formulário abaixo e garante sua vaga no LOTUS Inteligência Emocional
+            Preencha o formulário abaixo e garante sua vaga!
           </p>
         </div>
 

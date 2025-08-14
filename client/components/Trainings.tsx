@@ -192,7 +192,7 @@ export const Trainings = () => {
       href: "/formacao-master",
     },
     {
-      title: "Legado",
+      title: "Lotus Legado",
       description: "Chega de apenas SOBREVIVER, construa o seu LEGADO e viva o Chamado que faz o seu ESPÍRITO VIBRAR.",
       icon: <Sparkles className="w-8 h-8" />,
       category: "individual" as const,
