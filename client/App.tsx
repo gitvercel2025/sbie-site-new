@@ -16,6 +16,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FormularioPage from './pages/FormularioPage';
 
+// Adicione esta importação no topo do arquivo
+import LegadoPage from "./pages/LegadoPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -41,6 +44,7 @@ const App = () => (
               <Route path="/formulario" element={<FormularioPage />} />
               <Route path="/formacao" element={<PlaceholderPage title="Formação em Inteligência Emocional" description="Certificação completa para profissionais da área." />} />
               <Route path="/formacao-master" element={<PlaceholderPage title="Formação Master em Inteligência Emocional" description="Certificação avançada para especialistas." />} />
+              <Route path="/legado" element={<LegadoPage />} />
               <Route path="/business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
               <Route path="/embaixadores" element={<PlaceholderPage title="SBIE Embaixadores do Bem" description="Programa social para multiplicar conhecimento em comunidades." />} />
 

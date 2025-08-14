@@ -20,7 +20,7 @@ interface TrainingCardProps {
   description: string;
   icon: React.ReactNode;
   index: number;
-  category: "individual" | "professional" | "corporate" | "social";
+  category: "individual" | "professional" | "corporate" | "social" | "legacy";
   href: string;
 }
 
@@ -190,6 +190,13 @@ export const Trainings = () => {
       icon: <Cpu className="w-8 h-8" />,
       category: "professional" as const,
       href: "/formacao-master",
+    },
+    {
+      title: "Legado",
+      description: "Chega de apenas SOBREVIVER, construa o seu LEGADO e viva o Chamado que faz o seu ESPÍRITO VIBRAR.",
+      icon: <Sparkles className="w-8 h-8" />,
+      category: "individual" as const,
+      href: "/legado",
     },
     {
       title: "SBIE Business",
