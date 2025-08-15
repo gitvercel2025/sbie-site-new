@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 
 export const MECBanner = () => {
   const [isAnimated, setIsAnimated] = useState(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  const texts = [
+    "🎓 Nossa Formação é reconhecida pelo MEC - Ministério da Educação",
+    "🎯 Nossas Imersões possuem Garantia Incondicional"
+  ];
 
   useEffect(() => {
     // Start animation after component mounts
@@ -10,6 +16,15 @@ export const MECBanner = () => {
     }, 100);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    // Alternância de textos a cada 10 segundos
+    const textTimer = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 10000);
+
+    return () => clearInterval(textTimer);
   }, []);
 
   return (
@@ -34,16 +49,21 @@ export const MECBanner = () => {
         <div className="block md:hidden">
           <div className="flex flex-col items-center space-y-3 text-center">
             <div className="relative">
-              <span className="font-semibold text-sm bg-white/15 px-4 py-2 rounded-full block border border-white/20 backdrop-blur-sm">
-                🎓 Nossa Formação é reconhecida pelo MEC
+              <span className="font-semibold text-sm bg-white/15 px-4 py-2 rounded-full block border border-white/20 backdrop-blur-sm transition-all duration-1000">
+                {texts[currentTextIndex]}
               </span>
-              <div className="text-xs mt-2 text-white/95 font-medium">
-                Ministério da Educação
-              </div>
+              {currentTextIndex === 0 && (
+                <div className="text-xs mt-2 text-white/95 font-medium">
+                  Ministério da Educação
+                </div>
+              )}
             </div>
             <img
-              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-              alt="Selo MEC"
+              src={currentTextIndex === 0 
+                ? "https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+                : "https://i.imgur.com/SIuRnC0.png"
+              }
+              alt={currentTextIndex === 0 ? "Selo MEC" : "Selo Garantia"}
               className="h-16 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
             />
           </div>
@@ -52,14 +72,17 @@ export const MECBanner = () => {
         {/* Desktop Layout - Centralizado */}
         <div className="hidden md:flex items-center justify-center space-x-6">
           <div className="relative">
-            <span className="font-bold text-lg lg:text-xl bg-white/15 px-6 py-3 rounded-full border border-white/25 backdrop-blur-sm">
-              🎓 Nossa Formação é reconhecida pelo MEC - Ministério da Educação
+            <span className="font-bold text-lg lg:text-xl bg-white/15 px-6 py-3 rounded-full border border-white/25 backdrop-blur-sm transition-all duration-1000">
+              {texts[currentTextIndex]}
             </span>
           </div>
           
           <img
-            src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-            alt="Selo MEC"
+            src={currentTextIndex === 0 
+              ? "https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+              : "https://i.imgur.com/KN5lano.png"
+            }
+            alt={currentTextIndex === 0 ? "Selo MEC" : "Selo Garantia"}
             className="h-20 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
           />
         </div>

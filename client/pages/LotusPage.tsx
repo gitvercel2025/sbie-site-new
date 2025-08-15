@@ -225,15 +225,12 @@ const LotusPage = () => {
 
   // Função para navegação dos botões CTA
   const handleCTAClick = () => {
-    // Scroll para o topo antes de navegar
-    // No início do componente LotusPage, adicione:
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, []);
-    // Pequeno delay para garantir que o scroll aconteça antes da navegação
+    // Navegar para o formulário e fazer scroll para o topo
+    navigate('/formulario');
+    // Garantir que o scroll vá para o topo após a navegação
     setTimeout(() => {
-      navigate('/formulario');
-    }, 300);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -260,7 +257,7 @@ const LotusPage = () => {
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
                   <Sparkles className="w-5 h-5 text-[#B66D38] mr-2" />
-                  <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança real. Resultado Inevitável.</span>
+                  <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável.</span>
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] via-[#B66D38] to-[#DFC6AA] mb-6 leading-tight tracking-tight">
@@ -361,7 +358,7 @@ const LotusPage = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
               <Sparkles className="w-5 h-5 text-[#B66D38] mr-2" />
-              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Transformação Garantida</span>
+              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável.</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-12">
               O QUE É O LOTUS?
