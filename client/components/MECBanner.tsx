@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Award } from "lucide-react";
 
 export const MECBanner = () => {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -34,60 +33,35 @@ export const MECBanner = () => {
         {/* Mobile Layout */}
         <div className="block md:hidden">
           <div className="flex flex-col items-center space-y-3 text-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center animate-bounce border border-white/30">
-                <Award className="w-4 h-4 text-white" />
-              </div>
-              <img
-                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-                alt="Selo MEC"
-                className="h-12 w-auto animate-pulse drop-shadow-lg"
-              />
-            </div>
             <div className="relative">
-              <span className="font-semibold text-sm animate-pulse bg-white/15 px-4 py-2 rounded-full block border border-white/20 backdrop-blur-sm">
+              <span className="font-semibold text-sm bg-white/15 px-4 py-2 rounded-full block border border-white/20 backdrop-blur-sm">
                 🎓 Nossa Formação é reconhecida pelo MEC
               </span>
               <div className="text-xs mt-2 text-white/95 font-medium">
                 Ministério da Educação
               </div>
-              {/* Glow effect futurista */}
-              <div className="absolute inset-0 bg-white/10 rounded-full animate-ping opacity-40"></div>
             </div>
+            <img
+              src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+              alt="Selo MEC"
+              className="h-16 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
+            />
           </div>
         </div>
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout - Centralizado */}
         <div className="hidden md:flex items-center justify-center space-x-6">
-          {/* Icon with enhanced animation */}
-          <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center animate-bounce border-2 border-white/30 backdrop-blur-sm">
-              <Award className="w-6 h-6 text-white" />
-            </div>
+          <div className="relative">
+            <span className="font-bold text-lg lg:text-xl bg-white/15 px-6 py-3 rounded-full border border-white/25 backdrop-blur-sm">
+              🎓 Nossa Formação é reconhecida pelo MEC - Ministério da Educação
+            </span>
           </div>
-
-          {/* Text content with enhanced animation */}
-          <div className="flex-1 text-center">
-            <div className="flex items-center justify-center space-x-6 flex-wrap">
-              <img
-                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-                alt="Selo MEC"
-                className="h-12 w-auto animate-pulse drop-shadow-xl hover:scale-110 transition-transform duration-300"
-              />
-              <div className="relative">
-                <span className="font-bold text-lg lg:text-xl animate-pulse bg-white/15 px-6 py-3 rounded-full border border-white/25 backdrop-blur-sm">
-                  🎓 Nossa Formação é reconhecida pelo MEC - Ministério da Educação
-                </span>
-                {/* Glow effect futurista */}
-                <div className="absolute inset-0 bg-white/10 rounded-full animate-ping opacity-40"></div>
-              </div>
-              <img
-                src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-                alt="Selo MEC"
-                className="h-16 w-auto animate-pulse drop-shadow-xl hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-          </div>
+          
+          <img
+            src="https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
+            alt="Selo MEC"
+            className="h-20 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
+          />
         </div>
       </div>
 

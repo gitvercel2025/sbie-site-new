@@ -15,6 +15,7 @@ import LotusPage from "./pages/LotusPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FormularioPage from './pages/FormularioPage';
+import { FormacaoPage } from './pages/FormacaoPage';
 
 // Adicione esta importação no topo do arquivo
 import LegadoPage from "./pages/LegadoPage";
@@ -42,7 +43,7 @@ const App = () => (
               {/* Treinamentos - Corrigindo as rotas para corresponder ao menu */}
               <Route path="/lotus" element={<LotusPage />} />
               <Route path="/formulario" element={<FormularioPage />} />
-              <Route path="/formacao" element={<PlaceholderPage title="Formação em Inteligência Emocional" description="Certificação completa para profissionais da área." />} />
+              <Route path="/formacao" element={<FormacaoPage />} />
               <Route path="/formacao-master" element={<PlaceholderPage title="Formação Master em Inteligência Emocional" description="Certificação avançada para especialistas." />} />
               <Route path="/legado" element={<LegadoPage />} />
               <Route path="/business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
@@ -51,7 +52,7 @@ const App = () => (
               {/* Rotas antigas mantidas para compatibilidade */}
               <Route path="/lotus-ie" element={<LotusPage />} />
               <Route path="/lotus-legado" element={<PlaceholderPage title="LOTUS Legado" description="O programa mais completo para especialistas em inteligência emocional." />} />
-              <Route path="/formacao-ie" element={<PlaceholderPage title="Formação em Inteligência Emocional" description="Certificação completa para profissionais da área." />} />
+              <Route path="/formacao-ie" element={<FormacaoPage />} />
               <Route path="/sbie-business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
 
               {/* Online */}

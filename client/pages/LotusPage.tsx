@@ -255,12 +255,12 @@ const LotusPage = () => {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
-            {/* Left Column - Content & Rodrigo */}
+            {/* Left Column - Content */}
             <div className="space-y-8">
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
                   <Sparkles className="w-5 h-5 text-[#B66D38] mr-2" />
-                  <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Transformação Garantida</span>
+                  <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança real. Resultado Inevitável.</span>
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] via-[#B66D38] to-[#DFC6AA] mb-6 leading-tight tracking-tight">
@@ -274,48 +274,15 @@ const LotusPage = () => {
                   Transforme sua vida pessoal e profissional dominando suas emoções e desenvolvendo uma 
                   <span className="text-[#B66D38] font-semibold"> liderança extraordinária</span>
                 </p>
+                
+                <button 
+                  onClick={handleCTAClick}
+                  className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-[#B66D38]/50 relative overflow-hidden group mb-8"
+                >
+                  <span className="relative z-10">QUERO TRANSFORMAR 10 ANOS EM APENAS UM ANO</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
               </div>
-              
-              {/* Rodrigo Fonseca Card */}
-              <div className="bg-gradient-to-br from-[#4F5948]/20 to-[#21302B]/30 backdrop-blur-xl border border-[#DFC6AA]/20 rounded-3xl p-6 hover:scale-105 transition-all duration-500">
-                <div className="flex items-center space-x-4">
-                  <div className="relative">
-                    <div className="w-20 h-20 rounded-2xl overflow-hidden relative">
-                      <img 
-                        src="https://i.imgur.com/q3u2Jdm.jpg" 
-                        alt="Rodrigo Fonseca" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#B66D38] rounded-full flex items-center justify-center">
-                      <Award className="w-3 h-3 text-white" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-[#DFC6AA] mb-1">Rodrigo Fonseca</h3>
-                    <p className="text-[#B66D38] text-sm font-semibold mb-2">Maior Mentor em Inteligência Emocional do Brasil</p>
-                    <div className="flex items-center space-x-4 text-xs text-[#DFC6AA]/80">
-                      <div className="flex items-center">
-                        <Users className="w-3 h-3 mr-1" />
-                        <span>+107k transformados</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Star className="w-3 h-3 mr-1" />
-                        <span>25+ anos</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <button 
-                onClick={handleCTAClick}
-                className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-[#B66D38]/50 relative overflow-hidden group"
-              >
-                <span className="relative z-10">QUERO TRANSFORMAR 10 ANOS EM APENAS UM ANO</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
             </div>
             
             {/* Right Column - Video */}
@@ -399,6 +366,15 @@ const LotusPage = () => {
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-12">
               O QUE É O LOTUS?
             </h2>
+            
+            {/* Nova caixa de texto */}
+            <div className="max-w-4xl mx-auto mb-12">
+              <div className="bg-gradient-to-br from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-xl border border-[#B66D38]/30 rounded-3xl p-8 md:p-10">
+                <p className="text-xl md:text-2xl text-[#DFC6AA] font-semibold leading-relaxed">
+                  "Chega de ser refém das suas emoções. Você já sabe o que precisa mudar, mas continua preso no mesmo ciclo. O LOTUS é onde você se liberta, por dentro e por fora."
+                </p>
+              </div>
+            </div>
           </div>
           
           <div className="max-w-4xl mx-auto">
