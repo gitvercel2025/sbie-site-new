@@ -59,12 +59,14 @@ export const MECBanner = () => {
               )}
             </div>
             <img
+              key={currentTextIndex}
               src={currentTextIndex === 0 
                 ? "https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
-                : "https://i.imgur.com/SIuRnC0.png"
+                : "https://i.imgur.com/KN5lano.png"
               }
               alt={currentTextIndex === 0 ? "Selo MEC" : "Selo Garantia"}
-              className="h-16 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
+              className="h-16 w-auto drop-shadow-xl hover:scale-110 transition-all duration-500 bg-transparent"
+              style={{ background: 'transparent' }}
             />
           </div>
         </div>
@@ -78,12 +80,14 @@ export const MECBanner = () => {
           </div>
           
           <img
+            key={currentTextIndex}
             src={currentTextIndex === 0 
               ? "https://verboemmovimento.com/wp-content/uploads/2024/07/image.png"
               : "https://i.imgur.com/KN5lano.png"
             }
             alt={currentTextIndex === 0 ? "Selo MEC" : "Selo Garantia"}
-            className="h-20 w-auto drop-shadow-xl hover:scale-110 transition-transform duration-300"
+            className="h-20 w-auto drop-shadow-xl hover:scale-110 transition-all duration-500 bg-transparent"
+            style={{ background: 'transparent' }}
           />
         </div>
       </div>
