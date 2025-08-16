@@ -16,6 +16,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FormularioPage from './pages/FormularioPage';
 import { FormacaoPage } from './pages/FormacaoPage';
+import ConhecaSbiePage from './pages/ConhecaSbiePage';
 
 // Adicione esta importação no topo do arquivo
 import LegadoPage from "./pages/LegadoPage";
@@ -36,7 +37,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
 
               {/* Quem Somos */}
-              <Route path="/conheca-sbie" element={<PlaceholderPage title="Conheça a SBIE" description="Descubra a história e missão da Sociedade Brasileira de Inteligência Emocional." />} />
+              <Route path="/conheca-sbie" element={<ConhecaSbiePage />} />
               <Route path="/metodologia" element={<PlaceholderPage title="Nossa Metodologia" description="Conheça a metodologia exclusiva da SBIE para desenvolvimento emocional." />} />
               <Route path="/rodrigo-fonseca" element={<PlaceholderPage title="Rodrigo Fonseca" description="Saiba mais sobre o fundador e presidente da SBIE." />} />
 

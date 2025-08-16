@@ -74,7 +74,7 @@ export const Navbar = () => {
   };
 
   const quemSomosItems: DropdownItem[] = [
-    { label: "Conheça a SBIE", href: "https://www.sbie.com.br/conheca-a-sbie/" },
+    { label: "Conheça a SBIE", href: "/conheca-sbie" },
     { label: "Nossa Metodologia", href: "https://www.sbie.com.br/nossa-metodologia/" },
     { label: "Rodrigo Fonseca", href: "https://rodrigofonsecaie.com.br/" },
   ];
