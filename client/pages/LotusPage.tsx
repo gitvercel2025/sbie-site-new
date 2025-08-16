@@ -63,7 +63,8 @@ const LotusPage = () => {
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/fafa.jpg",
       videoId: "MAnp-y73GSE",
-      name: "Fafá de Belém"
+      name: "Fafá de Belém",
+      profession: "Cantora"
     },
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/scheila.jpg",

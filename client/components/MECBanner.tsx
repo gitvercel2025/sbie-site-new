@@ -19,10 +19,10 @@ export const MECBanner = () => {
   }, []);
 
   useEffect(() => {
-    // Alternância de textos a cada 10 segundos
+    // Alternância de textos a cada 4 segundos
     const textTimer = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 10000);
+    }, 4000);
 
     return () => clearInterval(textTimer);
   }, []);
