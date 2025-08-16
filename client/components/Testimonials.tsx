@@ -78,6 +78,14 @@ export const Testimonials = () => {
       videoUrl: "https://www.youtube.com/watch?v=a9o4wfPvndI",
       quote: "Descobri o poder de transformar emoções em resultados positivos",
     },
+    {
+      id: "6",
+      name: "Julio Cocielo",
+      title: "Influenciador Digital",
+      thumbnail: "https://i.imgur.com/n0i8PCt.png",
+      videoUrl: "https://www.youtube.com/watch?v=nMD7wBKvByw",
+      quote: "A inteligência emocional me ajudou a ter mais clareza nas minhas decisões e relacionamentos",
+    },
   ];
 
   const nextSlide = () => {
@@ -165,6 +173,9 @@ export const Testimonials = () => {
                       src={testimonial.thumbnail}
                       alt={`Depoimento de ${testimonial.name}`}
                       className="w-full h-full object-cover"
+                      style={{ 
+                        objectPosition: testimonial.name === 'Julio Cocielo' ? 'center 30%' : 'center center' 
+                      }}
                     />
 
                     {/* Play Button Overlay */}

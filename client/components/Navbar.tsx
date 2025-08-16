@@ -110,7 +110,7 @@ export const Navbar = () => {
               <img
                 src="https://i.imgur.com/jMtFhFI.png"
                 alt="SBIE Logo"
-                className="h-20 w-auto transition-all duration-500 hover:brightness-110 hover:contrast-110"
+                className="h-40 w-auto transition-all duration-500 hover:brightness-110 hover:contrast-110"
               />
             </Link>
           </div>

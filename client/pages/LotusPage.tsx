@@ -73,7 +73,7 @@ const LotusPage = () => {
       profession: "Dançarina e Apresentadora"
     },
     {
-      thumbnail: "https://i.ytimg.com/vi/x9DuLeMxQ70/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXem3oELLxdSk7d8KfHiwYV5y05g",
+      thumbnail: "https://i.imgur.com/n0i8PCt.png",
       videoId: "nMD7wBKvByw",
       name: "Julio Cocielo",
       profession: "Influenciador Digital"
@@ -624,7 +624,7 @@ const LotusPage = () => {
               <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Resultados Imediatos</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-6">
-              Benefícios Transformadores
+              Resultados que você vai sentir na pele!
             </h2>
           </div>
           
@@ -661,7 +661,7 @@ const LotusPage = () => {
               <span className="text-[#DFC6AA] font-bold text-lg tracking-wide uppercase">Conteúdo Exclusivo</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-6">
-              Resultados que você vai sentir na pele!
+              O QUE VOCÊ VAI APRENDER
             </h2>
           </div>
           
@@ -694,24 +694,30 @@ const LotusPage = () => {
       {/* Video Testimonials Section */}
       <section className="py-12 md:py-20 px-4 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-4 md:px-6 py-2 md:py-3 mb-4 md:mb-6">
-              <Play className="w-4 h-4 md:w-5 md:h-5 text-[#B66D38] mr-2" />
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
+              <Star className="w-5 h-5 text-[#B66D38] mr-2" />
               <span className="text-[#DFC6AA] font-semibold text-xs md:text-sm tracking-wide uppercase">Depoimentos</span>
             </div>
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-black text-[#DFC6AA] mb-4 md:mb-6 min-h-[80px] md:min-h-[120px] flex items-center justify-center px-2">
-              {typedText.split('107 MIL PESSOAS').map((part, index) => (
-                <span key={index}>
-                  {part}
-                  {index === 0 && (
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] animate-pulse">
-                      107 MIL PESSOAS
+            
+            {/* Caixa de texto moderna para o título */}
+            <div className="max-w-4xl mx-auto mb-8">
+              <div className="bg-gradient-to-br from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-xl border border-[#B66D38]/30 rounded-3xl p-6 md:p-8">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-[#DFC6AA] leading-tight">
+                  {typedText.split('107 MIL PESSOAS').map((part, index) => (
+                    <span key={index}>
+                      {part}
+                      {index === 0 && (
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] animate-pulse">
+                          107 MIL PESSOAS
+                        </span>
+                      )}
                     </span>
-                  )}
-                </span>
-              ))}
-              <span className="animate-pulse text-[#B66D38]">|</span>
-            </h2>
+                  ))}
+                  <span className="animate-pulse text-[#B66D38]">|</span>
+                </h2>
+              </div>
+            </div>
           </div>
           
           {/* Video Player Modal */}
@@ -752,7 +758,8 @@ const LotusPage = () => {
                       <img 
                         src={video.thumbnail} 
                         alt={video.name}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                        style={{ objectPosition: video.name === 'Julio Cocielo' ? 'center 20%' : 'center center' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
@@ -805,7 +812,8 @@ const LotusPage = () => {
                             <img 
                               src={video.thumbnail} 
                               alt={video.name}
-                              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                              className="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                              style={{ objectPosition: video.name === 'Julio Cocielo' ? 'center 20%' : 'center center' }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
