@@ -39,22 +39,26 @@ const LotusPage = () => {
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/juliana.jpg",
       videoId: "ysF7fk1pjeQ",
-      name: "Juliana Paes"
+      name: "Juliana Paes",
+      profession: "Atriz"
     },
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/wolf.jpg",
       videoId: "ENhzSaMsOQI",
-      name: "Wolf Maya"
+      name: "Wolf Maya",
+      profession: "Diretor de TV"
     },
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/cris.jpg",
       videoId: "dKBKJjxy2J4",
-      name: "Chris Flores"
+      name: "Chris Flores",
+      profession: "Apresentadora de TV"
     },
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/catia.jpg",
       videoId: "5gCzTc34VVo",
-      name: "Catia Fonseca"
+      name: "Catia Fonseca",
+      profession: "Apresentadora de TV"
     },
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/fafa.jpg",
@@ -64,7 +68,14 @@ const LotusPage = () => {
     {
       thumbnail: "https://lp.sbie.com.br/wp-content/uploads/2022/05/scheila.jpg",
       videoId: "a9o4wfPvndI",
-      name: "Scheila Carvalho"
+      name: "Scheila Carvalho",
+      profession: "Dançarina e Apresentadora"
+    },
+    {
+      thumbnail: "https://i.ytimg.com/vi/x9DuLeMxQ70/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAXem3oELLxdSk7d8KfHiwYV5y05g",
+      videoId: "nMD7wBKvByw",
+      name: "Julio Cocielo",
+      profession: "Influenciador Digital"
     }
   ];
 
@@ -257,7 +268,7 @@ const LotusPage = () => {
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
                   <Sparkles className="w-5 h-5 text-[#B66D38] mr-2" />
-                  <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável.</span>
+              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável!</span>
                 </div>
                 
                 <h1 className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] via-[#B66D38] to-[#DFC6AA] mb-6 leading-tight tracking-tight">
@@ -336,19 +347,83 @@ const LotusPage = () => {
       </section>
 
       {/* Próximas Turmas Section */}
-      <section className="w-full flex justify-center items-center py-16 bg-gradient-to-br from-[#f7f5ef] via-[#f3e7d6] to-[#e9e2d0]">
-        <div className="max-w-xl w-full bg-white/90 rounded-3xl shadow-2xl border border-[#DFC6AA]/40 p-8 flex flex-col items-center gap-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#B66D38] mb-2 tracking-tight">PRÓXIMA TURMA</h2>
-          <div className="text-lg md:text-xl text-[#21302B] font-semibold mb-2">22, 23 e 24 de Agosto de 2025</div>
-          <div className="text-base md:text-lg text-[#21302B]/80 mb-4">Hotel Vista Serrana – Mairiporã/SP</div>
-          <a
-            href="https://wa.me/5511940069695"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-[#B66D38]/50"
-          >
-            Mais Informações
-          </a>
+      <section 
+        className="relative py-20 px-4 overflow-hidden"
+        style={{
+          backgroundImage: 'url(https://i.imgur.com/EykuWqo.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Overlay escuro */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tight">PRÓXIMA TURMA</h2>
+            <div className="text-xl md:text-2xl text-[#DFC6AA] font-semibold mb-4">22, 23 e 24 de Agosto de 2025</div>
+            <div className="text-lg md:text-xl text-white/90 mb-8">Hotel Vista Serrana – Mairiporã/SP</div>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Card Esquerdo */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <div className="relative bg-black/80 backdrop-blur-xl border border-[#DFC6AA]/30 rounded-3xl p-8 overflow-hidden">
+                {/* Decorações futuristas */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#B66D38]/50"></div>
+                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-[#B66D38]/50"></div>
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-[#B66D38]/50"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#B66D38]/50"></div>
+                
+                <img 
+                  src="https://i.imgur.com/DVzRLBU.jpeg" 
+                  alt="Imagem LOTUS 1" 
+                  className="w-full h-64 object-cover rounded-2xl mb-4"
+                />
+                
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-[#DFC6AA] mb-2">Mudança Real. Resultado Inevitável!</h3>
+                  <p className="text-white/80">3 dias que vão mudar sua vida para sempre</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Card Direito */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#DFC6AA] via-[#B66D38] to-[#DFC6AA] rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <div className="relative bg-black/80 backdrop-blur-xl border border-[#DFC6AA]/30 rounded-3xl p-8 overflow-hidden">
+                {/* Decorações futuristas */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#DFC6AA]/50"></div>
+                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-[#DFC6AA]/50"></div>
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-[#DFC6AA]/50"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#DFC6AA]/50"></div>
+                
+                <img 
+                  src="https://i.imgur.com/pixKRFm.jpeg" 
+                  alt="Imagem LOTUS 2" 
+                  className="w-full h-64 object-cover rounded-2xl mb-4"
+                />
+                
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-[#DFC6AA] mb-2">Metodologia Exclusiva</h3>
+                  <p className="text-white/80">Técnicas comprovadas de inteligência emocional</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a
+              href="https://wa.me/5511940069695"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-12 py-6 rounded-2xl text-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50"
+            >
+              Mais Informações
+            </a>
+          </div>
         </div>
       </section>
 
@@ -358,7 +433,7 @@ const LotusPage = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
               <Sparkles className="w-5 h-5 text-[#B66D38] mr-2" />
-              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável.</span>
+              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Mudança Real. Resultado Inevitável!</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-12">
               O QUE É O LOTUS?
@@ -443,10 +518,10 @@ const LotusPage = () => {
               <div className="bg-gradient-to-br from-[#4F5948]/30 to-[#21302B]/50 backdrop-blur-xl border border-[#DFC6AA]/20 rounded-3xl p-8 shadow-2xl">
                 <div className="space-y-6">
                   {[
-                    "Você se sente vazio e sem motivação para nada?",
-                    "Você não se sente valorizado(a) pelas pessoas que mais ama?",
-                    "Seus familiares não te reconhecem e não se importam com você?",
-                    "Sua vida perdeu o sentido?"
+                    "Sua mente não para, seu coração dispara e você vive fingindo que tá tudo bem, quando por dentro sente que está implodindo?",
+                    "Você acorda cansado, dorme esgotado e passa o dia inteiro carregando um peso invisível que está te esmagando por dentro?",
+                    "Seu corpo já está gritando: dores, cansaço, insônia… sinais claros de que do jeito que você está vivendo, não dá mais?",
+                    "Você sente que está apenas passando pela vida sem um 'porquê' que realmente te mova?"
                   ].map((question, index) => (
                     <div key={index} className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-[#B66D38]/10 transition-all duration-300">
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -483,9 +558,11 @@ const LotusPage = () => {
               <div className="bg-gradient-to-br from-[#4F5948]/30 to-[#21302B]/50 backdrop-blur-xl border border-[#DFC6AA]/20 rounded-3xl p-8 shadow-2xl">
                 <div className="space-y-6">
                   {[
-                    "Você se sente sobrecarregado(a) e acha que não vai dar conta?",
-                    "Os problemas só acumulam e você não consegue resolver mais nada?",
-                    "Sente que só trabalha e não consegue aproveitar a vida?"
+                    "Você está exausto, sem vontade de fazer nada, e sente que está afundando num mesmo ciclo?",
+                    "Você se sente solitário, mesmo entre pessoas, e que ninguém realmente te entende?",
+                    "Você se sente invisível no trabalho, sem reconhecimento e completamente esgotado?",
+                    "Você vive com medo do amanhã, angustiado com o dinheiro e com vergonha de pedir ajuda?",
+                    "Você sente que está perdendo sua vida pessoal, negligenciando as pessoas que mais ama por excesso de trabalho?"
                   ].map((question, index) => (
                     <div key={index} className="group flex items-start space-x-4 p-4 rounded-2xl hover:bg-[#B66D38]/10 transition-all duration-300">
                       <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -520,7 +597,7 @@ const LotusPage = () => {
                 {/* Main image container */}
                 <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
                   <img 
-                    src="https://i.imgur.com/A9deES9.png" 
+                    src="https://img.freepik.com/fotos-gratis/mulher-adulta-com-problemas-de-saude-mental_23-2148758684.jpg?semt=ais_hybrid&w=740&q=80" 
                     alt="Sobrecarga e estresse" 
                     className="w-full h-auto rounded-xl shadow-lg"
                   />
@@ -579,11 +656,11 @@ const LotusPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-gradient-to-r from-[#B66D38]/20 to-[#DFC6AA]/20 backdrop-blur-sm border border-[#DFC6AA]/30 rounded-full px-6 py-3 mb-6">
-              <Brain className="w-5 h-5 text-[#B66D38] mr-2" />
-              <span className="text-[#DFC6AA] font-semibold text-sm tracking-wide uppercase">Conteúdo Exclusivo</span>
+              <Zap className="w-5 h-5 text-[#B66D38] mr-2" />
+              <span className="text-[#DFC6AA] font-bold text-lg tracking-wide uppercase">Conteúdo Exclusivo</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] mb-6">
-              Habilidades que você irá desenvolver após o LOTUS!
+              Resultados que você vai sentir na pele!
             </h2>
           </div>
           
@@ -686,11 +763,16 @@ const LotusPage = () => {
                         </div>
                       </div>
                       
-                      {/* Name */}
+                      {/* Name and Profession */}
                       <div className="absolute bottom-3 left-3 right-3">
                         <h3 className="text-white font-bold text-base leading-tight">
                           {video.name}
                         </h3>
+                        {video.profession && (
+                          <p className="text-[#DFC6AA] text-sm font-medium mt-1">
+                            {video.profession}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -724,7 +806,27 @@ const LotusPage = () => {
                               alt={video.name}
                               className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            {/* ... existing code ... */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                            
+                            {/* Play Button */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-20 h-20 bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-all duration-300">
+                                <Play className="w-8 h-8 text-[#21302B] ml-1" fill="currentColor" />
+                              </div>
+                            </div>
+                            
+                            {/* Name and Profession */}
+                            <div className="absolute bottom-4 left-4 right-4">
+                              <h3 className="text-white font-bold text-lg leading-tight">
+                                {video.name}
+                              </h3>
+                              {video.profession && (
+                                <p className="text-[#DFC6AA] text-sm font-medium mt-1">
+                                  {video.profession}
+                                </p>
+                              )}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -890,7 +992,7 @@ const LotusPage = () => {
             <img 
               src="https://lp.sbie.com.br/wp-content/uploads/2022/05/icones-midia.png" 
               alt="Ícones de Mídia" 
-              className="mx-auto max-w-full h-auto brightness-125 contrast-110 hover:brightness-150 transition-all duration-300 filter"
+              className="mx-auto max-w-full h-auto brightness-110 contrast-105 hover:brightness-200 hover:contrast-125 hover:scale-105 transition-all duration-500 filter cursor-pointer"
             />
           </div>
         </div>
@@ -903,13 +1005,12 @@ const LotusPage = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#B66D38]/5 to-transparent"></div>
             
             <div className="relative z-10">
-              <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-3xl flex items-center justify-center shadow-2xl relative overflow-hidden">
+              <div className="w-40 h-40 mx-auto mb-8 flex items-center justify-center">
                 <img 
-                  src="https://i.imgur.com/HwQq64m.png" 
+                  src="https://i.imgur.com/KN5lano.png" 
                   alt="Selo de Garantia" 
-                  className="w-full h-full object-contain p-2"
+                  className="w-40 h-40 object-contain rounded-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/10"></div>
               </div>
               
               <h2 className="text-3xl md:text-5xl font-black text-[#DFC6AA] mb-6">
