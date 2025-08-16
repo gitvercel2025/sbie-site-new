@@ -80,7 +80,7 @@ const ConhecaSbiePage = () => {
     {
       icon: <Heart className="w-8 h-8" />,
       title: "VALORES",
-      description: "Amor incondicional, Verdade, prima da vida. Aperfeiçoamento constante. Excelência sempre, amor e energia. Simplicidade. Compaixão. Trabalhar com Amor!"
+      description: "Amor incondicional, Verdade. Aperfeiçoamento constante. Excelência sempre, amor e energia. Simplicidade. Compaixão. Trabalhar com Amor!"
     }
   ];
 
@@ -221,7 +221,7 @@ const ConhecaSbiePage = () => {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-sbie-bronze/20">
                 <img
-                  src="https://images.sympla.com.br/67f037ed66dca.png"
+                  src="https://i.imgur.com/6IsfE9I.jpeg"
                   alt="SBIE - Seu futuro"
                   className="w-full h-80 object-cover rounded-2xl"
                 />
@@ -331,7 +331,7 @@ const ConhecaSbiePage = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">Transformação Coletiva</h3>
                   <p className="text-sbie-beige/90">
-                    Somos parceiros do Secretariado Internacional de Inteligência Emocional
+                    Somos parceiros da Sociedade Internacional de Inteligência Emocional
                   </p>
                 </div>
               </div>
@@ -350,7 +350,7 @@ const ConhecaSbiePage = () => {
           </h2>
           
           <p className="text-xl text-sbie-beige/90 mb-8 max-w-2xl mx-auto">
-            Junte-se a mais de 200 mil pessoas que já descobriram o poder da Inteligência Emocional
+            Junte-se a mais de 200 mil pessoas que já descobriram o poder da Inteligência Emocional na prática!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -387,61 +387,15 @@ const ConhecaSbiePage = () => {
           </p>
         </div>
         
-        {/* Globo 3D Effect Futurista */}
+        {/* Imagem do Globo com Efeito de Zoom */}
         <div ref={globeRef} className="relative flex items-center justify-center">
-          <div className="relative w-96 h-96 mx-auto">
-            {/* Globo principal com efeito holográfico */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm border border-sbie-bronze/20 animate-spin-slow shadow-2xl shadow-sbie-bronze/20">
-              {/* Efeito de scan holográfico */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-sbie-bronze/10 to-transparent animate-scan-vertical opacity-60"></div>
-              
-              {/* Pontos representando países com efeito pulsante */}
-              <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-sbie-bronze rounded-full animate-pulse shadow-lg shadow-sbie-bronze/50"></div>
-              <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-sbie-beige rounded-full animate-pulse delay-1000 shadow-lg shadow-sbie-beige/50"></div>
-              <div className="absolute bottom-1/3 left-1/2 w-4 h-4 bg-sbie-bronze rounded-full animate-pulse delay-2000 shadow-lg shadow-sbie-bronze/50"></div>
-              <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-sbie-beige rounded-full animate-pulse delay-3000 shadow-lg shadow-sbie-beige/50"></div>
-              <div className="absolute bottom-1/4 right-1/2 w-3 h-3 bg-sbie-bronze rounded-full animate-pulse delay-4000 shadow-lg shadow-sbie-bronze/50"></div>
-              
-              {/* Linhas de conexão entre pontos */}
-              <div className="absolute top-1/4 left-1/3 w-20 h-0.5 bg-gradient-to-r from-sbie-bronze/60 to-transparent rotate-45 animate-pulse"></div>
-              <div className="absolute top-1/2 right-1/4 w-16 h-0.5 bg-gradient-to-l from-sbie-beige/60 to-transparent -rotate-12 animate-pulse delay-1000"></div>
-              <div className="absolute bottom-1/3 left-1/2 w-24 h-0.5 bg-gradient-to-r from-sbie-bronze/60 to-transparent rotate-12 animate-pulse delay-2000"></div>
-            </div>
-            
-            {/* Anéis orbitais com efeito neon */}
-            <div className="absolute inset-0 rounded-full border-2 border-sbie-bronze/30 animate-spin-reverse shadow-lg shadow-sbie-bronze/20"></div>
-            <div className="absolute inset-4 rounded-full border border-sbie-beige/30 animate-spin-slow shadow-lg shadow-sbie-beige/20"></div>
-            <div className="absolute inset-8 rounded-full border border-sbie-bronze/20 animate-spin-reverse shadow-md shadow-sbie-bronze/10" style={{animationDuration: '8s'}}></div>
-            
-            {/* Centro do globo com efeito pulsante */}
-            <div className="absolute inset-1/3 rounded-full bg-gradient-to-br from-sbie-bronze to-sbie-beige flex items-center justify-center shadow-2xl shadow-sbie-bronze/40 animate-pulse">
-              <Globe className="w-12 h-12 text-white drop-shadow-lg" />
-              {/* Aura central */}
-              <div className="absolute inset-0 rounded-full bg-sbie-bronze/20 animate-ping"></div>
-            </div>
-            
-            {/* Efeito de energia radiante */}
-            <div className="absolute inset-0 rounded-full border-4 border-transparent bg-gradient-to-r from-sbie-bronze/20 via-transparent to-sbie-beige/20 animate-spin" style={{animationDuration: '3s'}}></div>
+          <div className="relative w-90 h-90 mx-auto group">
+            <img 
+              src="http://emotionalintelligencesociety.org/wp-content/uploads/2022/11/isei-logo-m1.png" 
+              alt="Impacto Global SBIE" 
+              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 shadow-xl"
+            />
           </div>
-          
-          {/* Partículas flutuantes com efeito trail */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-sbie-bronze/70 rounded-full animate-float shadow-lg shadow-sbie-bronze/50">
-            <div className="absolute inset-0 rounded-full bg-sbie-bronze/30 animate-ping"></div>
-          </div>
-          <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-sbie-beige/70 rounded-full animate-float delay-1000 shadow-lg shadow-sbie-beige/50">
-            <div className="absolute inset-0 rounded-full bg-sbie-beige/30 animate-ping delay-500"></div>
-          </div>
-          <div className="absolute bottom-1/4 left-3/4 w-2 h-2 bg-sbie-bronze/70 rounded-full animate-float delay-2000 shadow-lg shadow-sbie-bronze/50">
-            <div className="absolute inset-0 rounded-full bg-sbie-bronze/30 animate-ping delay-1000"></div>
-          </div>
-          
-          {/* Raios de energia */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-sbie-bronze/40 to-transparent animate-pulse"></div>
-          <div className="absolute top-0 left-1/2 w-0.5 h-full bg-gradient-to-b from-transparent via-sbie-beige/40 to-transparent animate-pulse delay-1000"></div>
-          
-          {/* Hexágonos flutuantes */}
-          <div className="absolute top-1/6 right-1/6 w-8 h-8 border border-sbie-bronze/40 rotate-45 animate-float" style={{clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)'}}></div>
-          <div className="absolute bottom-1/6 left-1/6 w-6 h-6 border border-sbie-beige/40 rotate-12 animate-float delay-1500" style={{clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)'}}></div>
         </div>
       </section>
     </div>

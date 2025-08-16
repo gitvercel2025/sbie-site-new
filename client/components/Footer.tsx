@@ -14,6 +14,13 @@ import {
   Award,
 } from "lucide-react";
 
+// Adicionar ícone do TikTok
+const TikTokIcon = () => (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
+
 export const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -35,11 +42,6 @@ export const Footer = () => {
 
   const socialLinks = [
     {
-      icon: <Facebook className="w-5 h-5" />,
-      href: "https://www.facebook.com/sbie.oficial",
-      label: "Facebook",
-    },
-    {
       icon: <Instagram className="w-5 h-5" />,
       href: "https://www.instagram.com/sbie.oficial/",
       label: "Instagram",
@@ -53,6 +55,16 @@ export const Footer = () => {
       icon: <Youtube className="w-5 h-5" />,
       href: "https://www.youtube.com/sbiemocional",
       label: "YouTube",
+    },
+    {
+      icon: <TikTokIcon />,
+      href: "https://www.tiktok.com/@sbie.oficial",
+      label: "TikTok",
+    },
+    {
+      icon: <Facebook className="w-5 h-5" />,
+      href: "https://www.facebook.com/sbie.oficial",
+      label: "Facebook",
     },
   ];
 
@@ -216,18 +228,40 @@ export const Footer = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
-              <Shield className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
-              <p className="text-sbie-beige/90 font-medium">
-                Metodologia Certificada
-              </p>
-              <p className="text-sbie-beige/70 text-sm">
-                International Society
-              </p>
+              <a 
+                href="https://emotionalintelligencesociety.org/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="http://emotionalintelligencesociety.org/wp-content/uploads/2022/11/isei-logo-m1.png"
+                  alt="International Society Logo"
+                  className="w-16 h-16 mx-auto mb-3 object-contain"
+                />
+                <p className="text-sbie-beige/90 font-medium">
+                  Metodologia Certificada
+                </p>
+                <p className="text-sbie-beige/70 text-sm">
+                  International Society
+                </p>
+              </a>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
-              <Award className="w-8 h-8 text-sbie-bronze mx-auto mb-3" />
-              <p className="text-sbie-beige/90 font-medium">4 Best-Sellers</p>
-              <p className="text-sbie-beige/70 text-sm">Publicados</p>
+              <a 
+                href="https://rodrigofonsecaie.com.br/os4poderes/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src="https://rodrigofonsecaie.com.br/wp-content/uploads/2023/02/livros-min.png"
+                  alt="Livros Best-Sellers"
+                  className="w-16 h-16 mx-auto mb-3 object-contain"
+                />
+                <p className="text-sbie-beige/90 font-medium">4 Best-Sellers</p>
+                <p className="text-sbie-beige/70 text-sm">Publicados</p>
+              </a>
             </div>
             <div className="bg-sbie-beige/5 rounded-2xl p-6 border border-sbie-beige/10">
               <img

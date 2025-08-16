@@ -304,7 +304,7 @@ const LotusPage = () => {
                   {/* Custom Thumbnail Background */}
                   <div className="absolute inset-0">
                     <img 
-                      src="https://i.imgur.com/QRH4pQM.jpeg" 
+                      src="https://i.imgur.com/KJCS30L.jpeg" 
                       alt="LOTUS Thumbnail" 
                       className="w-full h-full object-cover rounded-3xl"
                     />
@@ -333,13 +333,14 @@ const LotusPage = () => {
                 </div>
               ) : (
                 <div className="w-full h-80 lg:h-96 bg-black rounded-3xl overflow-hidden shadow-2xl">
-                  <video 
-                    className="w-full h-full object-cover" 
-                    src="https://lp.sbie.com.br/wp-content/uploads/2023/02/lotus-2025.mp4" 
+                  <iframe 
+                    className="w-full h-full" 
+                    src="https://www.youtube.com/embed/2ozH--8vI-Y" 
                     title="LOTUS Apresentação"
-                    controls
-                    autoPlay
-                  ></video>
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               )}
             </div>

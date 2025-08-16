@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Phone, Mail, User, DollarSign, Send, CheckCircle } from 'lucide-react';
+import { Phone, Mail, User, Users, Send, CheckCircle } from 'lucide-react';
 
 const FormularioPage = () => {
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
     email: '',
-    rendaMensal: ''
+    comoConheceu: '',
+    outroMeio: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,6 +21,7 @@ const FormularioPage = () => {
   };
 
   const formatWhatsAppMessage = () => {
+    const conheceuTexto = formData.comoConheceu === 'Outro' ? formData.outroMeio : formData.comoConheceu;
     const message = `Olá! Gostaria de me inscrever no LOTUS Inteligência Emocional.
 
 *Dados do interessado:*
@@ -27,7 +29,7 @@ const FormularioPage = () => {
 📝 *Nome:* ${formData.nome}
 📱 *WhatsApp:* ${formData.whatsapp}
 📧 *Email:* ${formData.email}
-💰 *Renda Mensal:* ${formData.rendaMensal}
+👥 *Como nos conheceu:* ${conheceuTexto}
 
 Aguardo contato para mais informações sobre o curso.`;
     
@@ -37,8 +39,13 @@ Aguardo contato para mais informações sobre o curso.`;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.nome || !formData.whatsapp || !formData.email || !formData.rendaMensal) {
+    if (!formData.nome || !formData.whatsapp || !formData.email || !formData.comoConheceu) {
       alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    if (formData.comoConheceu === 'Outro' && !formData.outroMeio) {
+      alert('Por favor, especifique como nos conheceu.');
       return;
     }
 
@@ -61,7 +68,8 @@ Aguardo contato para mais informações sobre o curso.`;
           nome: '',
           whatsapp: '',
           email: '',
-          rendaMensal: ''
+          comoConheceu: '',
+          outroMeio: ''
         });
         setShowSuccess(false);
       }, 3000);
@@ -171,25 +179,50 @@ Aguardo contato para mais informações sobre o curso.`;
               />
             </div>
 
-            {/* Renda Mensal */}
+            {/* Como nos conheceu */}
             <div>
               <label className="block text-[#DFC6AA] text-sm font-semibold mb-2">
-                <DollarSign className="w-4 h-4 inline mr-2" />
-                Renda Mensal
+                <Users className="w-4 h-4 inline mr-2" />
+                Como nos conheceu?
               </label>
               <select
-                name="rendaMensal"
-                value={formData.rendaMensal}
+                name="comoConheceu"
+                value={formData.comoConheceu}
                 onChange={handleInputChange}
                 className="w-full bg-[#21302B]/50 border border-[#DFC6AA]/20 rounded-xl px-4 py-3 text-[#DFC6AA] focus:outline-none focus:border-[#B66D38] focus:ring-2 focus:ring-[#B66D38]/20 transition-all duration-300"
                 required
               >
-                <option value="">Selecione sua faixa de renda</option>
-                <option value="R$ 2.000,00 a R$ 4.000,00 mensais">R$ 2.000,00 a R$ 4.000,00 mensais</option>
-                <option value="R$ 5.000,00 a R$ 10.000,00 mensais">R$ 5.000,00 a R$ 10.000,00 mensais</option>
-                <option value="Acima de R$ 10.000,00 mensais">Acima de R$ 10.000,00 mensais</option>
+                <option value="">Selecione como nos conheceu</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="YouTube">YouTube</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Google">Google</option>
+                <option value="Indicação de amigo">Indicação de amigo</option>
+                <option value="Evento/Palestra">Evento/Palestra</option>
+                <option value="Mídia (TV, Rádio, Jornal)">Mídia (TV, Rádio, Jornal)</option>
+                <option value="Outro">Outro</option>
               </select>
             </div>
+
+            {/* Campo condicional para "Outro" */}
+            {formData.comoConheceu === 'Outro' && (
+              <div>
+                <label className="block text-[#DFC6AA] text-sm font-semibold mb-2">
+                  Especifique:
+                </label>
+                <input
+                  type="text"
+                  name="outroMeio"
+                  value={formData.outroMeio}
+                  onChange={handleInputChange}
+                  className="w-full bg-[#21302B]/50 border border-[#DFC6AA]/20 rounded-xl px-4 py-3 text-[#DFC6AA] placeholder-[#DFC6AA]/50 focus:outline-none focus:border-[#B66D38] focus:ring-2 focus:ring-[#B66D38]/20 transition-all duration-300"
+                  placeholder="Digite como nos conheceu"
+                  required
+                />
+              </div>
+            )}
 
             {/* Submit Button */}
             <button

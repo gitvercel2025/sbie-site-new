@@ -129,7 +129,7 @@ export const Statistics = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-sbie-dark-green mb-6">
             Resultados que{" "}
             <span className="text-sbie-bronze relative">
-              Falam por Si
+              falam por si
               <div className="absolute -bottom-2 left-0 w-full h-1 bg-sbie-bronze/30 rounded-full"></div>
             </span>
           </h2>
