@@ -52,11 +52,6 @@ export const MECBanner = () => {
               <span className="font-semibold text-sm bg-white/15 px-4 py-2 rounded-full block border border-white/20 backdrop-blur-sm transition-all duration-1000">
                 {texts[currentTextIndex]}
               </span>
-              {currentTextIndex === 0 && (
-                <div className="text-xs mt-2 text-white/95 font-medium">
-                  Ministério da Educação
-                </div>
-              )}
             </div>
             <img
               key={currentTextIndex}
