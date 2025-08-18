@@ -17,9 +17,9 @@ import NotFound from "./pages/NotFound";
 import FormularioPage from './pages/FormularioPage';
 import { FormacaoPage } from './pages/FormacaoPage';
 import ConhecaSbiePage from './pages/ConhecaSbiePage';
-
-// Adicione esta importação no topo do arquivo
+import MetodologiaPage from './pages/MetodologiaPage';
 import LegadoPage from "./pages/LegadoPage";
+import RodrigoFonsecaPage from './pages/RodrigoFonsecaPage';
 
 const queryClient = new QueryClient();
 
@@ -38,7 +38,9 @@ const App = () => (
 
               {/* Quem Somos */}
               <Route path="/conheca-sbie" element={<ConhecaSbiePage />} />
-              <Route path="/metodologia" element={<PlaceholderPage title="Nossa Metodologia" description="Conheça a metodologia exclusiva da SBIE para desenvolvimento emocional." />} />
+              <Route path="/metodologia" element={<MetodologiaPage />} />
+              // Dentro do Router, adicione a nova rota:
+              <Route path="/rodrigo-fonseca" element={<RodrigoFonsecaPage />} />
               <Route path="/rodrigo-fonseca" element={<PlaceholderPage title="Rodrigo Fonseca" description="Saiba mais sobre o fundador e presidente da SBIE." />} />
 
               {/* Treinamentos - Corrigindo as rotas para corresponder ao menu */}

@@ -469,13 +469,12 @@ export const LegadoPage = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-[#B66D38]/5 to-transparent"></div>
             
             <div className="relative z-10">
-              <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-[#B66D38] to-[#DFC6AA] rounded-3xl flex items-center justify-center shadow-2xl relative overflow-hidden">
+              <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center">
                 <img 
-                  src="https://i.imgur.com/a6obr3B.png" 
+                  src="https://i.imgur.com/KN5lano.png" 
                   alt="Selo de Garantia" 
-                  className="w-full h-full object-contain p-2"
+                  className="w-full h-full object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/10"></div>
               </div>
               
               <h2 className="text-3xl md:text-5xl font-black text-[#DFC6AA] mb-6">

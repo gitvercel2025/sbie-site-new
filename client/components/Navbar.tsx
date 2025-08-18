@@ -75,8 +75,8 @@ export const Navbar = () => {
 
   const quemSomosItems: DropdownItem[] = [
     { label: "Conheça a SBIE", href: "/conheca-sbie" },
-    { label: "Nossa Metodologia", href: "https://www.sbie.com.br/nossa-metodologia/" },
-    { label: "Rodrigo Fonseca", href: "https://rodrigofonsecaie.com.br/" },
+    { label: "Nossa Metodologia", href: "/metodologia" },
+    { label: "Rodrigo Fonseca", href: "/rodrigo-fonseca" },
   ];
 
   const treinamentosItems: DropdownItem[] = [
@@ -108,7 +108,7 @@ export const Navbar = () => {
               className="flex items-center transition-transform duration-500 hover:scale-110 cursor-pointer"
             >
               <img
-                src="https://i.imgur.com/jMtFhFI.png"
+                src="https://i.imgur.com/j3yYEa6.png"
                 alt="SBIE Logo"
                 className="h-40 w-auto transition-all duration-500 hover:brightness-110 hover:contrast-110"
               />
