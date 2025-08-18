@@ -86,39 +86,51 @@ const RodrigoFonsecaPage = () => {
   const tvVideos = [
     { 
       id: 'tv1', 
-      thumbnail: 'https://images.seeklogo.com/logo-png/39/2/globo-logo-png_seeklogo-398350.png', 
+      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_globo_principal-laranja.png', 
+      title: 'Participação na Globo',
       videoUrl: 'https://youtu.be/ym2AKmrYvLE',
-      channel: 'Globo'
+      channel: 'Globo',
+      logo: 'https://logodownload.org/wp-content/uploads/2013/12/globo-logo.png'
     },
     { 
       id: 'tv2', 
-      thumbnail: 'https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo.png', 
+      thumbnail: 'https://img.favpng.com/6/6/3/brazil-recordtv-logo-rede-globo-television-png-favpng-KWdv90awdbDfGfLLqQE4kTzqG.jpg', 
+      title: 'Entrevista RecordTV',
       videoUrl: 'https://youtu.be/zwpga4QDm_M',
-      channel: 'RecordTV'
+      channel: 'RecordTV',
+      logo: 'https://logodownload.org/wp-content/uploads/2013/12/record-tv-logo.png'
     },
     { 
       id: 'tv3', 
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/GNT_logo-roxo.svg/1200px-GNT_logo-roxo.svg.png', 
-      videoUrl: 'https://youtu.be/mAcQ877ePfA',
-      channel: 'GNT'
+      thumbnail: 'https://telaviva.com.br/wp-content/uploads/2018/11/GNT.jpg', 
+      title: 'Programa GNT',
+      videoUrl: 'https://player.vimeo.com/video/216529866',
+      channel: 'GNT',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/GNT_logo-roxo.svg/1200px-GNT_logo-roxo.svg.png'
     },
     { 
       id: 'tv4', 
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Rede_Bandeirantes_logo_2011.svg', 
+      thumbnail: 'https://cdn.mitvstatic.com/channels/br_bandeirantes_m.png', 
+      title: 'Entrevista BAND',
       videoUrl: 'https://youtu.be/ohe-HaOR8pg',
-      channel: 'BAND'
+      channel: 'BAND',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Rede_Bandeirantes_logo_2011.svg'
     },
     { 
       id: 'tv5', 
       thumbnail: 'https://upload.wikimedia.org/wikipedia/pt/8/89/Logotipo_da_RedeTV%21.png', 
+      title: 'Programa RedeTV',
       videoUrl: 'https://youtu.be/t7zrHd04VHk',
-      channel: 'RedeTV'
+      channel: 'RedeTV',
+      logo: 'https://upload.wikimedia.org/wikipedia/pt/8/89/Logotipo_da_RedeTV%21.png'
     },
     { 
       id: 'tv6', 
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Logotipo_da_GloboNews.png', 
+      thumbnail: 'https://img.observatoriodatv.com.br/wp-content/uploads/2020/03/globonews.png', 
+      title: 'Reportagem GloboNews',
       videoUrl: 'https://g1.globo.com/globonews/jornal-das-dez/video/na-venezuela-brasileiros-retidos-por-causa-do-coronavirus-aguardam-repatriacao-8479783.ghtml',
-      channel: 'GloboNews'
+      channel: 'GloboNews',
+      logo: 'https://upload.wikimedia.org/commons/8/89/Logotipo_da_GloboNews.png'
     }
   ];
 
@@ -126,32 +138,38 @@ const RodrigoFonsecaPage = () => {
     { 
       thumbnail: 'https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2018/04/Thumb_estad%C3%A3o.jpg.webp', 
       url: 'https://www.sbie.com.br/imprensa/rodrigo-fonseca-fala-sobre-importancia-dos-pais-e-da-escola-para-prevencao-do-suicidio/',
-      source: 'O Estado de São Paulo'
+      source: 'O Estado de São Paulo',
+      title: 'Inteligência Emocional na Prevenção'
     },
     { 
       thumbnail: 'https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2018/02/Thumb.png.webp', 
       url: 'https://www.sbie.com.br/imprensa/trt-rio-inteligencia-emocional-importancia-para-sua-vida/',
-      source: 'TRT Rio'
+      source: 'TRT Rio',
+      title: 'Importância da Inteligência Emocional'
     },
     { 
-      thumbnail: 'https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2018/01/exame-thumb.jpg.webp', 
+      thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQERR_y8N6CjXsVjN75YAegc8EQ5tPb-50F6w&s', 
       url: 'https://www.sbie.com.br/imprensa/exame-8-habitos-diarios-para-aumentar-sua-inteligencia-emocional/',
-      source: 'Exame.com'
+      source: 'Exame.com',
+      title: '8 Hábitos para Aumentar sua IE'
     },
     { 
       thumbnail: 'https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2017/04/capa-casais-casas-separadas.jpg.webp', 
       url: 'https://www.sbie.com.br/imprensa/casais-que-moram-casas-separadas/',
-      source: 'Correio Brasiliense'
+      source: 'Correio Brasiliense',
+      title: 'Relacionamentos Modernos'
     },
     { 
-      thumbnail: 'https://www.sbie.com.br/wp-content/webp-express/webp-images/uploads/2016/03/jornal-folha-de-sao-paulo.jpg.webp', 
+      thumbnail: 'https://f.i.uol.com.br/hunting/folha/1/common/icons/logo-folha-tempo-real-app_144px.png', 
       url: 'https://www.sbie.com.br/imprensa/em-busca-do-emprego-dos-sonhos/',
-      source: 'Folha de São Paulo'
+      source: 'Folha de São Paulo',
+      title: 'Em Busca do Emprego dos Sonhos'
     },
     { 
-      thumbnail: 'https://storage.builderall.com//franquias/2/7263021/editor-html/11769343.webp', 
+      thumbnail: 'https://vejasp.abril.com.br/wp-content/uploads/2025/02/logo-veja-sp-1.png', 
       url: 'https://www.sbie.com.br/imprensa/veja-grande-mentira/',
-      source: 'Veja São Paulo'
+      source: 'Veja São Paulo',
+      title: 'Artigo Especial Veja'
     }
   ];
 
@@ -202,44 +220,37 @@ const RodrigoFonsecaPage = () => {
         
         <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green/10 to-sbie-bronze/10"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Logo com moldura moderna e imagem de fundo */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500 animate-pulse"></div>
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-sbie-bronze/20 shadow-2xl hover:shadow-sbie-bronze/20 transition-all duration-500 hover:scale-105 overflow-hidden">
-                {/* Imagem de fundo ESCURA */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-40 transition-all duration-500"
-                  style={{ backgroundImage: 'url(https://i.imgur.com/dBT9Ltf.jpeg)' }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-sbie-bronze/20 to-sbie-dark-green/20 rounded-3xl"></div>
-                <img 
-                  src="https://rodrigofonsecaie.com.br/wp-content/uploads/2024/09/logo-rodrigo-sem-fundo.png" 
-                  alt="Rodrigo Fonseca Logo" 
-                  className="w-full h-auto relative z-10 drop-shadow-lg"
-                />
-                <div className="absolute -inset-1 bg-gradient-to-r from-sbie-bronze via-sbie-dark-green to-sbie-bronze rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-              </div>
+          <div className="flex flex-col items-center justify-center text-center">
+            {/* Título Principal */}
+            <div className="mb-12">
+              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-sbie-bronze to-white bg-clip-text text-transparent mb-6 tracking-wider">
+                ESSA É A MINHA HISTÓRIA
+              </h1>
+              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sbie-bronze via-white to-sbie-bronze bg-clip-text text-transparent tracking-wide">
+                
+              </h2>
             </div>
 
-            {/* Vídeo Player com thumbnail personalizada */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
-              <div className="relative bg-black/90 rounded-2xl overflow-hidden shadow-2xl border border-sbie-bronze/30">
+            {/* Vídeo Player Moderno Centralizado */}
+            <div className="relative group max-w-4xl w-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-all duration-500 animate-pulse"></div>
+              <div className="relative bg-black/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border-2 border-sbie-bronze/40 hover:border-sbie-bronze/60 transition-all duration-500">
                 {!isVideoPlaying ? (
                   <div 
                     className="relative aspect-video bg-cover bg-center cursor-pointer" 
-                    style={{ backgroundImage: 'url(https://i.imgur.com/9a9VMCS.jpg)' }}
+                    style={{ backgroundImage: 'url(https://i.imgur.com/dBT9Ltf.jpeg)', backgroundPosition: 'center 20%' }}
                     onClick={handleVideoPlay}
                   >
-                    <div className="absolute inset-0 bg-black/40 hover:bg-black/20 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/60 hover:from-black/40 hover:to-black/40 transition-all duration-300"></div>
                     <div className="relative z-10 flex items-center justify-center h-full">
                       <div className="text-center">
-                        <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center mb-4 mx-auto hover:bg-white transition-all duration-300 hover:scale-110 shadow-lg">
-                          <Play className="w-8 h-8 text-sbie-dark-green ml-1" />
+                        <div className="w-24 h-24 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-full flex items-center justify-center mb-6 mx-auto hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/20">
+                          <Play className="w-10 h-10 text-white ml-1" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Minha História!!!</h3>
-                        <p className="text-white/80">Clique para assistir</p>
+                        <div className="bg-black/50 backdrop-blur-sm rounded-2xl px-8 py-4 border border-sbie-bronze/30">
+                          <h3 className="text-3xl font-bold text-white mb-2">Assista Minha História</h3>
+                          <p className="text-white/80 text-lg">Clique para reproduzir</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -247,7 +258,7 @@ const RodrigoFonsecaPage = () => {
                   <iframe
                     className="w-full aspect-video"
                     src="https://www.youtube.com/embed/zqNAjk6pRis?autoplay=1"
-                    title="Minha História - Rodrigo Fonseca"
+                    title="Essa é a Minha História - Rodrigo Fonseca"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -263,14 +274,15 @@ const RodrigoFonsecaPage = () => {
       <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-r from-white to-sbie-beige/30">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Foto do Rodrigo */}
+            {/* Foto do Rodrigo ajustada para mostrar o rosto */}
             <div className={`relative group transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
               <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
               <div className="relative bg-white rounded-3xl p-6 shadow-2xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500">
                 <img 
-                  src="https://i.imgur.com/omP96V6.jpg" 
+                  src="https://i.imgur.com/dBT9Ltf.jpeg" 
                   alt="Rodrigo Fonseca" 
-                  className="w-full h-auto rounded-2xl shadow-lg"
+                  className="w-full h-auto rounded-2xl shadow-lg object-cover object-top"
+                  style={{ aspectRatio: '4/5' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sbie-dark-green/10 to-transparent rounded-3xl"></div>
               </div>
@@ -325,7 +337,6 @@ const RodrigoFonsecaPage = () => {
           </div>
         </div>
       </section>
-
       {/* Redes Sociais e Mídia Section - APENAS CONTADORES */}
       <section className="py-20 px-4 bg-gradient-to-br from-sbie-dark-green/5 via-white to-sbie-bronze/5">
         <div className="container mx-auto max-w-7xl">
@@ -386,140 +397,328 @@ const RodrigoFonsecaPage = () => {
         </div>
       </section>
 
-      {/* Nova Seção: Imprensa e Televisão */}
-      <section className="py-20 px-4 bg-gradient-to-r from-sbie-beige/30 to-white">
+      {/* Imprensa e Televisão Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-sbie-bronze/5 via-white to-sbie-dark-green/5">
         <div className="container mx-auto max-w-7xl">
-          {/* IMPRENSA - TELEVISÃO */}
-          <div className="mb-20">
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center mb-4">
-                <Tv className="w-8 h-8 text-sbie-bronze mr-3" />
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-sbie-dark-green to-sbie-bronze bg-clip-text text-transparent">
-                  IMPRENSA - TELEVISÃO
-                </h2>
-              </div>
-              <p className="text-sbie-dark-green/70 text-lg max-w-2xl mx-auto">
-                Rodrigo Fonseca nos mais diferentes programas de TV do Brasil
-              </p>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-sbie-dark-green to-sbie-bronze bg-clip-text text-transparent mb-4">
+              IMPRENSA - TELEVISÃO
+            </h2>
+            <p className="text-sbie-dark-green/70 text-lg max-w-2xl mx-auto">
+              Rodrigo Fonseca nos mais diferentes programas de TV do Brasil
+            </p>
+          </div>
 
+          {/* Seção de Televisão */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-sbie-dark-green mb-8 text-center">
+              <Tv className="inline-block w-6 h-6 mr-2" />
+              Participações na TV
+            </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {tvVideos.map((video, index) => {
-                const videoId = video.videoUrl.includes('youtu') ? video.videoUrl.split('/').pop()?.split('?')[0] : null;
-                return (
-                  <div key={video.id} className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
-                    <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border border-sbie-bronze/30">
-                      {activeVideo !== video.id ? (
-                        <div className="relative aspect-video cursor-pointer bg-white flex items-center justify-center p-8">
-                          <img 
-                            src={video.thumbnail} 
-                            alt={`${video.channel} Logo`}
-                            className="max-w-full max-h-full object-contain"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = 'https://via.placeholder.com/640x360/1a5f3f/ffffff?text=Video+Thumbnail';
-                            }}
-                            onClick={() => handleMediaVideoPlay(video.id)}
-                          />
-                          <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300"></div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-16 h-16 bg-sbie-dark-green/90 rounded-full flex items-center justify-center hover:bg-sbie-dark-green transition-all duration-300 hover:scale-110 shadow-lg">
-                              <Play className="w-6 h-6 text-white ml-1" />
+              {tvVideos.map((video, index) => (
+                <div 
+                  key={index} 
+                  className="group relative cursor-pointer"
+                  onClick={() => window.open(video.videoUrl, '_blank')}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+                  <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-4 overflow-hidden rounded-xl aspect-video">
+                      <img 
+                        src={video.thumbnail} 
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                      
+                      {/* Caixa de Texto Moderna com Logo */}
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <div className="bg-gradient-to-r from-black/90 to-black/70 backdrop-blur-md rounded-lg p-2.5 border border-white/30 shadow-lg">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-2">
+                              <div className="bg-white/20 rounded p-1 flex items-center justify-center">
+                                <img 
+                                  src={video.logo} 
+                                  alt={`Logo ${video.channel}`}
+                                  className="w-5 h-4 object-contain"
+                                  onError={(e) => {
+                                    e.currentTarget.style.display = 'none';
+                                  }}
+                                />
+                              </div>
+                              <span className="text-white font-semibold text-xs">{video.channel}</span>
+                            </div>
+                            <div className="bg-white/30 rounded-full p-1.5 hover:bg-white/40 transition-colors">
+                              <Play className="w-3 h-3 text-white" />
                             </div>
                           </div>
-                          {/* Caixa de texto moderna */}
-                          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze p-3">
-                            <p className="text-white font-semibold text-center text-sm">
-                              {video.channel}
-                            </p>
-                          </div>
                         </div>
-                      ) : (
-                        videoId ? (
-                          <iframe
-                            className="w-full aspect-video"
-                            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                            title={`${video.channel} Interview`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        ) : (
-                          <div className="aspect-video bg-sbie-dark-green/10 flex items-center justify-center">
-                            <a 
-                              href={video.videoUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="flex items-center space-x-2 text-sbie-dark-green hover:text-sbie-bronze transition-colors"
-                            >
-                              <ExternalLink className="w-6 h-6" />
-                              <span>Assistir no site</span>
-                            </a>
-                          </div>
-                        )
-                      )}
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <h4 className="font-bold text-sbie-dark-green mb-2">{video.title}</h4>
+                      <p className="text-sbie-bronze font-semibold text-sm">{video.channel}</p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* IMPRENSA - NOTÍCIAS */}
-          <div>
-            <div className="text-center mb-16">
-              <div className="flex items-center justify-center mb-4">
-                <Newspaper className="w-8 h-8 text-sbie-bronze mr-3" />
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-sbie-dark-green to-sbie-bronze bg-clip-text text-transparent">
-                  IMPRENSA - NOTÍCIAS
-                </h2>
+          {/* Seção de Notícias */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center mb-4">
+                <div className="bg-gradient-to-r from-sbie-dark-green to-sbie-bronze p-3 rounded-full shadow-lg">
+                  <Newspaper className="w-8 h-8 text-white" />
+                </div>
               </div>
-              <p className="text-sbie-dark-green/70 text-lg max-w-2xl mx-auto">
-                Rodrigo Fonseca nos mais diferentes veículos de comunicação espalhados pelo Brasil
+              <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-sbie-dark-green via-sbie-bronze to-sbie-dark-green bg-clip-text text-transparent mb-4">
+                ARTIGOS E NOTÍCIAS
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze mx-auto rounded-full"></div>
+              <p className="text-sbie-dark-green/70 mt-4 text-lg font-medium">
+                Acompanhe as principais publicações e entrevistas
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.map((article, index) => (
-                <a
-                  key={index}
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative bg-white rounded-2xl overflow-hidden shadow-xl border border-sbie-bronze/20 hover:shadow-2xl transition-all duration-500 hover:scale-105"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
-                  <div className="relative aspect-video bg-white flex items-center justify-center p-4">
-                    <img 
-                      src={article.thumbnail} 
-                      alt={article.source} 
-                      className="max-w-full max-h-full object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = 'https://via.placeholder.com/400x200/1a5f3f/ffffff?text=News+Article';
-                      }}
-                    />
-                  </div>
-                  {/* Caixa de texto moderna */}
-                  <div className="bg-gradient-to-r from-sbie-dark-green to-sbie-bronze p-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-white font-semibold text-sm">{article.source}</span>
-                      <ExternalLink className="w-4 h-4 text-white group-hover:scale-110 transition-all duration-300" />
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+                  <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
+                    <div className="relative mb-4 overflow-hidden rounded-xl aspect-video">
+                      <img 
+                        src={article.thumbnail} 
+                        alt={article.source}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                      
+                      {/* Caixa de Texto Moderna para Notícias */}
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <div className="bg-gradient-to-r from-sbie-dark-green/90 to-sbie-bronze/90 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                          <div className="flex items-center justify-between">
+                            <span className="text-white font-semibold text-sm">{article.source}</span>
+                            <ExternalLink className="w-4 h-4 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <h4 className="font-bold text-sbie-dark-green mb-2 text-sm leading-tight">{article.title}</h4>
+                      <a 
+                        href={article.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sbie-bronze hover:text-sbie-dark-green font-semibold transition-all duration-300 text-xs"
+                      >
+                        Ler Artigo <ExternalLink className="w-3 h-3 ml-1" />
+                      </a>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
 
             {/* Caixa de texto moderna para mais informações */}
-            <div className="relative">
+            <div className="relative mt-12">
               <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-2xl blur-xl opacity-20"></div>
               <div className="relative bg-gradient-to-r from-sbie-dark-green to-sbie-bronze rounded-2xl p-8 text-center">
                 <div className="absolute inset-0 bg-white/10 rounded-2xl"></div>
                 <p className="relative z-10 text-white text-lg font-semibold">
                   Saiba mais em <span className="underline hover:no-underline transition-all duration-300">www.sbie.com.br/imprensa</span>
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nova Seção: TREINAMENTOS PRESENCIAIS - Design Escuro Moderno */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-sbie-dark-green/20 to-black">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-sbie-bronze to-white bg-clip-text text-transparent mb-4">
+              TREINAMENTOS PRESENCIAIS
+            </h2>
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+              Transforme sua vida através dos nossos treinamentos exclusivos em Inteligência Emocional
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Card 1: Lotus Inteligência Emocional */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-sbie-bronze/30 hover:border-sbie-bronze/50 transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <div className="text-center mb-6">
+                  <img 
+                    src="https://rodrigofonsecaie.com.br/wp-content/uploads/2023/01/logo-lotus.svg" 
+                    alt="Lotus Inteligência Emocional" 
+                    className="w-32 h-32 mx-auto mb-4 drop-shadow-lg filter brightness-110"
+                  />
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Lotus Inteligência Emocional
+                  </h3>
+                </div>
+                
+                <div className="flex-grow space-y-4 text-gray-300 leading-relaxed">
+                  <p className="font-semibold text-sbie-bronze">
+                    Descubra como mudar tudo aquilo que você já está cansado de saber na teoria, mas que na prática não faz!
+                  </p>
+                  
+                  <p>
+                    O Treinamento LOTUS Inteligência Emocional é a primeira etapa de uma experiência intensa e transformadora, desenvolvida pela Sociedade Brasileira de Inteligência Emocional – SBIE, que em 3 dias de imersão, o conduzirá a uma reflexão profunda sobre as suas emoções e o comportamento humano, e como somente você poderá alterá-los.
+                  </p>
+                </div>
+                
+                <div className="mt-6">
+                  <a 
+                    href="/#trainings" 
+                    className="block w-full bg-gradient-to-r from-sbie-bronze to-sbie-dark-green text-white font-bold py-4 px-6 rounded-2xl text-center hover:shadow-xl hover:shadow-sbie-bronze/20 transition-all duration-300 hover:scale-105"
+                  >
+                    CLIQUE AQUI E SAIBA MAIS
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Lotus Legado */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-sbie-bronze/30 hover:border-sbie-bronze/50 transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <div className="text-center mb-6">
+                  <img 
+                    src="https://rodrigofonsecaie.com.br/wp-content/uploads/2023/01/logo-legado.svg" 
+                    alt="Lotus Legado" 
+                    className="w-32 h-32 mx-auto mb-4 drop-shadow-lg filter brightness-110"
+                  />
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Lotus Legado
+                  </h3>
+                </div>
+                
+                <div className="flex-grow space-y-4 text-gray-300 leading-relaxed">
+                  <p className="font-semibold text-sbie-bronze">
+                    Com técnicas e ferramentas avançadas de Inteligência Emocional, você terá a grande oportunidade de relembrar o seu Propósito de vida, e usar toda abundância e prosperidade que virá com o cumprimento dela, para construir o seu verdadeiro Legado!
+                  </p>
+                  
+                  <p>
+                    Agora que você descobriu que a sua felicidade depende apenas de você, chegou a hora de descobrir como construí-la através do seu Propósito de Vida, nessa última etapa do Treinamento LOTUS Inteligência Emocional.
+                  </p>
+                  
+                  <p>
+                    Quantas vezes você já se perguntou: "O que eu vim fazer nesse mundo? Será que tenho um propósito maior, além de comer, beber e dormir?", "O que eu vou deixar neste mundo, ou para as próximas gerações, quando partir?" Se você está no momento de ouvir (relembrar) essas respostas, venha viver uma experiência transformadora, capaz de despertar o seu verdadeiro potencial para realizar sua missão e construir o seu LEGADO!
+                  </p>
+                </div>
+                
+                <div className="mt-6">
+                  <a 
+                    href="/#trainings" 
+                    className="block w-full bg-gradient-to-r from-sbie-dark-green to-sbie-bronze text-white font-bold py-4 px-6 rounded-2xl text-center hover:shadow-xl hover:shadow-sbie-bronze/20 transition-all duration-300 hover:scale-105"
+                  >
+                    CLIQUE AQUI E SAIBA MAIS
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Formação em Inteligência Emocional */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-sbie-bronze/30 hover:border-sbie-bronze/50 transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <div className="text-center mb-6">
+                  <img 
+                    src="https://rodrigofonsecaie.com.br/wp-content/uploads/2023/01/logo-formacao.svg" 
+                    alt="Formação em Inteligência Emocional" 
+                    className="w-32 h-32 mx-auto mb-4 drop-shadow-lg"
+                  />
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    Formação em Inteligência Emocional
+                  </h3>
+                </div>
+                
+                <div className="flex-grow space-y-4 text-gray-300 leading-relaxed">
+                  <p className="font-semibold text-sbie-bronze">
+                    Se torne um Mentor em Inteligência Emocional e esteja preparado para as mudanças do futuro que já chegou!
+                  </p>
+                  
+                  <p>
+                    A Inteligência Emocional é a ferramenta mais eficaz para destravar o potencial que existe em cada ser humano, afinal, trabalha diretamente no cérebro límbico e com as emoções que geram pensamentos, sentimentos e comportamentos registrados em nosso mundo invisível.
+                  </p>
+                  
+                  <p>
+                    Ao aplicar as técnicas e ferramentas ensinadas na Formação em Inteligência Emocional, seus clientes poderão criar seus próprios Programas Emocionais e sentirão que estão no controle de suas vidas para alcançar seus sonhos e objetivos.
+                  </p>
+                  
+                  <p>
+                    Se você quer transformar a sua vida, ou deseja ingressar nessa nova Carreira, encontrará nessa Formação um grande potencial de transformação no âmbito pessoal, profissional, nos relacionamentos, no exercício da liderança, superação de desafios e muito mais!
+                  </p>
+                </div>
+                
+                <div className="mt-6">
+                  <a 
+                    href="/#trainings" 
+                    className="block w-full bg-gradient-to-r from-sbie-bronze to-sbie-dark-green text-white font-bold py-4 px-6 rounded-2xl text-center hover:shadow-xl hover:shadow-sbie-bronze/20 transition-all duration-300 hover:scale-105"
+                  >
+                    CLIQUE AQUI E SAIBA MAIS
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Nova Seção: LIVROS */}
+      <section className="py-20 px-4 bg-gradient-to-br from-sbie-dark-green/5 via-white to-sbie-bronze/5">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-sbie-dark-green to-sbie-bronze bg-clip-text text-transparent mb-4">
+              LIVROS
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Imagem dos Livros */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
+              <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
+                <img 
+                  src="https://rodrigofonsecaie.com.br/wp-content/uploads/2023/02/livros-min.png" 
+                  alt="Os 4 Poderes das Emoções - Livros" 
+                  className="w-full h-auto drop-shadow-lg"
+                />
+              </div>
+            </div>
+
+            {/* Conteúdo dos Livros */}
+            <div className="space-y-6">
+              <div className="space-y-4 text-sbie-dark-green/80 leading-relaxed text-lg">
+                <p>
+                  Em Os 4 Poderes das Emoções eu vou te ensinar de forma simples, acessível, fácil e, principalmente, PRÁTICA, com muitos exercícios, o passo a passo que você precisa aprender, dominar e desenvolver na sua vida, nos seus relacionamentos e na condução da sua família.
+                </p>
+                
+                <p>
+                  Reconhecer suas próprias emoções e desenvolvê-las além de ser um fator decisório para uma vida mais abundante e feliz, também está presente em outros aspectos como por exemplo, em empresas de grande porte é uma habilidade obrigatória.
+                </p>
+                
+                <p className="font-semibold text-sbie-bronze">
+                  A Inteligência Emocional é uma das habilidades mais valorizadas e necessárias nos últimos anos.
+                </p>
+              </div>
+              
+              <div className="mt-8">
+                <a 
+                  href="https://rodrigofonsecaie.com.br/os4poderes/?utm_source=siterf&utm_medium=lp&utm_campaign=livros" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gradient-to-r from-sbie-dark-green to-sbie-bronze text-white font-bold py-4 px-8 rounded-2xl text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  CLIQUE AQUI E SAIBA MAIS
+                </a>
               </div>
             </div>
           </div>
