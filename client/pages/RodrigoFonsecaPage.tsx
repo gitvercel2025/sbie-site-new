@@ -94,7 +94,7 @@ const RodrigoFonsecaPage = () => {
     },
     { 
       id: 'tv2', 
-      thumbnail: 'https://img.favpng.com/6/6/3/brazil-recordtv-logo-rede-globo-television-png-favpng-KWdv90awdbDfGfLLqQE4kTzqG.jpg', 
+      thumbnail: 'https://brazil.mom-gmr.org/uploads/tx_lfrogmom/media/7013-1071_import.png', 
       title: 'Entrevista RecordTV',
       videoUrl: 'https://youtu.be/zwpga4QDm_M',
       channel: 'RecordTV',
@@ -188,12 +188,12 @@ const RodrigoFonsecaPage = () => {
       </section>
 
       {/* Hero Section com background futurista preto do universo */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-12 md:py-20 px-4 overflow-hidden">
         {/* Background futurista preto do universo */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-          {/* Estrelas animadas */}
+          {/* Estrelas animadas - reduzidas no mobile */}
           <div className="absolute inset-0">
-            {[...Array(50)].map((_, i) => (
+            {[...Array(30)].map((_, i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
@@ -207,49 +207,49 @@ const RodrigoFonsecaPage = () => {
             ))}
           </div>
           
-          {/* Nebulosas e efeitos espaciais */}
-          <div className="absolute top-20 left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-32 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl animate-ping"></div>
-          <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+          {/* Nebulosas e efeitos espaciais - responsivos */}
+          <div className="absolute top-10 md:top-20 left-10 md:left-20 w-20 md:w-40 h-20 md:h-40 bg-purple-500/20 rounded-full blur-2xl md:blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-16 md:bottom-32 right-16 md:right-32 w-16 md:w-32 h-16 md:h-32 bg-blue-500/20 rounded-full blur-xl md:blur-2xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/4 w-12 md:w-24 h-12 md:h-24 bg-cyan-400/20 rounded-full blur-lg md:blur-xl animate-ping"></div>
+          <div className="absolute bottom-10 md:bottom-20 left-1/3 w-18 md:w-36 h-18 md:h-36 bg-indigo-500/20 rounded-full blur-2xl md:blur-3xl animate-pulse"></div>
           
-          {/* Galáxias espirais */}
-          <div className="absolute top-1/3 right-1/4 w-28 h-28 border border-purple-400/30 rounded-full animate-spin" style={{animationDuration: '20s'}}></div>
-          <div className="absolute bottom-1/3 left-1/2 w-20 h-20 border border-cyan-400/30 rounded-full animate-spin" style={{animationDuration: '15s'}}></div>
+          {/* Galáxias espirais - responsivas */}
+          <div className="absolute top-1/3 right-1/4 w-14 md:w-28 h-14 md:h-28 border border-purple-400/30 rounded-full animate-spin" style={{animationDuration: '20s'}}></div>
+          <div className="absolute bottom-1/3 left-1/2 w-10 md:w-20 h-10 md:h-20 border border-cyan-400/30 rounded-full animate-spin" style={{animationDuration: '15s'}}></div>
         </div>
         
         <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green/10 to-sbie-bronze/10"></div>
-        <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="container mx-auto max-w-7xl relative z-10 px-2 md:px-4">
           <div className="flex flex-col items-center justify-center text-center">
-            {/* Título Principal */}
-            <div className="mb-12">
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-sbie-bronze to-white bg-clip-text text-transparent mb-6 tracking-wider">
+            {/* Título Principal - responsivo */}
+            <div className="mb-8 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-white via-sbie-bronze to-white bg-clip-text text-transparent mb-4 md:mb-6 tracking-wide md:tracking-wider px-2">
                 ESSA É A MINHA HISTÓRIA
               </h1>
-              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sbie-bronze via-white to-sbie-bronze bg-clip-text text-transparent tracking-wide">
+              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-sbie-bronze via-white to-sbie-bronze bg-clip-text text-transparent tracking-wide">
                 
               </h2>
             </div>
 
-            {/* Vídeo Player Moderno Centralizado */}
-            <div className="relative group max-w-4xl w-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-all duration-500 animate-pulse"></div>
-              <div className="relative bg-black/95 backdrop-blur-sm rounded-3xl overflow-hidden shadow-2xl border-2 border-sbie-bronze/40 hover:border-sbie-bronze/60 transition-all duration-500">
+            {/* Vídeo Player Moderno Centralizado - melhor responsividade */}
+            <div className="relative group w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-2xl md:rounded-3xl blur-xl md:blur-2xl opacity-30 group-hover:opacity-50 transition-all duration-500 animate-pulse"></div>
+              <div className="relative bg-black/95 backdrop-blur-sm rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl border border-sbie-bronze/40 hover:border-sbie-bronze/60 transition-all duration-500">
                 {!isVideoPlaying ? (
                   <div 
                     className="relative aspect-video bg-cover bg-center cursor-pointer" 
-                    style={{ backgroundImage: 'url(https://i.imgur.com/dBT9Ltf.jpeg)', backgroundPosition: 'center 20%' }}
+                    style={{ backgroundImage: 'url(https://i.imgur.com/dBT9Ltf.jpeg)', backgroundPosition: 'center 30%' }}
                     onClick={handleVideoPlay}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/60 hover:from-black/40 hover:to-black/40 transition-all duration-300"></div>
-                    <div className="relative z-10 flex items-center justify-center h-full">
+                    <div className="relative z-10 flex items-center justify-center h-full p-4">
                       <div className="text-center">
-                        <div className="w-24 h-24 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-full flex items-center justify-center mb-6 mx-auto hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/20">
-                          <Play className="w-10 h-10 text-white ml-1" />
+                        <div className="w-16 h-16 md:w-20 lg:w-24 md:h-20 lg:h-24 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-full flex items-center justify-center mb-4 md:mb-6 mx-auto hover:scale-110 transition-all duration-300 shadow-xl md:shadow-2xl border border-white/20">
+                          <Play className="w-6 h-6 md:w-8 lg:w-10 md:h-8 lg:h-10 text-white ml-1" />
                         </div>
-                        <div className="bg-black/50 backdrop-blur-sm rounded-2xl px-8 py-4 border border-sbie-bronze/30">
-                          <h3 className="text-3xl font-bold text-white mb-2">Assista Minha História</h3>
-                          <p className="text-white/80 text-lg">Clique para reproduzir</p>
+                        <div className="bg-black/50 backdrop-blur-sm rounded-xl md:rounded-2xl px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 border border-sbie-bronze/30">
+                          <h3 className="text-lg md:text-2xl lg:text-3xl font-bold text-white mb-1 md:mb-2">Assista Minha História</h3>
+                          <p className="text-white/80 text-sm md:text-base lg:text-lg">Clique para reproduzir</p>
                         </div>
                       </div>
                     </div>
@@ -415,51 +415,53 @@ const RodrigoFonsecaPage = () => {
               <Tv className="inline-block w-6 h-6 mr-2" />
               Participações na TV
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
               {tvVideos.map((video, index) => (
                 <div 
                   key={index} 
                   className="group relative cursor-pointer"
                   onClick={() => window.open(video.videoUrl, '_blank')}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-sbie-bronze to-sbie-dark-green rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
-                  <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
-                    <div className="relative mb-4 overflow-hidden rounded-xl aspect-video">
-                      <img 
-                        src={video.thumbnail} 
-                        alt={video.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                      
-                      {/* Caixa de Texto Moderna com Logo */}
-                      <div className="absolute bottom-3 left-3 right-3">
-                        <div className="bg-gradient-to-r from-black/90 to-black/70 backdrop-blur-md rounded-lg p-2.5 border border-white/30 shadow-lg">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-2">
-                              <div className="bg-white/20 rounded p-1 flex items-center justify-center">
-                                <img 
-                                  src={video.logo} 
-                                  alt={`Logo ${video.channel}`}
-                                  className="w-5 h-4 object-contain"
-                                  onError={(e) => {
-                                    e.currentTarget.style.display = 'none';
-                                  }}
-                                />
-                              </div>
-                              <span className="text-white font-semibold text-xs">{video.channel}</span>
+                  <div className="relative overflow-hidden rounded-xl md:rounded-2xl aspect-video shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                    <img 
+                      src={video.thumbnail} 
+                      alt={video.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                    
+                    {/* Caixa de Texto Moderna Simplificada */}
+                    <div className="absolute bottom-0 left-0 right-0">
+                      <div className="bg-gradient-to-t from-black/90 via-black/70 to-transparent p-3 md:p-4 pt-6 md:pt-8">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-2 md:space-x-3">
+                            <div className="bg-white/20 rounded-md md:rounded-lg p-1.5 md:p-2 backdrop-blur-sm">
+                              <img 
+                                src={video.logo} 
+                                alt={`Logo ${video.channel}`}
+                                className="w-4 h-3 md:w-5 lg:w-6 md:h-4 lg:h-5 object-contain"
+                                onError={(e) => {
+                                  e.currentTarget.style.display = 'none';
+                                }}
+                              />
                             </div>
-                            <div className="bg-white/30 rounded-full p-1.5 hover:bg-white/40 transition-colors">
-                              <Play className="w-3 h-3 text-white" />
+                            <div>
+                              <h4 className="text-white font-bold text-xs md:text-sm">{video.title}</h4>
+                              <p className="text-white/80 text-xs">{video.channel}</p>
                             </div>
+                          </div>
+                          <div className="bg-white/30 rounded-full p-1.5 md:p-2 backdrop-blur-sm hover:bg-white/40 transition-colors">
+                            <Play className="w-3 h-3 md:w-4 md:h-4 text-white" />
                           </div>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="text-center">
-                      <h4 className="font-bold text-sbie-dark-green mb-2">{video.title}</h4>
-                      <p className="text-sbie-bronze font-semibold text-sm">{video.channel}</p>
+                    {/* Overlay de Play no Centro */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white/90 rounded-full p-3 md:p-4 shadow-lg backdrop-blur-sm">
+                        <Play className="w-6 h-6 md:w-8 md:h-8 text-sbie-dark-green" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -485,38 +487,35 @@ const RodrigoFonsecaPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.map((article, index) => (
-                <div key={index} className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-sbie-dark-green to-sbie-bronze rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-all duration-500"></div>
-                  <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-sbie-bronze/20 hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
-                    <div className="relative mb-4 overflow-hidden rounded-xl aspect-video">
-                      <img 
-                        src={article.thumbnail} 
-                        alt={article.source}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                      
-                      {/* Caixa de Texto Moderna para Notícias */}
-                      <div className="absolute bottom-3 left-3 right-3">
-                        <div className="bg-gradient-to-r from-sbie-dark-green/90 to-sbie-bronze/90 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                          <div className="flex items-center justify-between">
-                            <span className="text-white font-semibold text-sm">{article.source}</span>
-                            <ExternalLink className="w-4 h-4 text-white" />
-                          </div>
+                <div 
+                  key={index} 
+                  className="group relative cursor-pointer"
+                  onClick={() => window.open(article.url, '_blank')}
+                >
+                  <div className="relative overflow-hidden rounded-2xl aspect-video shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                    <img 
+                      src={article.thumbnail} 
+                      alt={article.source}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+                    
+                    {/* Caixa de Texto Moderna para Notícias */}
+                    <div className="absolute bottom-0 left-0 right-0">
+                      <div className="bg-gradient-to-t from-sbie-dark-green/90 to-sbie-bronze/90 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                        <div className="flex items-center justify-between">
+                          <span className="text-white font-semibold text-sm">{article.source}</span>
+                          <ExternalLink className="w-4 h-4 text-white" />
                         </div>
+                        <h4 className="text-white font-bold text-sm leading-tight">{article.title}</h4>
                       </div>
                     </div>
                     
-                    <div className="text-center">
-                      <h4 className="font-bold text-sbie-dark-green mb-2 text-sm leading-tight">{article.title}</h4>
-                      <a 
-                        href={article.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sbie-bronze hover:text-sbie-dark-green font-semibold transition-all duration-300 text-xs"
-                      >
-                        Ler Artigo <ExternalLink className="w-3 h-3 ml-1" />
-                      </a>
+                    {/* Overlay de Link no Centro */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white/90 rounded-full p-4 shadow-lg backdrop-blur-sm">
+                        <ExternalLink className="w-8 h-8 text-sbie-dark-green" />
+                      </div>
                     </div>
                   </div>
                 </div>

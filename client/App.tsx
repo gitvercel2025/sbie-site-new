@@ -20,6 +20,7 @@ import ConhecaSbiePage from './pages/ConhecaSbiePage';
 import MetodologiaPage from './pages/MetodologiaPage';
 import LegadoPage from "./pages/LegadoPage";
 import RodrigoFonsecaPage from './pages/RodrigoFonsecaPage';
+import ImprensaPage from './pages/ImprensaPage';
 
 const queryClient = new QueryClient();
 
@@ -68,7 +69,7 @@ const App = () => (
 
               {/* Outros */}
               <Route path="/blog" element={<PlaceholderPage title="Blog SBIE" description="Artigos e insights sobre inteligência emocional." />} />
-              <Route path="/imprensa" element={<PlaceholderPage title="Imprensa" description="Materiais para imprensa e mídia." />} />
+              <Route path="/imprensa" element={<ImprensaPage />} />
               <Route path="/store" element={<PlaceholderPage title="SBIE Store" description="Produtos e materiais exclusivos da SBIE." />} />
               <Route path="/contato" element={<ContactPage />} />
 

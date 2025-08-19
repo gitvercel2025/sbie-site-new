@@ -148,14 +148,12 @@ export const Navbar = () => {
                 Blog
               </a>
 
-              <a
-                href="https://www.sbie.com.br/imprensa/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/imprensa"
                 className="px-4 py-2 text-white/90 hover:text-white transition-all duration-300 hover:scale-105 hover:bg-white/5 rounded-lg font-medium"
               >
                 Imprensa
-              </a>
+              </Link>
 
               <a
                 href="https://www.sbie.com.br/store/"
@@ -289,13 +287,15 @@ export const Navbar = () => {
 
               {/* Other Links */}
               <div className="border-t border-white/20 pt-4 mt-4">
-                <Link
-                  to="/blog"
+                <a
+                  href="https://www.sbie.com.br/blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-3 text-white font-semibold hover:bg-white/10 hover:text-white transition-all duration-200 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Blog
-                </Link>
+                </a>
                 <Link
                   to="/imprensa"
                   className="block px-4 py-3 text-white font-semibold hover:bg-white/10 hover:text-white transition-all duration-200 rounded-lg"
@@ -303,13 +303,15 @@ export const Navbar = () => {
                 >
                   Imprensa
                 </Link>
-                <Link
-                  to="/store"
+                <a
+                  href="https://www.sbie.com.br/store/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-3 text-white font-semibold hover:bg-white/10 hover:text-white transition-all duration-200 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Store
-                </Link>
+                </a>
                 <a
                   href="#contact"
                   className="block mx-4 mt-4 px-6 py-3 bg-gradient-to-r from-sbie-bronze to-sbie-bronze/80 text-white rounded-full hover:from-sbie-bronze/90 hover:to-sbie-bronze/70 transition-all duration-300 text-center font-semibold shadow-lg border border-sbie-bronze/20"
