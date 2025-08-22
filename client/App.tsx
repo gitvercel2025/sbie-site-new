@@ -16,6 +16,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import FormularioPage from './pages/FormularioPage';
 import { FormacaoPage } from './pages/FormacaoPage';
+import { FormacaoMasterPage } from './pages/FormacaoMasterPage';
 import ConhecaSbiePage from './pages/ConhecaSbiePage';
 import MetodologiaPage from './pages/MetodologiaPage';
 import LegadoPage from "./pages/LegadoPage";
@@ -40,15 +41,13 @@ const App = () => (
               {/* Quem Somos */}
               <Route path="/conheca-sbie" element={<ConhecaSbiePage />} />
               <Route path="/metodologia" element={<MetodologiaPage />} />
-              // Dentro do Router, adicione a nova rota:
               <Route path="/rodrigo-fonseca" element={<RodrigoFonsecaPage />} />
-              <Route path="/rodrigo-fonseca" element={<PlaceholderPage title="Rodrigo Fonseca" description="Saiba mais sobre o fundador e presidente da SBIE." />} />
 
               {/* Treinamentos - Corrigindo as rotas para corresponder ao menu */}
               <Route path="/lotus" element={<LotusPage />} />
               <Route path="/formulario" element={<FormularioPage />} />
               <Route path="/formacao" element={<FormacaoPage />} />
-              <Route path="/formacao-master" element={<PlaceholderPage title="Formação Master em Inteligência Emocional" description="Certificação avançada para especialistas." />} />
+              <Route path="/formacao-master" element={<FormacaoMasterPage />} />
               <Route path="/legado" element={<LegadoPage />} />
               <Route path="/business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
               <Route path="/embaixadores" element={<PlaceholderPage title="SBIE Embaixadores do Bem" description="Programa social para multiplicar conhecimento em comunidades." />} />
