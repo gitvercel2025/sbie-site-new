@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, User, Users, Send, CheckCircle } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const FormularioPage = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,13 @@ const FormularioPage = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Lê o nome do treinamento vindo da página anterior (state) ou pela query (?treinamento=...)
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const trainingFromQuery = searchParams.get('treinamento');
+  const trainingFromState = (location.state as any)?.training;
+  const trainingName = trainingFromState || trainingFromQuery || 'Treinamento SBIE';
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -22,7 +30,7 @@ const FormularioPage = () => {
 
   const formatWhatsAppMessage = () => {
     const conheceuTexto = formData.comoConheceu === 'Outro' ? formData.outroMeio : formData.comoConheceu;
-    const message = `Olá! Gostaria de me inscrever no LOTUS Inteligência Emocional.
+    const message = `Olá! Gostaria de me inscrever no ${trainingName}.
 
 *Dados do interessado:*
 

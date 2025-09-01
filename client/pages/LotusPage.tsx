@@ -238,7 +238,7 @@ const LotusPage = () => {
   // Função para navegação dos botões CTA
   const handleCTAClick = () => {
     // Navegar para o formulário e fazer scroll para o topo
-    navigate('/formulario');
+    navigate('/formulario', { state: { training: 'LOTUS Inteligência Emocional' } });
     // Garantir que o scroll vá para o topo após a navegação
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -13,7 +13,7 @@ export const FormacaoPage = () => {
   });
 
   const handleCTAClick = () => {
-    navigate('/formulario');
+    navigate('/formulario', { state: { training: 'FORMAÇÃO EM INTELIGÊNCIA EMOCIONAL' } });
   };
 
   // Contador regressivo para próxima turma (exemplo: 30 dias)

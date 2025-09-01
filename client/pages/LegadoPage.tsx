@@ -25,7 +25,7 @@ export const LegadoPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // Pequeno delay para garantir que o scroll aconteça antes da navegação
     setTimeout(() => {
-      navigate('/formulario');
+      navigate('/formulario', { state: { training: 'LEGADO' } });
     }, 300);
   };
 

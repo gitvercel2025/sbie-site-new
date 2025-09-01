@@ -17,7 +17,7 @@ export const FormacaoMasterPage = () => {
 
   const handleCTAClick = () => {
     // Navegar para o formulário e fazer scroll para o topo
-    navigate('/formulario');
+    navigate('/formulario', { state: { training: 'FORMAÇÃO MASTER EM INTELIGÊNCIA EMOCIONAL' } });
     // Garantir que o scroll vá para o topo após a navegação
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
