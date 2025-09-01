@@ -470,38 +470,50 @@ export const FormacaoPage = () => {
               </div>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#B66D38] rounded-full mr-4"></div>
-                  <div>
-                    <h4 className="font-bold text-[#21302B]">Ana Silva</h4>
-                    <p className="text-sm text-gray-600">Executiva</p>
+            <div className="grid md:grid-cols-3 gap-8 items-stretch">
+              {/* Card 1 */}
+              <div className="group block h-full">
+                <div className="h-full rounded-3xl p-[3px] bg-gradient-to-br from-[#DFC6AA]/60 via-white to-[#B66D38]/30 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div className="rounded-[22px] overflow-hidden bg-white ring-1 ring-gray-200 h-full flex items-center justify-center">
+                    <div className="w-full h-80 sm:h-88 md:h-80 lg:h-80 xl:h-80">
+                      <img
+                        src="https://i.imgur.com/y8Kktmv.jpeg"
+                        alt="Depoimento 1"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
-                <p className="text-[#21302B] italic">"A formação mudou completamente minha forma de liderar. Hoje tenho muito mais clareza e equilíbrio."</p>
               </div>
-              
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#B66D38] rounded-full mr-4"></div>
-                  <div>
-                    <h4 className="font-bold text-[#21302B]">Carlos Santos</h4>
-                    <p className="text-sm text-gray-600">Empresário</p>
+
+              {/* Card 2 */}
+              <div className="group block h-full">
+                <div className="h-full rounded-3xl p-[3px] bg-gradient-to-br from-[#DFC6AA]/60 via-white to-[#B66D38]/30 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div className="rounded-[22px] overflow-hidden bg-white ring-1 ring-gray-200 h-full flex items-center justify-center">
+                    <div className="w-full h-80 sm:h-88 md:h-80 lg:h-80 xl:h-80">
+                      <img
+                        src="https://i.imgur.com/pkTshKd.jpeg"
+                        alt="Depoimento 2"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
-                <p className="text-[#21302B] italic">"Descobri meu propósito de vida e hoje vivo com muito mais significado e direção."</p>
               </div>
-              
-              <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#B66D38] rounded-full mr-4"></div>
-                  <div>
-                    <h4 className="font-bold text-[#21302B]">Maria Costa</h4>
-                    <p className="text-sm text-gray-600">Psicóloga</p>
+
+              {/* Card 3 */}
+              <div className="group block h-full">
+                <div className="h-full rounded-3xl p-[3px] bg-gradient-to-br from-[#DFC6AA]/60 via-white to-[#B66D38]/30 shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <div className="rounded-[22px] overflow-hidden bg-white ring-1 ring-gray-200 h-full flex items-center justify-center">
+                    <div className="w-full h-80 sm:h-88 md:h-80 lg:h-80 xl:h-80">
+                      <img
+                        src="https://i.imgur.com/Cb6OeX2.jpeg"
+                        alt="Depoimento 3"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
-                <p className="text-[#21302B] italic">"As técnicas práticas me ajudaram a regular minhas emoções e melhorar meus relacionamentos."</p>
               </div>
             </div>
           </div>
