@@ -22,6 +22,7 @@ import MetodologiaPage from './pages/MetodologiaPage';
 import LegadoPage from "./pages/LegadoPage";
 import RodrigoFonsecaPage from './pages/RodrigoFonsecaPage';
 import ImprensaPage from './pages/ImprensaPage';
+import { BusinessPage } from './pages/BusinessPage';
 
 const queryClient = new QueryClient();
 
@@ -49,7 +50,7 @@ const App = () => (
               <Route path="/formacao" element={<FormacaoPage />} />
               <Route path="/formacao-master" element={<FormacaoMasterPage />} />
               <Route path="/legado" element={<LegadoPage />} />
-              <Route path="/business" element={<PlaceholderPage title="SBIE Business" description="Soluções corporativas em inteligência emocional." />} />
+              <Route path="/business" element={<BusinessPage />} />
               <Route path="/embaixadores" element={<PlaceholderPage title="SBIE Embaixadores do Bem" description="Programa social para multiplicar conhecimento em comunidades." />} />
 
               {/* Rotas antigas mantidas para compatibilidade */}
