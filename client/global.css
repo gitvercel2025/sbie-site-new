@@ -97,6 +97,48 @@
     @apply bg-background text-foreground;
   }
 
+  /* Responsive utilities for mobile optimization */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* Ensure text doesn't overflow on small screens */
+    h1, h2, h3, h4, h5, h6 {
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+    
+    /* Better button spacing on mobile */
+    button {
+      min-height: 44px; /* iOS touch target minimum */
+    }
+    
+    /* Improve card layouts on mobile */
+    .grid {
+      gap: 1rem;
+    }
+    
+    /* Better video player sizing */
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Smooth scrolling for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus states for accessibility */
+  button:focus,
+  a:focus {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
   @keyframes float {
     0%,
     100% {

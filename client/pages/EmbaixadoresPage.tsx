@@ -50,24 +50,26 @@ export const EmbaixadoresPage = () => {
 
             
             {/* Badge superior */}
-            <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-8 py-4 rounded-full mb-8 border-2 border-sbie-bronze/50 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
-              <Crown className="w-8 h-8 text-sbie-beige" />
-              <span className="text-sbie-beige font-black text-2xl md:text-3xl tracking-wide">EMBAIXADORES DO</span>
-              <div className="w-16 h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center shadow-lg">
-                <Award className="w-8 h-8 text-white" fill="currentColor" />
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-4 sm:px-8 py-4 sm:py-4 rounded-full mb-8 border-2 border-sbie-bronze/50 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
+              <div className="flex items-center space-x-2 sm:space-x-4">
+                <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-sbie-beige" />
+                <span className="text-sbie-beige font-black text-lg sm:text-2xl md:text-3xl tracking-wide text-center">EMBAIXADORES DO</span>
               </div>
-              <span className="text-sbie-beige font-black text-2xl md:text-3xl tracking-wide">BEM</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center shadow-lg">
+                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" />
+              </div>
+              <span className="text-sbie-beige font-black text-lg sm:text-2xl md:text-3xl tracking-wide text-center">BEM</span>
             </div>
             
             {/* Título principal */}
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight">
-              <span className="text-white">Um Chamado</span>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-8 leading-tight text-center">
+              <span className="text-white block sm:inline">Um Chamado</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sbie-bronze via-sbie-beige to-sbie-bronze animate-pulse">à GRANDEZA</span>
             </h1>
             
             {/* Subtítulo */}
-            <div className="bg-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-sbie-bronze/30 transition-all duration-500 hover:bg-sbie-bronze/30">
-              <p className="text-xl md:text-3xl font-semibold text-sbie-beige leading-relaxed max-w-5xl mx-auto">
+            <div className="bg-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-4 sm:p-8 mb-8 border border-sbie-bronze/30 transition-all duration-500 hover:bg-sbie-bronze/30">
+              <p className="text-lg sm:text-xl md:text-3xl font-semibold text-sbie-beige leading-relaxed max-w-5xl mx-auto text-center">
                 <span className="text-sbie-bronze font-bold">A Melhor Oportunidade da sua Vida</span>
               </p>
             </div>
@@ -75,12 +77,12 @@ export const EmbaixadoresPage = () => {
             {/* CTA Principal */}
             <button
               onClick={handleCTAClick}
-              className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-12 py-6 rounded-full text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50"
+              className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-6 sm:px-12 py-4 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50 w-full sm:w-auto"
             >
-              <span className="flex items-center space-x-3">
-                <Target className="w-6 h-6" />
-                <span>QUERO SER UM EMBAIXADOR DO BEM!</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="flex items-center justify-center space-x-2 sm:space-x-3">
+                <Target className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="text-center leading-tight">QUERO SER UM<br className="sm:hidden" /> EMBAIXADOR DO BEM!</span>
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
             </button>
@@ -98,31 +100,31 @@ export const EmbaixadoresPage = () => {
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           {/* Título da seção */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-8 py-4 rounded-full mb-12 border-2 border-sbie-bronze/50 shadow-2xl">
-              <div className="w-4 h-4 bg-sbie-bronze rounded-full animate-pulse" />
-              <span className="text-sbie-beige font-black text-xl tracking-wider">REFLEXÃO PROFUNDA</span>
-              <div className="w-4 h-4 bg-sbie-bronze rounded-full animate-pulse" />
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <div className="inline-flex items-center space-x-2 sm:space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-4 sm:px-8 py-3 sm:py-4 rounded-full mb-8 sm:mb-12 border-2 border-sbie-bronze/50 shadow-2xl">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full animate-pulse" />
+              <span className="text-sbie-beige font-black text-lg sm:text-xl tracking-wider">REFLEXÃO PROFUNDA</span>
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full animate-pulse" />
             </div>
             
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
-              <span className="text-white">VOCÊ ESTÁ</span>
+            <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 sm:mb-8 leading-tight">
+              <span className="text-white block sm:inline">VOCÊ ESTÁ</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sbie-bronze via-sbie-beige to-sbie-bronze animate-pulse">PREPARADO?</span>
             </h2>
           </div>
           
           {/* Card principal moderno */}
-          <div className="bg-gradient-to-br from-white/10 to-sbie-bronze/10 backdrop-blur-lg rounded-3xl p-12 md:p-16 border-2 border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/20 transition-all duration-700">
+          <div className="bg-gradient-to-br from-white/10 to-sbie-bronze/10 backdrop-blur-lg rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 border-2 border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/20 transition-all duration-700">
             
             {/* Grid de pergaminhos */}
-            <div className="grid gap-8 md:gap-12">
+            <div className="grid gap-6 sm:gap-8 md:gap-12">
               
               {/* Pergaminho 1 */}
               <div className="relative">
-                <div className="bg-gradient-to-r from-sbie-beige/20 to-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-8 border-l-4 border-sbie-bronze shadow-xl transform hover:scale-105 transition-all duration-500">
-                  <div className="absolute -left-2 top-4 w-4 h-4 bg-sbie-bronze rounded-full shadow-lg" />
-                  <div className="absolute -left-2 bottom-4 w-4 h-4 bg-sbie-bronze rounded-full shadow-lg" />
-                  <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed italic">
+                <div className="bg-gradient-to-r from-sbie-beige/20 to-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border-l-4 border-sbie-bronze shadow-xl transform hover:scale-105 transition-all duration-500">
+                  <div className="absolute -left-2 top-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full shadow-lg" />
+                  <div className="absolute -left-2 bottom-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full shadow-lg" />
+                  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed italic">
                     "Não há dúvidas de que vivemos um dos <span className="text-sbie-bronze font-bold">piores momentos</span> da história da humanidade."
                   </p>
                 </div>
@@ -130,10 +132,10 @@ export const EmbaixadoresPage = () => {
               
               {/* Pergaminho 2 */}
               <div className="relative">
-                <div className="bg-gradient-to-r from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm rounded-2xl p-8 border-r-4 border-sbie-beige shadow-xl transform hover:scale-105 transition-all duration-500 ml-auto max-w-4xl">
-                  <div className="absolute -right-2 top-4 w-4 h-4 bg-sbie-beige rounded-full shadow-lg" />
-                  <div className="absolute -right-2 bottom-4 w-4 h-4 bg-sbie-beige rounded-full shadow-lg" />
-                  <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed italic text-right">
+                <div className="bg-gradient-to-r from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border-r-4 border-sbie-beige shadow-xl transform hover:scale-105 transition-all duration-500 sm:ml-auto sm:max-w-4xl">
+                  <div className="absolute -right-2 top-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-beige rounded-full shadow-lg" />
+                  <div className="absolute -right-2 bottom-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-beige rounded-full shadow-lg" />
+                  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed italic sm:text-right">
                     "Um sentimento generalizado de <span className="text-sbie-beige font-bold">falta de propósito</span> parece estar aprisionando a maioria das pessoas em vidas medíocres e tristes."
                   </p>
                 </div>
@@ -141,10 +143,10 @@ export const EmbaixadoresPage = () => {
               
               {/* Pergaminho 3 */}
               <div className="relative">
-                <div className="bg-gradient-to-r from-sbie-beige/20 to-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-8 border-l-4 border-sbie-bronze shadow-xl transform hover:scale-105 transition-all duration-500">
-                  <div className="absolute -left-2 top-4 w-4 h-4 bg-sbie-bronze rounded-full shadow-lg" />
-                  <div className="absolute -left-2 bottom-4 w-4 h-4 bg-sbie-bronze rounded-full shadow-lg" />
-                  <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed italic">
+                <div className="bg-gradient-to-r from-sbie-beige/20 to-sbie-bronze/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border-l-4 border-sbie-bronze shadow-xl transform hover:scale-105 transition-all duration-500">
+                  <div className="absolute -left-2 top-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full shadow-lg" />
+                  <div className="absolute -left-2 bottom-4 w-3 h-3 sm:w-4 sm:h-4 bg-sbie-bronze rounded-full shadow-lg" />
+                  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed italic">
                     "E o número de pessoas que precisam de nossa <span className="text-sbie-bronze font-bold">ajuda é cada vez maior</span>..."
                   </p>
                 </div>
@@ -194,12 +196,12 @@ export const EmbaixadoresPage = () => {
             <div className="text-center mt-16">
               <button
                 onClick={handleCTAClick}
-                className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-12 py-6 rounded-full text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50"
+                className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-6 sm:px-12 py-4 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50 w-full sm:w-auto"
               >
-                <span className="flex items-center space-x-3">
-                  <Award className="w-6 h-6" />
-                  <span>ACEITO O CHAMADO À GRANDEZA!</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                <span className="flex items-center justify-center space-x-2 sm:space-x-3">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span className="text-center leading-tight">ACEITO O CHAMADO<br className="sm:hidden" /> À GRANDEZA!</span>
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
               </button>
@@ -211,40 +213,40 @@ export const EmbaixadoresPage = () => {
        {/* 3. Seção "Embaixadores do Bem na Prática" */}
        <section className="py-24 bg-gradient-to-br from-sbie-dark-green/20 to-sbie-menu-green/20 backdrop-blur-sm">
          <div className="max-w-7xl mx-auto px-4">
-           <div className="text-center mb-16">
-             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+           <div className="text-center mb-12 sm:mb-16">
+             <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-6 sm:mb-8 leading-tight">
                <span className="text-sbie-bronze">Embaixadores do Bem na Prática</span>
              </h2>
            </div>
            
            {/* Grid de benefícios */}
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-16">
              {/* Card 1 - Mentoria Exclusiva */}
-             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
-               <div className="w-16 h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                 <Users className="w-8 h-8 text-white" />
+             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
+               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                 <Users className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                </div>
-               <h3 className="text-xl font-bold text-sbie-bronze mb-4">MENTORIA EXCLUSIVA</h3>
-               <p className="text-sm text-sbie-beige leading-relaxed mb-4">
+               <h3 className="text-lg sm:text-xl font-bold text-sbie-bronze mb-3 sm:mb-4">MENTORIA EXCLUSIVA</h3>
+               <p className="text-xs sm:text-sm text-sbie-beige leading-relaxed mb-3 sm:mb-4">
                  Networking e Sessão Especial na Residência do Rodrigo Fonseca de 3 horas (com uma Reprogramação Emocional Exclusiva).
                </p>
              </div>
              
              {/* Card 2 - Treinamentos */}
-             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
-               <div className="w-16 h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                 <Award className="w-8 h-8 text-white" />
+             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
+               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                 <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                </div>
-               <h3 className="text-xl font-bold text-sbie-bronze mb-4">TREINAMENTOS</h3>
-               <p className="text-sm text-sbie-beige leading-relaxed mb-4">
+               <h3 className="text-lg sm:text-xl font-bold text-sbie-bronze mb-3 sm:mb-4">TREINAMENTOS</h3>
+               <p className="text-xs sm:text-sm text-sbie-beige leading-relaxed mb-3 sm:mb-4">
                  LOTUS, Legado e Formação para o Embaixador (exceto Hotel).
                </p>
              </div>
              
              {/* Card 3 - Desconto */}
-             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
-               <div className="w-16 h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                 <Gift className="w-8 h-8 text-white" />
+             <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-3xl border border-sbie-bronze/30 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105 text-center">
+               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                 <Gift className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                </div>
                <h3 className="text-xl font-bold text-sbie-bronze mb-4">DESCONTO</h3>
                <p className="text-sm text-sbie-beige leading-relaxed mb-4">
@@ -719,42 +721,42 @@ export const EmbaixadoresPage = () => {
                </h3>
                
                {/* Cards de Contato */}
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12">
                  {/* Card WhatsApp */}
-                 <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-3xl p-8 border border-green-500/30 hover:border-green-500/50 transition-all duration-300 hover:scale-105 group cursor-pointer">
+                 <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 border border-green-500/30 hover:border-green-500/50 transition-all duration-300 hover:scale-105 group cursor-pointer">
                    <div className="text-center">
-                     <div className="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                       <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                       <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.097"/>
                        </svg>
                      </div>
-                     <div className="text-sm text-green-300 mb-2 font-medium">Atendimento por</div>
-                     <div className="text-2xl font-black text-white mb-4">Whatsapp</div>
-                     <div className="text-green-300 mb-6 leading-relaxed">
+                     <div className="text-xs sm:text-sm text-green-300 mb-2 font-medium">Atendimento por</div>
+                     <div className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">Whatsapp</div>
+                     <div className="text-sm sm:text-base text-green-300 mb-4 sm:mb-6 leading-relaxed">
                        Envie uma mensagem para<br/>
-                       <span className="font-bold text-white">+55 (11) 2985-5949</span>
+                       <span className="font-bold text-white text-sm sm:text-base">+55 (11) 2985-5949</span>
                      </div>
-                     <a href="https://wa.me/5511298559490?text=Olá! Gostaria de falar com um especialista sobre o programa Embaixadores do Bem." target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                     <a href="https://wa.me/5511298559490?text=Olá! Gostaria de falar com um especialista sobre o programa Embaixadores do Bem." target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                        Fale com um especialista
                      </a>
                    </div>
                  </div>
 
                  {/* Card Email */}
-                 <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm rounded-3xl p-8 border border-sbie-bronze/30 hover:border-sbie-bronze/50 transition-all duration-300 hover:scale-105 group cursor-pointer">
+                 <div className="bg-gradient-to-br from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 border border-sbie-bronze/30 hover:border-sbie-bronze/50 transition-all duration-300 hover:scale-105 group cursor-pointer">
                    <div className="text-center">
-                     <div className="w-20 h-20 bg-sbie-bronze rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                       <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                     <div className="w-16 h-16 sm:w-20 sm:h-20 bg-sbie-bronze rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+                       <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                        </svg>
                      </div>
-                     <div className="text-sm text-sbie-bronze mb-2 font-medium">Atendimento por</div>
-                     <div className="text-2xl font-black text-white mb-4">Email</div>
-                     <div className="text-sbie-beige mb-6 leading-relaxed">
+                     <div className="text-xs sm:text-sm text-sbie-bronze mb-2 font-medium">Atendimento por</div>
+                     <div className="text-xl sm:text-2xl font-black text-white mb-3 sm:mb-4">Email</div>
+                     <div className="text-sm sm:text-base text-sbie-beige mb-4 sm:mb-6 leading-relaxed">
                        Envie uma mensagem para<br/>
-                       <span className="font-bold text-white">contato@sbie.com.br</span>
+                       <span className="font-bold text-white text-sm sm:text-base">contato@sbie.com.br</span>
                      </div>
-                     <a href="mailto:contato@sbie.com.br?subject=Interesse no programa Embaixadores do Bem&body=Olá! Gostaria de mais informações sobre o programa Embaixadores do Bem." className="inline-block bg-sbie-bronze hover:bg-sbie-beige text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                     <a href="mailto:contato@sbie.com.br?subject=Interesse no programa Embaixadores do Bem&body=Olá! Gostaria de mais informações sobre o programa Embaixadores do Bem." className="inline-block bg-sbie-bronze hover:bg-sbie-beige text-white font-bold py-2 sm:py-3 px-4 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                        Clique para acessar
                      </a>
                    </div>
@@ -763,19 +765,19 @@ export const EmbaixadoresPage = () => {
                </div>
                
                {/* Um Chamado à Grandeza Card - Posicionado abaixo */}
-               <div className="max-w-md mx-auto mt-8">
-                 <div className="relative bg-gradient-to-br from-sbie-bronze via-yellow-500 to-yellow-600 rounded-2xl p-8 text-center border-2 border-sbie-bronze/50 hover:border-sbie-bronze transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-sbie-bronze/30 overflow-hidden">
+               <div className="max-w-sm sm:max-w-md mx-auto mt-6 sm:mt-8">
+                 <div className="relative bg-gradient-to-br from-sbie-bronze via-yellow-500 to-yellow-600 rounded-2xl p-4 sm:p-6 md:p-8 text-center border-2 border-sbie-bronze/50 hover:border-sbie-bronze transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-sbie-bronze/30 overflow-hidden">
                    {/* Selo "APROVEITE" */}
-                   <div className="absolute top-0 left-0 bg-green-500 text-white px-4 py-2 text-sm font-bold transform -rotate-45 -translate-x-3 -translate-y-1 shadow-lg">
+                   <div className="absolute top-0 left-0 bg-green-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-bold transform -rotate-45 -translate-x-2 sm:-translate-x-3 -translate-y-1 shadow-lg">
                      APROVEITE
                    </div>
                    
                    {/* Conteúdo Principal */}
-                   <div className="mt-4">
-                     <h3 className="text-3xl font-black text-gray-900 mb-2 leading-tight">
+                   <div className="mt-3 sm:mt-4">
+                     <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2 leading-tight">
                        Um Chamado<br />à Grandeza
                      </h3>
-                     <div className="text-4xl font-black text-white mb-2 drop-shadow-lg">
+                     <div className="text-3xl sm:text-4xl font-black text-white mb-2 drop-shadow-lg">
                        R$3.000,00 mês
                      </div>
                      <p className="text-gray-800 text-sm font-semibold mb-6">
