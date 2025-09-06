@@ -386,7 +386,7 @@ export const BusinessPage = () => {
               
               <button
                 onClick={handleCTAClick}
-                className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-10 py-4 rounded-full text-lg font-bold transition-all duration-500 transform hover:scale-110 shadow-xl hover:shadow-sbie-bronze/50 border border-sbie-bronze/30"
+                className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-6 md:px-10 py-3 md:py-4 rounded-xl md:rounded-full text-base md:text-lg font-bold transition-all duration-500 transform hover:scale-110 shadow-xl hover:shadow-sbie-bronze/50 border border-sbie-bronze/30"
               >
                 <span className="flex items-center space-x-3">
                   <Target className="w-5 h-5" />
@@ -624,7 +624,7 @@ export const BusinessPage = () => {
                 {/* Botão CTA */}
                 <button
                   onClick={handleCTAClick}
-                  className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-12 py-6 rounded-full text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 mt-8"
+                  className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-8 md:px-12 py-4 md:py-6 rounded-2xl md:rounded-full text-lg md:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 mt-8"
                 >
                   <span className="flex items-center space-x-3">
                     <Briefcase className="w-6 h-6" />
@@ -961,7 +961,7 @@ export const BusinessPage = () => {
             </p>
             <button
               onClick={handleCTAClick}
-              className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-sbie-dark-green px-10 py-4 rounded-full text-lg font-bold transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-sbie-bronze/50"
+              className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-sbie-dark-green px-6 md:px-10 py-3 md:py-4 rounded-xl md:rounded-full text-base md:text-lg font-bold transition-all duration-500 transform hover:scale-105 shadow-xl hover:shadow-sbie-bronze/50"
             >
               <span className="flex items-center space-x-3">
                 <Play className="w-5 h-5" />
@@ -1407,8 +1407,8 @@ export const BusinessPage = () => {
                 Quer que sua empresa também alcance esses <span className="text-sbie-bronze">resultados extraordinários</span>?
               </h3>
               <button
-                onClick={handleCTAClick}
-                className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-12 py-6 rounded-full text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30"
+              onClick={handleCTAClick}
+              className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-8 md:px-12 py-4 md:py-6 rounded-2xl md:rounded-full text-lg md:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30"
               >
                 <span className="flex items-center space-x-3">
                   <Briefcase className="w-6 h-6" />
@@ -1560,7 +1560,7 @@ export const BusinessPage = () => {
               <div className="pt-8">
                 <button
                   onClick={handleCTAClick}
-                  className="group w-full bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-8 py-6 rounded-full text-xl font-bold transition-all duration-500 transform hover:scale-105 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30"
+                  className="group bg-gradient-to-r from-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-8 md:px-12 py-4 md:py-6 rounded-2xl md:rounded-full text-lg md:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30"
                 >
                   <span className="flex items-center justify-center space-x-3">
                     <Target className="w-6 h-6" />

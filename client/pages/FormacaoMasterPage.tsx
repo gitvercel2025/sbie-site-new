@@ -112,7 +112,7 @@ export const FormacaoMasterPage = () => {
             </div>
             <button 
               onClick={handleCTAClick}
-              className="bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-white px-8 md:px-12 py-3 md:py-4 rounded-full text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/25"
+              className="bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-white px-6 md:px-12 py-3 md:py-4 rounded-xl md:rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/25"
             >
               QUERO SER SELECIONADO
             </button>
@@ -151,7 +151,7 @@ export const FormacaoMasterPage = () => {
                   </div>
                   <button 
                     onClick={handleCTAClick}
-                    className="mt-6 md:mt-8 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl w-full md:w-auto"
+                    className="mt-6 md:mt-8 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-xl md:rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl w-full md:w-auto"
                   >
                     QUERO FAZER MINHA APLICAÇÃO
                   </button>

@@ -315,9 +315,9 @@ export const LegadoPage = () => {
             </div>
           </div>
           <div className="text-center">
-            <button 
+            <button
               onClick={handleCTAClick}
-              className="bg-[#B66D38] hover:bg-[#21302B] text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300"
+              className="bg-[#B66D38] hover:bg-[#21302B] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-medium transition-all duration-300"
             >
               Quero participar da próxima turma
             </button>

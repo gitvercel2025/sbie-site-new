@@ -297,7 +297,7 @@ export const Testimonials = () => {
               href="https://wa.me/5511940069695" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="inline-block bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               Comece Sua Transformação Agora
             </a>

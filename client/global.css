@@ -500,7 +500,7 @@
 }
 
 .animate-scroll-infinite {
-  animation: scroll-infinite 40s linear infinite;
+  animation: scroll-infinite 10s linear infinite;
 }
 
 /* Pausar animação no hover */

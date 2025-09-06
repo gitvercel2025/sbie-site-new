@@ -105,7 +105,7 @@ export const QuoteSection = () => {
 
               {/* CTA Button */}
               <div className="mt-12">
-                <button className="group bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/90 hover:to-sbie-bronze text-white px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
+                <button className="group bg-gradient-to-r from-sbie-bronze to-sbie-bronze/90 hover:from-sbie-bronze/90 hover:to-sbie-bronze text-white px-8 md:px-12 py-3 md:py-4 rounded-xl md:rounded-full font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden">
                   <span className="relative z-10 flex items-center space-x-2">
                     <span>Transforme Seu Medo em Ação</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

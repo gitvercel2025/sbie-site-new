@@ -152,7 +152,7 @@ const TrainingCard = ({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }, 100);
             }}
-            className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}
+            className={`inline-flex items-center space-x-2 bg-gradient-to-r ${getCategoryColor()} text-white px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:translate-x-2`}
           >
             <span>Saiba Mais</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -275,7 +275,7 @@ export const Trainings = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#trainings" 
-                className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector('#trainings')?.scrollIntoView({ behavior: 'smooth' });
@@ -287,7 +287,7 @@ export const Trainings = () => {
                 href="https://wa.me/5511940069695" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+                className="border-2 border-sbie-dark-green text-sbie-dark-green hover:bg-sbie-dark-green hover:text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-full font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105"
               >
                 Fale com um Consultor
               </a>

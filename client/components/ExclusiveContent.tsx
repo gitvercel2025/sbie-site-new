@@ -304,7 +304,7 @@ export const ExclusiveContent = () => {
                 placeholder="Seu melhor e-mail"
                 className="flex-1 px-4 py-3 bg-sbie-beige/30 border border-sbie-bronze/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-sbie-bronze focus:border-transparent"
               />
-              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap">
+              <button className="bg-sbie-bronze hover:bg-sbie-bronze/90 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg md:rounded-xl font-semibold text-sm md:text-base transition-all duration-300 hover:scale-105 whitespace-nowrap">
                 Inscrever-se
               </button>
             </div>

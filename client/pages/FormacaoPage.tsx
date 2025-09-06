@@ -72,7 +72,7 @@ export const FormacaoPage = () => {
         <div>
           <p className="mb-4">Sim, oferecemos diversas opções de parcelamento para facilitar seu acesso à formação.</p>
           <a 
-            href="https://wa.me/5511940069695" 
+            href="https://wa.me/551194006695" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300"
@@ -116,7 +116,7 @@ export const FormacaoPage = () => {
               
               <button 
                 onClick={handleCTAClick}
-                className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-12 py-6 rounded-2xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
                 Quero garantir minha vaga
               </button>
@@ -308,7 +308,7 @@ export const FormacaoPage = () => {
             <div className="text-center mt-12">
               <button 
                 onClick={handleCTAClick}
-                className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg md:rounded-xl text-base md:text-lg font-bold transition-all duration-300 transform hover:scale-105"
               >
                 Quero conhecer os módulos completos
               </button>
@@ -827,7 +827,7 @@ export const FormacaoPage = () => {
             
             <button 
               onClick={handleCTAClick}
-              className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-12 py-6 rounded-2xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-[#B66D38] hover:bg-[#B66D38]/90 text-white px-8 md:px-12 py-4 md:py-6 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl"
             >
               Quero garantir minha vaga na Formação em Inteligência Emocional
             </button>

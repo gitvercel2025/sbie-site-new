@@ -469,9 +469,9 @@ const LotusPage = () => {
                 Ele ainda promove a consciência de <span className="text-[#B66D38] font-semibold">"Programas Emocionais"</span> que disparam sentimentos e comportamentos indesejados e, principalmente, o conhecimento de como podemos reprogramá-los para gerar mudanças efetivas e espontâneas em nossas vidas pessoais e profissionais.
               </p>
               
-              <button 
+              <button
                 onClick={handleCTAClick}
-                className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-8 py-4 rounded-2xl text-lg font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50 relative overflow-hidden group"
+                className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl text-base md:text-lg font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50 relative overflow-hidden group"
               >
                 <span className="relative z-10">QUERO TRANSFORMAR 10 ANOS EM APENAS UM ANO</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -1084,7 +1084,7 @@ const LotusPage = () => {
           
           <button 
             onClick={handleCTAClick}
-            className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-16 py-6 rounded-2xl text-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50 animate-pulse relative overflow-hidden group"
+            className="bg-gradient-to-r from-[#B66D38] via-[#DFC6AA] to-[#B66D38] text-[#21302B] px-6 md:px-16 py-3 md:py-6 rounded-lg md:rounded-2xl text-base md:text-xl font-bold hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-[#B66D38]/50 animate-pulse relative overflow-hidden group"
           >
             <span className="relative z-10">GARANTIR MINHA VAGA AGORA</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#DFC6AA] to-[#B66D38] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -1168,7 +1168,7 @@ const LotusPage = () => {
       <div className="fixed bottom-4 left-4 right-4 z-50 md:left-auto md:right-4 md:w-auto">
         <button 
           onClick={handleCTAClick}
-          className="w-full md:w-auto font-['Poppins'] bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] text-[#21302B] px-8 py-4 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-2xl"
+          className="w-full md:w-auto font-['Poppins'] bg-gradient-to-r from-[#B66D38] to-[#DFC6AA] text-[#21302B] px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-full text-sm md:text-base font-bold hover:scale-105 transition-all duration-300 shadow-2xl"
         >
           INSCREVER-SE AGORA
         </button>
