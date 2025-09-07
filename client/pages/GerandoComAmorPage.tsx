@@ -700,6 +700,29 @@ const GerandoComAmorPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Nova Seção CTA Final */}
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-sbie-dark-green via-purple-900/30 to-pink-900/20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center">
+            <div className="relative inline-block">
+              <div className="absolute -inset-6 bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+              <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 border-2 border-pink-400/30 shadow-[0_0_40px_rgba(236,72,153,0.4)] hover:shadow-[0_0_60px_rgba(236,72,153,0.6)] transition-all duration-500">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-8">
+                  A decisão do futuro do seu bebê agora está nas suas mãos!
+                </h2>
+                
+                <button 
+                   onClick={() => document.getElementById('cta-final')?.scrollIntoView({ behavior: 'smooth' })}
+                   className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-8 sm:px-12 rounded-full text-lg sm:text-xl shadow-[0_0_30px_rgba(236,72,153,0.5)] hover:shadow-[0_0_40px_rgba(236,72,153,0.7)] transition-all duration-300 transform hover:scale-105"
+                 >
+                   QUERO ADQUIRIR MEU CURSO AGORA
+                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Smooth Transition */}
       <div className="h-32 bg-gradient-to-b from-purple-900/30 to-sbie-dark-green"></div>
     </div>
