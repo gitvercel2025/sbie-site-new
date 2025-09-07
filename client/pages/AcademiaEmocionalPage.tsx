@@ -801,27 +801,27 @@ export const AcademiaEmocionalPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="depoimentos-section" className="py-24 bg-white relative">
+      <section id="depoimentos-section" className="py-16 md:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-sbie-dark-green mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-sbie-dark-green mb-6">
               <span className="text-sbie-bronze">Depoimentos</span>
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Text Card */}
-            <div className="bg-gradient-to-br from-sbie-dark-green via-sbie-menu-green to-sbie-forest-green rounded-3xl p-8 sm:p-12 shadow-2xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-500 hover:scale-[1.02]">
-              <div className="text-white space-y-6">
-                <h3 className="text-2xl sm:text-3xl font-black text-sbie-bronze mb-6">
+            <div className="bg-gradient-to-br from-sbie-dark-green via-sbie-menu-green to-sbie-forest-green rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-500 hover:scale-[1.02] order-2 lg:order-1">
+              <div className="text-white space-y-4 lg:space-y-6">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-sbie-bronze mb-4 lg:mb-6">
                   Transformações Reais
                 </h3>
-                <p className="text-lg sm:text-xl leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl leading-relaxed">
                   Olha só o que aconteceu com eles depois de dominar a Inteligência Emocional…
                 </p>
-                <div className="bg-sbie-bronze/20 rounded-2xl p-6 border border-sbie-bronze/30">
-                  <p className="text-sbie-beige font-semibold">
+                <div className="bg-sbie-bronze/20 rounded-xl lg:rounded-2xl p-4 lg:p-6 border border-sbie-bronze/30">
+                  <p className="text-sbie-beige font-semibold text-sm sm:text-base">
                     Pessoas reais, transformações reais, resultados que você também pode alcançar.
                   </p>
                 </div>
@@ -829,8 +829,8 @@ export const AcademiaEmocionalPage = () => {
             </div>
 
             {/* Right Side - Testimonial Carousel */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div className="relative order-1 lg:order-2">
+              <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl">
                 <div 
                   className="flex transition-transform duration-1000 ease-in-out" 
                   style={{ transform: `translateX(-${currentTestimonialIndex * 100}%)` }}
@@ -840,7 +840,7 @@ export const AcademiaEmocionalPage = () => {
                       <img
                         src={image}
                         alt={`Depoimento ${index + 1}`}
-                        className="w-full h-80 sm:h-96 object-cover"
+                        className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                       />
                     </div>
                   ))}
@@ -848,12 +848,12 @@ export const AcademiaEmocionalPage = () => {
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-6 space-x-2">
+              <div className="flex justify-center mt-4 lg:mt-6 space-x-2">
                 {testimonialImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonialIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
                       index === currentTestimonialIndex ? 'bg-sbie-bronze scale-125' : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   />
@@ -861,8 +861,8 @@ export const AcademiaEmocionalPage = () => {
               </div>
 
               {/* Auto-play indicator */}
-              <div className="text-center mt-4">
-                <p className="text-sm text-gray-600">
+              <div className="text-center mt-3 lg:mt-4">
+                <p className="text-xs lg:text-sm text-gray-600">
                   Carrossel automático • {currentTestimonialIndex + 1} de {testimonialImages.length}
                 </p>
               </div>
@@ -1078,42 +1078,42 @@ export const AcademiaEmocionalPage = () => {
         </section>
 
         {/* Seção de Bônus */}
-        <section className="py-16 bg-gradient-to-br from-gray-900 via-sbie-dark-green/30 to-gray-900">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-gray-900 via-sbie-dark-green/30 to-gray-900">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 md:mb-12 leading-tight">
               Entrando HOJE para a Academia Emocional, você ainda leva de BÔNUS:
             </h2>
             
             <div className="relative">
               {/* Slideshow Container */}
-              <div className="overflow-hidden rounded-2xl">
+              <div className="overflow-hidden rounded-xl lg:rounded-2xl">
                 <div className="flex transition-transform duration-500 ease-in-out" style={{transform: `translateX(-${currentBonusIndex * 100}%)`}}>
                   
                   {/* Bônus 1 */}
                   <div className="w-full flex-shrink-0">
-                    <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-2xl p-8 md:p-12 min-h-[700px] flex items-center">
-                      <div className="flex flex-col lg:flex-row items-center gap-8">
-                        <div className="lg:w-1/2">
+                    <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 xl:p-12 min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] flex items-center">
+                      <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-8 w-full">
+                        <div className="w-full lg:w-1/2 flex justify-center">
                            <img 
                               src="https://lp.sbie.com.br/wp-content/uploads/2023/04/woman1.jpg" 
                               alt="Conferência Mães e Mulheres" 
-                              className="w-full max-w-sm mx-auto h-96 md:h-[500px] object-cover rounded-lg shadow-lg" 
+                              className="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-sm h-64 sm:h-80 lg:h-96 xl:h-[500px] object-cover rounded-lg shadow-lg" 
                               style={{aspectRatio: '9/16'}}
                             />
                          </div>
-                        <div className="lg:w-1/2 text-center lg:text-left">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        <div className="w-full lg:w-1/2 text-center lg:text-left px-2 sm:px-0">
+                          <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 lg:mb-4 leading-tight">
                             BÔNUS 1 Conferência Mães e Mulheres
                           </h3>
-                          <p className="text-lg text-white/90 mb-6">
+                          <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 lg:mb-6 leading-relaxed">
                             Sequência de 7 encontros especiais feitos na semana das mães.
                           </p>
-                          <div className="flex items-center justify-center lg:justify-start gap-4">
-                            <span className="text-lg text-white/70 line-through">
+                          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4">
+                            <span className="text-sm sm:text-base lg:text-lg text-white/70 line-through">
                               DE: R$ 197,00
                             </span>
                             <div className="relative">
-                              <span className="text-3xl font-bold text-green-400 bg-green-400/20 px-4 py-2 rounded-full border-2 border-green-400 animate-pulse">
+                              <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-400 bg-green-400/20 px-3 sm:px-4 py-1 sm:py-2 rounded-full border-2 border-green-400 animate-pulse">
                                 POR: R$ 0,00
                               </span>
                             </div>
@@ -1125,29 +1125,29 @@ export const AcademiaEmocionalPage = () => {
 
                   {/* Bônus 2 */}
                    <div className="w-full flex-shrink-0">
-                     <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-2xl p-8 md:p-12 min-h-[700px] flex items-center">
-                      <div className="flex flex-col lg:flex-row items-center gap-8">
-                        <div className="lg:w-1/2">
+                     <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 xl:p-12 min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] flex items-center">
+                      <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-8 w-full">
+                        <div className="w-full lg:w-1/2 flex justify-center">
                            <img 
                               src="https://lp.sbie.com.br/wp-content/uploads/2023/04/assistindo.jpg" 
                               alt="Lives com Convidados Especiais" 
-                              className="w-full max-w-sm mx-auto h-96 md:h-[500px] object-cover rounded-lg shadow-lg" 
+                              className="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-sm h-64 sm:h-80 lg:h-96 xl:h-[500px] object-cover rounded-lg shadow-lg" 
                               style={{aspectRatio: '9/16'}}
                             />
                          </div>
-                        <div className="lg:w-1/2 text-center lg:text-left">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        <div className="w-full lg:w-1/2 text-center lg:text-left px-2 sm:px-0">
+                          <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 lg:mb-4 leading-tight">
                             BÔNUS 2 Lives com Convidados Especiais
                           </h3>
-                          <p className="text-lg text-white/90 mb-6">
+                          <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 lg:mb-6 leading-relaxed">
                             Assista a entrevistas exclusivas com Mayra Cardi, Brisa Dantas, Elainne Ourives, Roberto Navarro, entre outros.
                           </p>
-                          <div className="flex items-center justify-center lg:justify-start gap-4">
-                            <span className="text-lg text-white/70 line-through">
+                          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4">
+                            <span className="text-sm sm:text-base lg:text-lg text-white/70 line-through">
                               DE: R$ 297,00
                             </span>
                             <div className="relative">
-                              <span className="text-3xl font-bold text-green-400 bg-green-400/20 px-4 py-2 rounded-full border-2 border-green-400 animate-pulse">
+                              <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-400 bg-green-400/20 px-3 sm:px-4 py-1 sm:py-2 rounded-full border-2 border-green-400 animate-pulse">
                                 POR: R$ 0,00
                               </span>
                             </div>
@@ -1159,29 +1159,29 @@ export const AcademiaEmocionalPage = () => {
 
                   {/* Bônus 3 */}
                    <div className="w-full flex-shrink-0">
-                     <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-2xl p-8 md:p-12 min-h-[500px] flex items-center">
-                      <div className="flex flex-col lg:flex-row items-center gap-8">
-                        <div className="lg:w-1/2">
+                     <div className="bg-gradient-to-r from-sbie-dark-green/80 to-sbie-forest-green/80 rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 xl:p-12 min-h-[500px] sm:min-h-[600px] lg:min-h-[700px] flex items-center">
+                      <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 lg:gap-8 w-full">
+                        <div className="w-full lg:w-1/2 flex justify-center">
                            <img 
                              src="https://lp.sbie.com.br/wp-content/uploads/2023/04/rodrigo.jpg" 
                              alt="Faça Acontecer 2.0" 
-                             className="w-full max-w-sm mx-auto h-96 md:h-[500px] object-cover rounded-lg shadow-lg" 
+                             className="w-full max-w-[200px] sm:max-w-[250px] lg:max-w-sm h-64 sm:h-80 lg:h-96 xl:h-[500px] object-cover rounded-lg shadow-lg" 
                              style={{aspectRatio: '9/16'}}
                            />
                          </div>
-                        <div className="lg:w-1/2 text-center lg:text-left">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        <div className="w-full lg:w-1/2 text-center lg:text-left px-2 sm:px-0">
+                          <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 lg:mb-4 leading-tight">
                             BÔNUS 3 Faça Acontecer 2.0
                           </h3>
-                          <p className="text-lg text-white/90 mb-6">
+                          <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 lg:mb-6 leading-relaxed">
                             Todas as gravações e atualizações do meu Programa semanal "Faça Acontecer 2.0"
                           </p>
-                          <div className="flex items-center justify-center lg:justify-start gap-4">
-                            <span className="text-lg text-white/70 line-through">
+                          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4">
+                            <span className="text-sm sm:text-base lg:text-lg text-white/70 line-through">
                               DE: R$ 197,00
                             </span>
                             <div className="relative">
-                              <span className="text-3xl font-bold text-green-400 bg-green-400/20 px-4 py-2 rounded-full border-2 border-green-400 animate-pulse">
+                              <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-green-400 bg-green-400/20 px-3 sm:px-4 py-1 sm:py-2 rounded-full border-2 border-green-400 animate-pulse">
                                 POR: R$ 0,00
                               </span>
                             </div>
@@ -1193,32 +1193,32 @@ export const AcademiaEmocionalPage = () => {
                 </div>
               </div>
 
-              {/* Navigation Buttons */}
+              {/* Navigation Buttons - Hidden on mobile */}
               <button 
                 onClick={() => setCurrentBonusIndex(currentBonusIndex === 0 ? 2 : currentBonusIndex - 1)}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+                className="hidden sm:block absolute left-2 lg:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 lg:p-3 rounded-full transition-all duration-300 z-10"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               
               <button 
                 onClick={() => setCurrentBonusIndex(currentBonusIndex === 2 ? 0 : currentBonusIndex + 1)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+                className="hidden sm:block absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 lg:p-3 rounded-full transition-all duration-300 z-10"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-8 space-x-2">
+              <div className="flex justify-center mt-6 lg:mt-8 space-x-2">
                 {[0, 1, 2].map((index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentBonusIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
                       currentBonusIndex === index 
                         ? 'bg-green-400 scale-125' 
                         : 'bg-white/40 hover:bg-white/60'
@@ -1231,60 +1231,60 @@ export const AcademiaEmocionalPage = () => {
         </section>
 
         {/* Seção Quanto você acha que vale tudo isso */}
-        <section id="pricing-section" className="py-16 bg-gradient-to-br from-sbie-dark-green via-sbie-menu-green to-sbie-forest-green">
+        <section id="pricing-section" className="py-12 md:py-16 bg-gradient-to-br from-sbie-dark-green via-sbie-menu-green to-sbie-forest-green">
           <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 bg-sbie-bronze px-6 py-3 rounded-lg inline-block shadow-2xl">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 bg-sbie-bronze px-4 sm:px-6 py-2 sm:py-3 rounded-lg inline-block shadow-2xl leading-tight">
                 Quanto você acha que vale tudo isso?
               </h2>
-              <p className="text-lg text-white mb-4">
+              <p className="text-base sm:text-lg text-white mb-3 md:mb-4 px-2">
                 A verdade, é que tudo o que eu entreguei aqui, vale pelo menos 
-                <span className="text-sbie-beige font-bold text-xl bg-red-600/20 px-2 py-1 rounded"> R$ 2.500,00</span>
+                <span className="text-sbie-beige font-bold text-lg sm:text-xl bg-red-600/20 px-2 py-1 rounded"> R$ 2.500,00</span>
               </p>
-              <p className="text-lg text-white">
+              <p className="text-base sm:text-lg text-white px-2">
                 Só que eu tenho uma missão pessoal de ajudar o maior número de pessoas possível. E por isso, eu consegui fazer com que a Academia Emocional custasse 
-                <span className="text-sbie-bronze font-bold text-xl bg-green-600/20 px-2 py-1 rounded"> R$ 598,00.</span>
+                <span className="text-sbie-bronze font-bold text-lg sm:text-xl bg-green-600/20 px-2 py-1 rounded"> R$ 598,00.</span>
               </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
               {/* Mockup da Academia Emocional */}
-              <div className="lg:w-1/2 relative">
+              <div className="w-full lg:w-1/2 relative order-2 lg:order-1">
                 <div className="relative group cursor-pointer">
                   <img 
                     src="https://lp.sbie.com.br/wp-content/uploads/2023/04/mockpf-s73-eve-set-14-mockup-768x438.png" 
                     alt="Academia Emocional Mockup" 
-                    className="w-full h-auto rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl border-2 border-sbie-bronze/30"
+                    className="w-full h-auto rounded-xl lg:rounded-2xl shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-3xl border-2 border-sbie-bronze/30"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sbie-bronze/30 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-sbie-bronze/30 to-transparent rounded-xl lg:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="mt-6 text-center">
-                  <p className="text-white font-medium">
+                <div className="mt-4 lg:mt-6 text-center px-2">
+                  <p className="text-sm sm:text-base text-white font-medium leading-relaxed">
                     Mas apenas HOJE e apenas NESTA PÁGINA, você pode acessar tudo isso com condição especial
                   </p>
-                  <p className="text-sbie-beige font-bold mt-2">
+                  <p className="text-sm sm:text-base text-sbie-beige font-bold mt-2 leading-relaxed">
                     Isso significa que nesse exato momento você tem a chance de acessar a
                   </p>
-                  <p className="text-sbie-bronze font-bold text-lg">
+                  <p className="text-base sm:text-lg text-sbie-bronze font-bold">
                     Academia Emocional Por APENAS:
                   </p>
                 </div>
               </div>
 
               {/* Card de Preço */}
-              <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-sbie-bronze via-sbie-beige to-sbie-bronze rounded-3xl p-8 text-white text-center shadow-2xl transform hover:scale-105 transition-all duration-300 border border-white/20">
-                  <div className="mb-6">
-                    <div className="bg-black/80 backdrop-blur-sm rounded-2xl p-6 border-2 border-sbie-bronze/50 mb-4 shadow-2xl">
-                      <div className="text-6xl md:text-7xl font-black mb-2 text-sbie-bronze drop-shadow-2xl">
+              <div className="w-full lg:w-1/2 order-1 lg:order-2">
+                <div className="bg-gradient-to-br from-sbie-bronze via-sbie-beige to-sbie-bronze rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 text-white text-center shadow-2xl transform hover:scale-105 transition-all duration-300 border border-white/20">
+                  <div className="mb-4 lg:mb-6">
+                    <div className="bg-black/80 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 border-2 border-sbie-bronze/50 mb-3 lg:mb-4 shadow-2xl">
+                      <div className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-1 lg:mb-2 text-sbie-bronze drop-shadow-2xl leading-none">
                         R$ 39,96
-                        <span className="text-3xl font-normal text-white"> /mês</span>
+                        <span className="text-xl sm:text-2xl lg:text-3xl font-normal text-white block sm:inline"> /mês</span>
                       </div>
-                      <div className="text-lg font-bold text-white bg-green-600/20 px-4 py-2 rounded-full inline-block">
+                      <div className="text-sm sm:text-base lg:text-lg font-bold text-white bg-green-600/20 px-3 sm:px-4 py-1 sm:py-2 rounded-full inline-block mt-2">
                         em 12x sem juros no cartão
                       </div>
                     </div>
-                    <div className="text-sm opacity-90 text-center">
+                    <div className="text-xs sm:text-sm opacity-90 text-center">
                       💳 Ou à vista com desconto especial
                     </div>
                   </div>
@@ -1293,21 +1293,21 @@ export const AcademiaEmocionalPage = () => {
                     href="https://payment.ticto.app/OA7CF4734"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-block bg-gradient-to-r from-sbie-dark-green to-sbie-forest-green text-white font-bold py-4 px-8 rounded-full text-lg hover:from-sbie-forest-green hover:to-sbie-dark-green transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-4 animate-pulse"
+                    className="w-full inline-block bg-gradient-to-r from-sbie-dark-green to-sbie-forest-green text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg hover:from-sbie-forest-green hover:to-sbie-dark-green transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl mb-3 lg:mb-4 animate-pulse"
                   >
                     QUERO SER MINHA MELHOR VERSÃO
                   </a>
                   
-                  <div className="text-sm opacity-90 mb-4">
+                  <div className="text-xs sm:text-sm opacity-90 mb-3 lg:mb-4">
                     Acesso imediato • Garantia de 7 dias
                   </div>
                   
                   {/* Imagem dos cartões */}
-                  <div className="mt-4">
+                  <div className="mt-3 lg:mt-4">
                     <img 
                       src="https://lp.sbie.com.br/wp-content/uploads/2023/04/cartoes2-768x41.png" 
                       alt="Formas de Pagamento" 
-                      className="w-full max-w-xs mx-auto opacity-90"
+                      className="w-full max-w-[250px] sm:max-w-xs mx-auto opacity-90"
                     />
                   </div>
                 </div>
@@ -1494,34 +1494,34 @@ export const AcademiaEmocionalPage = () => {
         </section>
 
         {/* Seção Final com Contador */}
-        <section className="py-24 bg-gradient-to-br from-sbie-bronze via-sbie-beige to-sbie-bronze relative">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-sbie-bronze via-sbie-beige to-sbie-bronze relative">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <div className="bg-sbie-dark-green/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-sbie-bronze/30">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+            <div className="bg-sbie-dark-green/20 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 border border-sbie-bronze/30">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 lg:mb-8">
                 Agora é a sua vez.
               </h2>
               
-              <div className="bg-sbie-dark-green/30 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-sbie-bronze/40">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+              <div className="bg-sbie-dark-green/30 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 mb-6 lg:mb-8 border border-sbie-bronze/40">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 lg:mb-6 leading-tight px-2">
                   Você tem pouco tempo antes que essa oportunidade saia do ar...
                 </h3>
                 
-                <div className="flex justify-center items-center gap-4 mb-6">
-                    <div className="bg-sbie-dark-green/80 rounded-xl p-4 min-w-[80px] border border-sbie-bronze/30">
-                      <div className="text-2xl md:text-3xl font-bold text-sbie-bronze">{String(timeLeft.days).padStart(2, '0')}</div>
-                      <div className="text-sm text-sbie-beige">Dias</div>
+                <div className="grid grid-cols-4 gap-2 sm:gap-3 lg:gap-4 mb-4 lg:mb-6 max-w-sm mx-auto">
+                    <div className="bg-sbie-dark-green/80 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-sbie-bronze/30">
+                      <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-sbie-bronze leading-none">{String(timeLeft.days).padStart(2, '0')}</div>
+                      <div className="text-xs sm:text-sm text-sbie-beige mt-1">Dias</div>
                     </div>
-                    <div className="bg-sbie-dark-green/80 rounded-xl p-4 min-w-[80px] border border-sbie-bronze/30">
-                      <div className="text-2xl md:text-3xl font-bold text-sbie-bronze">{String(timeLeft.hours).padStart(2, '0')}</div>
-                      <div className="text-sm text-sbie-beige">Horas</div>
+                    <div className="bg-sbie-dark-green/80 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-sbie-bronze/30">
+                      <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-sbie-bronze leading-none">{String(timeLeft.hours).padStart(2, '0')}</div>
+                      <div className="text-xs sm:text-sm text-sbie-beige mt-1">Horas</div>
                     </div>
-                    <div className="bg-sbie-dark-green/80 rounded-xl p-4 min-w-[80px] border border-sbie-bronze/30">
-                      <div className="text-2xl md:text-3xl font-bold text-sbie-bronze">{String(timeLeft.minutes).padStart(2, '0')}</div>
-                      <div className="text-sm text-sbie-beige">Minutos</div>
+                    <div className="bg-sbie-dark-green/80 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-sbie-bronze/30">
+                      <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-sbie-bronze leading-none">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                      <div className="text-xs sm:text-sm text-sbie-beige mt-1">Minutos</div>
                     </div>
-                    <div className="bg-sbie-dark-green/80 rounded-xl p-4 min-w-[80px] border border-sbie-bronze/30">
-                      <div className="text-2xl md:text-3xl font-bold text-sbie-bronze">{String(timeLeft.seconds).padStart(2, '0')}</div>
-                      <div className="text-sm text-sbie-beige">Segundos</div>
+                    <div className="bg-sbie-dark-green/80 rounded-lg lg:rounded-xl p-2 sm:p-3 lg:p-4 border border-sbie-bronze/30">
+                      <div className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-sbie-bronze leading-none">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                      <div className="text-xs sm:text-sm text-sbie-beige mt-1">Segundos</div>
                     </div>
                   </div>
                </div>
@@ -1530,7 +1530,7 @@ export const AcademiaEmocionalPage = () => {
                  href="https://payment.ticto.app/OA7CF4734"
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="inline-block bg-gradient-to-r from-sbie-dark-green to-sbie-forest-green hover:from-sbie-forest-green hover:to-sbie-dark-green text-white font-bold py-4 px-8 rounded-full text-xl transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-sbie-bronze/50 animate-pulse border-2 border-sbie-bronze/30"
+                 className="inline-block bg-gradient-to-r from-sbie-dark-green to-sbie-forest-green hover:from-sbie-forest-green hover:to-sbie-dark-green text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg lg:text-xl transform hover:scale-110 transition-all duration-300 shadow-2xl hover:shadow-sbie-bronze/50 animate-pulse border-2 border-sbie-bronze/30"
                >
                  QUERO SER MINHA MELHOR VERSÃO
                </a>
