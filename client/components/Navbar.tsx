@@ -108,8 +108,8 @@ export const Navbar = () => {
 
   const onlineItems: DropdownItem[] = [
     { label: "SBIE Academy", href: "/sbie-academy" },
-    { label: "SBIE Care", href: "https://www.sbie.com.br/solucao/sbie-care/?utm_source=sitesbie&utm_medium=menu&utm_campaign=care" },
-    { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=sitesbie&utm_medium=menu&utm_campaign=academia" },
+    { label: "SBIE Care", href: "/care" },
+    { label: "Academia Emocional", href: "/academia-emocional" },
     { label: "Gerando com Amor", href: "https://rodrigofonsecaie.com.br/gerando-com-amor/?utm_source=sitesbie&utm_medium=menu&utm_campaign=gerando-com-amor" },
     { label: "Alma Gêmeas", href: "https://hotmart.com/pt-br/marketplace?utm_source=sitesbie&utm_medium=menu&utm_campaign=almagemeas" },
     { label: "Livros Digitais", href: "https://rodrigofonsecaie.com.br/os4poderes/?utm_source=sitesbie&utm_medium=menu&utm_campaign=livros" },
