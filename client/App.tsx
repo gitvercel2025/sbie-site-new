@@ -24,6 +24,7 @@ import RodrigoFonsecaPage from './pages/RodrigoFonsecaPage';
 import ImprensaPage from './pages/ImprensaPage';
 import { BusinessPage } from './pages/BusinessPage';
 import { EmbaixadoresPage } from './pages/EmbaixadoresPage';
+import { SbieAcademyPage } from './pages/SbieAcademyPage';
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
               <Route path="/legado" element={<LegadoPage />} />
               <Route path="/business" element={<BusinessPage />} />
               <Route path="/embaixadores" element={<EmbaixadoresPage />} />
+              <Route path="/sbie-academy" element={<SbieAcademyPage />} />
 
               {/* Rotas antigas mantidas para compatibilidade */}
               <Route path="/lotus-ie" element={<LotusPage />} />

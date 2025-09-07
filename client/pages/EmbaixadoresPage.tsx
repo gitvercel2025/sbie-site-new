@@ -50,15 +50,15 @@ export const EmbaixadoresPage = () => {
 
             
             {/* Badge superior */}
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-4 sm:px-8 py-4 sm:py-4 rounded-full mb-8 border-2 border-sbie-bronze/50 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 backdrop-blur-sm px-3 sm:px-8 py-3 sm:py-4 rounded-full mb-8 border-2 border-sbie-bronze/50 shadow-2xl hover:shadow-sbie-bronze/30 transition-all duration-500 hover:scale-105">
               <div className="flex items-center space-x-2 sm:space-x-4">
-                <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-sbie-beige" />
-                <span className="text-sbie-beige font-black text-lg sm:text-2xl md:text-3xl tracking-wide text-center">EMBAIXADORES DO</span>
+                <Crown className="w-5 h-5 sm:w-8 sm:h-8 text-sbie-beige" />
+                <span className="text-sbie-beige font-black text-sm sm:text-2xl md:text-3xl tracking-wide text-center">EMBAIXADORES DO</span>
               </div>
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center shadow-lg">
-                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" />
+              <div className="w-10 h-10 sm:w-16 sm:h-16 bg-gradient-to-r from-sbie-bronze to-sbie-beige rounded-full flex items-center justify-center shadow-lg">
+                <Award className="w-5 h-5 sm:w-8 sm:h-8 text-white" fill="currentColor" />
               </div>
-              <span className="text-sbie-beige font-black text-lg sm:text-2xl md:text-3xl tracking-wide text-center">BEM</span>
+              <span className="text-sbie-beige font-black text-sm sm:text-2xl md:text-3xl tracking-wide text-center">BEM</span>
             </div>
             
             {/* Título principal */}
@@ -77,12 +77,12 @@ export const EmbaixadoresPage = () => {
             {/* CTA Principal */}
             <button
               onClick={handleCTAClick}
-              className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-6 sm:px-12 py-4 sm:py-6 rounded-full text-lg sm:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50 w-full sm:w-auto"
+              className="group relative bg-gradient-to-r from-sbie-bronze via-sbie-bronze to-sbie-beige hover:from-sbie-beige hover:to-sbie-bronze text-white px-4 sm:px-12 py-3 sm:py-6 rounded-full text-sm sm:text-xl font-bold transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-sbie-bronze/50 border-2 border-sbie-bronze/30 hover:border-sbie-beige/50 w-full sm:w-auto"
             >
-              <span className="flex items-center justify-center space-x-2 sm:space-x-3">
-                <Target className="w-5 h-5 sm:w-6 sm:h-6" />
-                <span className="text-center leading-tight">QUERO SER UM<br className="sm:hidden" /> EMBAIXADOR DO BEM!</span>
-                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              <span className="flex items-center justify-center space-x-1 sm:space-x-3">
+                <Target className="w-4 h-4 sm:w-6 sm:h-6" />
+                <span className="text-center leading-tight text-xs sm:text-base">QUERO SER UM<br className="sm:hidden" /> EMBAIXADOR DO BEM!</span>
+                <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
             </button>
@@ -325,146 +325,146 @@ export const EmbaixadoresPage = () => {
           </div>
           
           <div className="max-w-7xl mx-auto px-4 relative z-10">
-            <div className="text-center mb-20">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm px-6 py-3 rounded-full border border-sbie-bronze/30 mb-8">
-                <Zap className="w-5 h-5 text-sbie-bronze" />
-                <span className="text-sbie-bronze font-semibold text-sm uppercase tracking-wider">Investimento Exclusivo</span>
+            <div className="text-center mb-12 sm:mb-16 md:mb-20">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sbie-bronze/20 to-sbie-beige/20 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-full border border-sbie-bronze/30 mb-6 sm:mb-8">
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-sbie-bronze" />
+                <span className="text-sbie-bronze font-semibold text-xs sm:text-sm uppercase tracking-wider">Investimento Exclusivo</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight px-4">
                 <span className="bg-gradient-to-r from-sbie-bronze via-sbie-beige to-sbie-bronze bg-clip-text text-transparent animate-pulse">
                   CUSTO DOS BENEFÍCIOS
                 </span>
               </h2>
-              <p className="text-xl md:text-2xl text-sbie-beige/80 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-sbie-beige/80 max-w-4xl mx-auto leading-relaxed px-4">
                 Um investimento que vai revolucionar não apenas sua carreira, mas todo o seu futuro
               </p>
             </div>
             
             {/* Tabela de Custos e Benefícios */}
-            <div className="bg-gradient-to-br from-white/10 to-sbie-beige/10 backdrop-blur-sm rounded-3xl border border-sbie-bronze/30 shadow-2xl overflow-hidden mb-20">
-              <div className="bg-gradient-to-r from-sbie-bronze to-sbie-beige p-6">
-                <h3 className="text-3xl font-black text-white text-center uppercase tracking-wider">CUSTO DOS BENEFÍCIOS</h3>
+            <div className="bg-gradient-to-br from-white/10 to-sbie-beige/10 backdrop-blur-sm rounded-3xl border border-sbie-bronze/30 shadow-2xl overflow-hidden mb-12 sm:mb-16 md:mb-20 mx-4 sm:mx-0">
+              <div className="bg-gradient-to-r from-sbie-bronze to-sbie-beige p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white text-center uppercase tracking-wider">CUSTO DOS BENEFÍCIOS</h3>
               </div>
               
-              <div className="p-8">
-                <div className="space-y-4">
+              <div className="p-4 sm:p-6 md:p-8">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Item 1 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">NETWORKING E MENTORIA MENSAL DE 3 HORAS COM RODRIGO FONSECA:</span>
-                      <div className="text-sbie-bronze font-bold text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 20.000,00 X 12</div>
+                      <span className="text-white font-bold text-sm sm:text-lg leading-tight">NETWORKING E MENTORIA MENSAL DE 3 HORAS COM RODRIGO FONSECA:</span>
+                      <div className="text-sbie-bronze font-bold text-xs sm:text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 20.000,00 X 12</div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-sbie-bronze line-through">R$ 240.000,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-sbie-bronze line-through">R$ 240.000,00</span>
                     </div>
                   </div>
                   
                   {/* Item 2 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">LOTUS PRA VOCÊ:</span>
+                      <span className="text-white font-bold text-sm sm:text-lg">LOTUS PRA VOCÊ:</span>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-red-400 line-through">R$ 4.700,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-red-400 line-through">R$ 4.700,00</span>
                     </div>
                   </div>
                   
                   {/* Item 3 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">LEGADO PRA VOCÊ:</span>
+                      <span className="text-white font-bold text-sm sm:text-lg">LEGADO PRA VOCÊ:</span>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-sbie-bronze line-through">R$ 5.997,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-sbie-bronze line-through">R$ 5.997,00</span>
                     </div>
                   </div>
                   
                   {/* Item 4 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">FORMAÇÃO PRA VOCÊ:</span>
+                      <span className="text-white font-bold text-sm sm:text-lg">FORMAÇÃO PRA VOCÊ:</span>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-sbie-bronze line-through">R$ 7.997,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-sbie-bronze line-through">R$ 7.997,00</span>
                     </div>
                   </div>
                   
                   {/* Item 5 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">ACESSO EXCLUSIVO AO RODRIGO FONSECA:</span>
+                      <span className="text-white font-bold text-sm sm:text-lg">ACESSO EXCLUSIVO AO RODRIGO FONSECA:</span>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
                     </div>
                   </div>
                   
                   {/* Item 6 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">GRUPO VIP NO WHATSAPP:</span>
-                      <div className="text-green-400/70 text-sm mt-1">QUANTOS NEGÓCIOS</div>
-                      <div className="text-green-400/70 text-sm">VOCÊ VAI FECHAR?</div>
+                      <span className="text-white font-bold text-sm sm:text-lg">GRUPO VIP NO WHATSAPP:</span>
+                      <div className="text-green-400/70 text-xs sm:text-sm mt-1">QUANTOS NEGÓCIOS</div>
+                      <div className="text-green-400/70 text-xs sm:text-sm">VOCÊ VAI FECHAR?</div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
                     </div>
                   </div>
                   
                   {/* Item 7 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-green-500/20 to-green-600/20 rounded-xl border border-green-500/30 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">CRACHÁ, CORDÃO E PIN EXCLUSIVOS DOS EMBAIXADORES:</span>
+                      <span className="text-white font-bold text-sm sm:text-lg leading-tight">CRACHÁ, CORDÃO E PIN EXCLUSIVOS DOS EMBAIXADORES:</span>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-green-400">NÃO TEM PREÇO</span>
                     </div>
                   </div>
                   
                   {/* Item 8 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">AMIGOS E PESSOAS PRÓXIMAS TERÃO 50% DE DESCONTO NO LOTUS E LEGADO:</span>
-                      <div className="text-sbie-bronze font-bold text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 5.348,50 X 6 PESSOAS</div>
+                      <span className="text-white font-bold text-sm sm:text-lg leading-tight">AMIGOS E PESSOAS PRÓXIMAS TERÃO 50% DE DESCONTO NO LOTUS E LEGADO:</span>
+                      <div className="text-sbie-bronze font-bold text-xs sm:text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 5.348,50 X 6 PESSOAS</div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-sbie-bronze line-through">R$ 32.091,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-sbie-bronze line-through">R$ 32.091,00</span>
                     </div>
                   </div>
                   
                   {/* Item 9 */}
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center p-3 sm:p-4 bg-gradient-to-r from-sbie-dark-green/20 to-sbie-menu-green/20 rounded-xl border border-sbie-bronze/20 hover:border-sbie-bronze/40 transition-all duration-300 gap-2">
                     <div className="flex-1">
-                      <span className="text-white font-bold text-lg">UMA VAGA SOCIAL TODO LOTUS (MEDIANTE APROVAÇÃO DE FICHA SÓCIO-ECONÔMICO):</span>
-                      <div className="text-sbie-bronze font-bold text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 4.700,00 X 6</div>
+                      <span className="text-white font-bold text-sm sm:text-lg leading-tight">UMA VAGA SOCIAL TODO LOTUS (MEDIANTE APROVAÇÃO DE FICHA SÓCIO-ECONÔMICO):</span>
+                      <div className="text-sbie-bronze font-bold text-xs sm:text-sm mt-1 animate-pulse" style={{textShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37, 0 0 30px #D4AF37'}}>R$ 4.700,00 X 6</div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-2xl font-black text-sbie-bronze line-through">R$ 28.200,00</span>
+                    <div className="text-left sm:text-right">
+                      <span className="text-lg sm:text-2xl font-black text-sbie-bronze line-through">R$ 28.200,00</span>
                     </div>
                   </div>
                   
                   {/* Total */}
-                  <div className="bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 p-6 rounded-2xl border-2 border-sbie-bronze/50 mt-8">
-                    <div className="flex justify-between items-center">
-                      <span className="text-3xl font-black text-white uppercase tracking-wider">TOTAL</span>
-                      <span className="text-5xl font-black text-sbie-bronze line-through">R$ 318.985,00</span>
+                  <div className="bg-gradient-to-r from-sbie-bronze/30 to-sbie-beige/30 p-4 sm:p-6 rounded-2xl border-2 border-sbie-bronze/50 mt-6 sm:mt-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                      <span className="text-xl sm:text-3xl font-black text-white uppercase tracking-wider">TOTAL</span>
+                      <span className="text-2xl sm:text-5xl font-black text-sbie-bronze line-through">R$ 318.985,00</span>
                     </div>
                   </div>
                   
                   {/* Oferta Final */}
-                  <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 p-8 rounded-2xl border-2 border-green-500/50 mt-6 text-center">
-                    <div className="mb-4">
-                      <span className="text-green-400 font-bold text-lg uppercase tracking-wider">🔥 OFERTA EXCLUSIVA EMBAIXADORES 🔥</span>
+                  <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-green-500/50 mt-6 text-center">
+                    <div className="mb-3 sm:mb-4">
+                      <span className="text-green-400 font-bold text-sm sm:text-lg uppercase tracking-wider">🔥 OFERTA EXCLUSIVA EMBAIXADORES 🔥</span>
                     </div>
-                    <div className="text-6xl font-black text-green-400 mb-2">R$ 3.000,00</div>
-                    <div className="text-xl text-green-300 mb-6">Em 12 vezes no cartão ou R$36 mil à vista</div>
+                    <div className="text-3xl sm:text-5xl md:text-6xl font-black text-green-400 mb-2">R$ 3.000,00</div>
+                    <div className="text-sm sm:text-lg md:text-xl text-green-300 mb-4 sm:mb-6">Em 12 vezes no cartão ou R$36 mil à vista</div>
                     <button 
                       onClick={handleCTAClick}
-                      className="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-6 px-12 rounded-2xl text-xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 group"
+                      className="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 md:py-6 md:px-12 rounded-2xl text-sm sm:text-lg md:text-xl shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-105 group w-full sm:w-auto"
                     >
-                      <span className="flex items-center justify-center gap-3">
-                        ACEITO O CHAMADO À GRANDEZA!
-                        <Award className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                      <span className="flex items-center justify-center gap-2 sm:gap-3">
+                        <span className="leading-tight">ACEITO O CHAMADO À GRANDEZA!</span>
+                        <Award className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform flex-shrink-0" />
                       </span>
                     </button>
                   </div>

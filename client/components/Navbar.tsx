@@ -39,15 +39,33 @@ const DropdownMenu = ({
       } z-50`}
     >
       <div className="py-2">
-        {items.map((item, index) => (
-          <Link
-            key={index}
-            to={item.href}
-            className="block px-6 py-3 text-sbie-menu-green font-semibold hover:bg-sbie-menu-green hover:text-white transition-all duration-200 hover:translate-x-2 border-b border-sbie-beige/30 last:border-b-0"
-          >
-            {item.label}
-          </Link>
-        ))}
+        {items.map((item, index) => {
+          const isExternalLink = item.href.startsWith('http');
+          
+          if (isExternalLink) {
+            return (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-6 py-3 text-sbie-menu-green font-semibold hover:bg-sbie-menu-green hover:text-white transition-all duration-200 hover:translate-x-2 border-b border-sbie-beige/30 last:border-b-0"
+              >
+                {item.label}
+              </a>
+            );
+          }
+          
+          return (
+            <Link
+              key={index}
+              to={item.href}
+              className="block px-6 py-3 text-sbie-menu-green font-semibold hover:bg-sbie-menu-green hover:text-white transition-all duration-200 hover:translate-x-2 border-b border-sbie-beige/30 last:border-b-0"
+            >
+              {item.label}
+            </Link>
+          );
+        })}
       </div>
     </div>
   </div>
@@ -89,7 +107,7 @@ export const Navbar = () => {
   ];
 
   const onlineItems: DropdownItem[] = [
-    { label: "SBIE Academy", href: "https://www.sbie.com.br/solucao/sbie-academy/?utm_source=sitesbie&utm_medium=menu&utm_campaign=academy" },
+    { label: "SBIE Academy", href: "/sbie-academy" },
     { label: "SBIE Care", href: "https://www.sbie.com.br/solucao/sbie-care/?utm_source=sitesbie&utm_medium=menu&utm_campaign=care" },
     { label: "Academia Emocional", href: "https://lp.sbie.com.br/academia-emocional/?utm_source=sitesbie&utm_medium=menu&utm_campaign=academia" },
     { label: "Gerando com Amor", href: "https://rodrigofonsecaie.com.br/gerando-com-amor/?utm_source=sitesbie&utm_medium=menu&utm_campaign=gerando-com-amor" },
@@ -272,16 +290,35 @@ export const Navbar = () => {
                     openMobileDropdown === "online" ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  {onlineItems.map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.href}
-                      className="block px-8 py-2 text-white/90 hover:bg-white/20 hover:text-white transition-all duration-200 text-sm font-medium border-l-2 border-white/20 ml-4"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                  {onlineItems.map((item, index) => {
+                    const isExternalLink = item.href.startsWith('http');
+                    
+                    if (isExternalLink) {
+                      return (
+                        <a
+                          key={index}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-8 py-2 text-white/90 hover:bg-white/20 hover:text-white transition-all duration-200 text-sm font-medium border-l-2 border-white/20 ml-4"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.label}
+                        </a>
+                      );
+                    }
+                    
+                    return (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        className="block px-8 py-2 text-white/90 hover:bg-white/20 hover:text-white transition-all duration-200 text-sm font-medium border-l-2 border-white/20 ml-4"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
 
