@@ -110,7 +110,7 @@ export const Navbar = () => {
     { label: "SBIE Academy", href: "/sbie-academy" },
     { label: "SBIE Care", href: "/care" },
     { label: "Academia Emocional", href: "/academia-emocional" },
-    { label: "Gerando com Amor", href: "https://rodrigofonsecaie.com.br/gerando-com-amor/?utm_source=sitesbie&utm_medium=menu&utm_campaign=gerando-com-amor" },
+    { label: "Gerando com Amor", href: "/gerando-com-amor" },
     { label: "Alma Gêmeas", href: "https://hotmart.com/pt-br/marketplace?utm_source=sitesbie&utm_medium=menu&utm_campaign=almagemeas" },
     { label: "Livros Digitais", href: "https://rodrigofonsecaie.com.br/os4poderes/?utm_source=sitesbie&utm_medium=menu&utm_campaign=livros" },
   ];

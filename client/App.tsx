@@ -27,6 +27,7 @@ import { EmbaixadoresPage } from './pages/EmbaixadoresPage';
 import { SbieAcademyPage } from './pages/SbieAcademyPage';
 import { SbieCarePage } from './pages/SbieCarePage';
 import { AcademiaEmocionalPage } from './pages/AcademiaEmocionalPage';
+import GerandoComAmorPage from './pages/GerandoComAmorPage';
 
 const queryClient = new QueryClient();
 
@@ -68,7 +69,7 @@ const App = () => (
               <Route path="/academy" element={<PlaceholderPage title="SBIE Academy" description="Nossa plataforma online de ensino." />} />
               <Route path="/care" element={<SbieCarePage />} />
               <Route path="/academia-emocional" element={<AcademiaEmocionalPage />} />
-              <Route path="/gerando-amor" element={<PlaceholderPage title="Gerando com Amor" description="Programa especial para gestantes." />} />
+              <Route path="/gerando-com-amor" element={<GerandoComAmorPage />} />
               <Route path="/almas-gemeas" element={<PlaceholderPage title="Almas Gêmeas" description="Encontre relacionamentos saudáveis." />} />
               <Route path="/livros" element={<PlaceholderPage title="Livros Digitais" description="Nossa biblioteca digital de inteligência emocional." />} />
 
