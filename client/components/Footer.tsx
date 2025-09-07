@@ -125,7 +125,8 @@ export const Footer = () => {
                 <img
                   src="https://i.imgur.com/t5ySutR.png"
                   alt="SBIE Logo"
-                  className="h-24 w-auto mb-4 transition-all duration-300 brightness-125 contrast-110"
+                  className="h-32 w-auto mb-4 transition-all duration-300"
+                  style={{ filter: 'brightness(0) invert(1)' }}
                 />
               </div>
               <h3 className="text-lg font-bold text-sbie-beige mb-2">

@@ -166,12 +166,14 @@ export const Navbar = () => {
                 Blog
               </a>
 
-              <Link
-                to="/imprensa"
+              <a
+                href="https://www.sbie.com.br/imprensa/no-mais-voce-com-ana-maria-braga-rodrigo-fonseca-fala-sobre-medo/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-2 text-white/90 hover:text-white transition-all duration-300 hover:scale-105 hover:bg-white/5 rounded-lg font-medium"
               >
                 Imprensa
-              </Link>
+              </a>
 
               <a
                 href="https://www.sbie.com.br/store/"
@@ -333,13 +335,15 @@ export const Navbar = () => {
                 >
                   Blog
                 </a>
-                <Link
-                  to="/imprensa"
+                <a
+                  href="https://www.sbie.com.br/imprensa/no-mais-voce-com-ana-maria-braga-rodrigo-fonseca-fala-sobre-medo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block px-4 py-3 text-white font-semibold hover:bg-white/10 hover:text-white transition-all duration-200 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Imprensa
-                </Link>
+                </a>
                 <a
                   href="https://www.sbie.com.br/store/"
                   target="_blank"
